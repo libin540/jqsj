@@ -1,147 +1,44 @@
 <template>
     <div class="alarmQuery">
       <div class="seach">
-        <!-- <a-form
-          :model="formState"
-          ref="formRef"
-          :label-col="labelCol"
-          :wrapper-col="wrapperCol"
-          layout="horizontal"
-          :disabled="componentDisabled"
-          style="max-width: 100%"
-          labelAlign="right"
-          @finish="onFinish"
-        >
-          <a-row :gutter="24">
-            <a-col :span="6">
-              <a-form-item label="报警类型" name="alarmType">
-                <a-select
-                  placeholder="请选择"
-                  style="width: 80%"
-                  v-model:value="formState.alarmType"
-                >
-                  <a-select-option v-for="option in alarmTypeList" :key="option.code" :value="option.code">{{option.name}}</a-select-option>
-                </a-select>
-              </a-form-item>
-            </a-col>
-            <a-col :span="6">
-             
-            </a-col>
-            <a-col :span="6">
-              <a-form-item label="审核状态" name="auditStatus">
-                <a-select
-                  placeholder="请选择"
-                  style="width: 80%"
-                  v-model:value="formState.auditStatus"
-                >
-                <a-select-option v-for="option in alarmAuditStatusList" :key="option.code" :value="option.code">{{option.name}}</a-select-option>
-                </a-select>
-              </a-form-item>
-            </a-col>
-            <a-col :span="6">
-              <a-form-item label="报警推送状态" name="pushStatus">
-                <a-select
-                  placeholder="请选择"
-                  style="width: 80%"
-                  v-model:value="formState.pushStatus"
-                >
-                <a-select-option v-for="option in pushStatusList" :key="option.code" :value="option.code">{{option.name}}</a-select-option>
-                </a-select>
-              </a-form-item>
-            </a-col>
-          </a-row>
-          <a-row :gutter="24">
-            <a-col :span="6">
-              <a-form-item label="报警时间" name="alarmTime">
-                <a-date-picker
-                  placeholder="请选择"
-                  style="width: 80%"
-                  v-model:value="formState.alarmTime"
-                />
-              </a-form-item>
-            </a-col>
-            <a-col :span="6">
-              <a-form-item label="报警审核人" name="auditUserId">
-                <a-select
-                  placeholder="请选择"
-                  style="width: 80%"
-                  v-model:value="formState.auditUserId"
-                >
-                <a-select-option v-for="option in auditUserList" :key="option.code" :value="option.code">{{option.name}}</a-select-option>
-                </a-select>
-              </a-form-item>
-            </a-col>
-            <a-col :span="6">
-              <a-form-item label="报警处理人" name="receiverId">
-                <a-tree-select
-                  v-model:value="formState.receiverId"
-                  style="width: 80%"
-                  :dropdown-style="{ maxHeight: '400px', overflow: 'auto' }"
-                   placeholder="请选择"
-                  allow-clear
-                  tree-default-expand-all
-                  :tree-data="receiverList"
-                  tree-node-filter-prop="name"
-                >
-                </a-tree-select>
-              </a-form-item>
-            </a-col>
-            <a-col :span="6">
-              <a-form-item label="审核时间" name="auditTime">
-                <a-date-picker
-                  placeholder="请选择"
-                  style="width: 80%"
-                  v-model:value="formState.auditTime"
-                />
-              </a-form-item>
-            </a-col>
-          </a-row>
-          <div class="seachBtn">
-            <a-button class="primary" type="primary"  html-type="submit"
-                >检索</a-button
-              >
-              <a-button style="margin-left: 10px;" @click="handleReset">重置</a-button
-              >
-          </div>
-        </a-form> -->
         <el-form :inline="true" :model="formState" class="demo-form-inline" label-width="100px">
             <el-form-item label="报警类型">
-                <el-select v-model="formState.alarmType" placeholder="请选择">
+                <el-select v-model="formState.promptType" placeholder="请选择">
                     <el-option
-                    v-for="item in alarmTypeList"
-                    :key="item.code"
-                    :label="item.name"
-                    :value="item.code">
+                    v-for="item in promptTypeList"
+                    :key="item.value"
+                    :label="item.label"
+                    :value="item.value">
                     </el-option>
                 </el-select>
             </el-form-item>
             <el-form-item label="报警设备">
-                <el-select v-model="formState.alarmDeviceId" placeholder="请选择">
+                <el-select v-model="formState.deviceId" placeholder="请选择">
                     <el-option
                     v-for="item in alarmTypeList"
-                    :key="item.code"
-                    :label="item.name"
-                    :value="item.code">
+                    :key="item.value"
+                    :label="item.label"
+                    :value="item.value">
                     </el-option>
                 </el-select>
             </el-form-item>
             <el-form-item label="审核状态">
-                <el-select v-model="formState.auditStatus" placeholder="请选择">
+                <el-select v-model="formState.checkStatus" placeholder="请选择">
                     <el-option
-                    v-for="item in alarmTypeList"
-                    :key="item.code"
-                    :label="item.name"
-                    :value="item.code">
+                    v-for="item in checkstatusList"
+                    :key="item.value"
+                    :label="item.label"
+                    :value="item.value">
                     </el-option>
                 </el-select>
             </el-form-item>
             <el-form-item label="报警推送状态">
                 <el-select v-model="formState.pushStatus" placeholder="请选择">
                     <el-option
-                    v-for="item in alarmTypeList"
-                    :key="item.code"
-                    :label="item.name"
-                    :value="item.code">
+                    v-for="item in pushStatusList"
+                    :key="item.value"
+                    :label="item.label"
+                    :value="item.value">
                     </el-option>
                 </el-select>
             </el-form-item>
@@ -152,23 +49,23 @@
                     placeholder="选择日期">
                 </el-date-picker>
             </el-form-item>
-            <el-form-item label="报警审核人">
-                <el-select v-model="formState.auditUserId" placeholder="请选择">
+            <el-form-item label="报警处理人">
+                <el-select v-model="formState.dealPerson" placeholder="请选择">
                     <el-option
                     v-for="item in alarmTypeList"
-                    :key="item.code"
-                    :label="item.name"
-                    :value="item.code">
+                    :key="item.value"
+                    :label="item.label"
+                    :value="item.value">
                     </el-option>
                 </el-select>
             </el-form-item>
-            <el-form-item label="报警处理人">
-                <el-select v-model="formState.receiverId" placeholder="请选择">
+            <el-form-item label="报警接收人">
+                <el-select v-model="formState.recipient" placeholder="请选择">
                     <el-option
                     v-for="item in alarmTypeList"
-                    :key="item.code"
-                    :label="item.name"
-                    :value="item.code">
+                    :key="item.value"
+                    :label="item.label"
+                    :value="item.value">
                     </el-option>
                 </el-select>
             </el-form-item>
@@ -180,7 +77,7 @@
                 </el-date-picker>
             </el-form-item>
             <el-form-item>
-                <el-button type="primary" class="primary" @click="onSubmit">检索</el-button>
+                <el-button type="primary" class="primary" @click="handleOnSubmit">检索</el-button>
                 <el-button @click="handleReset">重置</el-button>
             </el-form-item>
         </el-form>
@@ -216,7 +113,7 @@
                 label="报警设备">
                 </el-table-column>
                 <el-table-column
-                prop="promptType"
+                prop="promptType_text"
                 label="报警类型">
                 </el-table-column>
                 <el-table-column
@@ -228,7 +125,7 @@
                 label="研判状态">
                 </el-table-column> -->
                 <el-table-column
-                prop="checkStatus"
+                prop="checkStatus_text"
                 label="审核状态">
                 </el-table-column>
                 <el-table-column
@@ -236,7 +133,7 @@
                 label="报警接收人">
                 </el-table-column>
                 <el-table-column
-                prop="pushStatus"
+                prop="pushStatus_text"
                 label="推送状态">
                 </el-table-column>
                 <el-table-column
@@ -254,7 +151,7 @@
                 width="180">
                 <template #default="scope">
                     <span>
-                        <a style="color:#408FFF;cursor: pointer;" @click="handleDetail(scope,index)">详情</a>
+                        <a style="color:#408FFF;cursor: pointer;" @click="handleDetail(scope,index,1)">详情</a>
                         <el-divider direction="vertical" />
                         <el-popconfirm
                             title="是否确认?"
@@ -291,7 +188,7 @@
                         </el-popconfirm>
                         
                         
-                        </span>
+                    </span>
                 </template>
                 </el-table-column>
             </el-table>
@@ -301,41 +198,45 @@
         <div v-if="styleTab == 2"  class="cardListBox" >
           <div class="cardList" v-if="data.length !=0">
             <div class="card" v-for="(record,index) in data" :key="record.id">
-              <p><span>报警设备：</span>{{ record.alarmDevice}}</p>
-              <p><span>报警类型：</span>{{ record.alarmType}}</p>
-              <p><span>报警处理人：</span>{{ record.auditUserName }}</p>
-              <p><span>报警接收人：</span>{{ record.receiverName }}</p>
-              <p><span>报警时间：</span>{{ record.alarmTime ? processingTimestamp(record.alarmTime) : ''}}</p>
-              <p><span>处理时间：</span>{{ record.processTime ? processingTimestamp(record.processTime) : ''}}</p>
+              <p><span>报警设备：</span>{{ record.deviceName}}</p>
+              <p><span>报警类型：</span>{{ record.promptType_text}}</p>
+              <p><span>报警处理人：</span>{{ record.dealPerson }}</p>
+              <p><span>报警接收人：</span>{{ record.recipient }}</p>
+              <p><span>报警时间：</span>{{ record.promptTime}}</p>
+              <p><span>处理时间：</span>{{ record.dealTime }}</p>
               <div class="cardButtons">
-                  <a-button @click="handleDetail(record,index)">详情</a-button>
-                  <a-popconfirm
-                    title="是否确认?"
-                    ok-text="确定"
-                    cancel-text="取消"
-                    @confirm="handleConfirm(4,record)"
-                    @cancel="cancel"
-                  >
-                    <a-button>确认</a-button>
-                  </a-popconfirm>
-                  <a-popconfirm
-                    title="是否存疑?"
-                    ok-text="确定"
-                    cancel-text="取消"
-                    @confirm="handleConfirm(3,record)"
-                    @cancel="cancel"
-                  >
-                    <a-button>存疑</a-button>
-                  </a-popconfirm>
-                  <a-popconfirm
-                    title="是否误报?"
-                    ok-text="确定"
-                    cancel-text="取消"
-                    @confirm="handleConfirm(2,record)"
-                    @cancel="cancel"
-                  >
-                    <a-button>误报</a-button>
-                  </a-popconfirm>
+                  <el-button style="color:#408FFF;cursor: pointer;"  @click="handleDetail(scope,index,2)">详情</el-button>
+                  <el-popconfirm
+                      title="是否确认?"
+                      @confirm="handleConfirm(4,scope)"
+                      @cancel="cancel"
+                      >
+                      <template #reference>
+                          <el-button style="color:#408FFF;cursor: pointer;">确认</el-button>
+                      </template>
+                      
+                  </el-popconfirm>
+                  
+                  <el-popconfirm
+                      title="是否存疑?"
+                      @confirm="handleConfirm(3,scope)"
+                      @cancel="cancel"
+                      >
+                      <template #reference>
+                          <el-button style="color:#408FFF;cursor: pointer;">存疑</el-button>
+                      </template>
+                      
+                  </el-popconfirm>
+                  <el-popconfirm
+                          title="是否误报?"
+                          @confirm="handleConfirm(2,scope)"
+                          @cancel="cancel"
+                      >
+                      <template #reference>
+                          <el-button style="color:#408FFF;cursor: pointer;">误报</el-button>
+                      </template>
+                      
+                  </el-popconfirm>
               </div>
               <p 
                 :style="{
@@ -385,7 +286,7 @@
   <script setup>
   import { ref, reactive, onMounted } from "vue";
 //   import AlarmDetails from './components/alarmQuery/AlarmDetails.vue'
-  import {promptList, promptUpdate} from '../../api/alarmCenter/alarmQuery'
+  import {promptList, promptUpdate,queryDictItemsByCodeStr} from '@/api/alarmCenter/alarmQuery'
   import { useRouter, } from 'vue-router'
   import moment from 'moment';
   import { ElMessage } from 'element-plus'
@@ -410,15 +311,16 @@
       showTotal: (total) => `共 ${total} 条`,
     })
   const formState = ref({
-    alarmType: null, //报警类型
-    alarmDeviceId: null, //报警设备
-    auditStatus: null, //审核状态
+    promptType: null, //报警类型
+    deviceId: null, //报警设备
+    checkStatus: null, //审核状态
     alarmTime: null, //报警时间
-    auditUserId: null, //报警审核人
-    receiverId: null, //报警处理人
+    dealPerson: null, //报警处理人
+    recipient: null, //报警接收人
     auditTime: null, //审核时间
     pushStatus:null,//报警推送状态
   });
+
   const tabList = ref([{
     id:1,
     label:'原始告警信息',
@@ -437,43 +339,60 @@
   const data = ref([])
   const alarmIdList = ref([])
   const selectData = ref({})
-  const alarmTypeList = ref([])//报警类型
-  const alarmAuditStatusList = ref([])//审核状态
-  const alarmDeviceList = ref([])//报警设备
+  const promptTypeList = ref([])//报警类型
+  const checkstatusList = ref([])//审核状态
   const pushStatusList = ref([])//推送状态
+
+  const alarmDeviceList = ref([])//报警设备
   const auditUserList = ref([])//报警审核人
   const receiverList = ref([])//报警处理人
-  
-  
-  
   // import TheWelcome from '../components/TheWelcome.vue';
   
   // console.log(queryUserAndObjOrgCallCount,aa)
   // const data = ref({});
   
   onMounted(async () => {
+    await handleQueryDictItemsByCodeStr()
+    await handleAlarList()
+  })
+  const handleQueryDictItemsByCodeStr = async() => {
+    let str = 'prompt_type,event_type,prompt_level,check_status,prompt_source,intelligence_result,push_status,is_collect,is_silent,deal_status,operate_type'
     try {
-      const info = await conditions();
+      const info = await queryDictItemsByCodeStr(str);
+      const response = info.data.data
       console.log(info)
-      selectData.value = info.data
-      alarmTypeList.value = info.data.alarmTypeList
-      alarmAuditStatusList.value = info.data.alarmAuditStatusList
-      alarmDeviceList.value = info.data.alarmDeviceList
-      pushStatusList.value = info.data.pushStatusList
-      auditUserList.value = info.data.auditUserList
-      receiverList.value = info.data.receiverList
-      // data.value = info.result;
+      
+      promptTypeList.value = response.prompt_type      //报警类型
+      checkstatusList.value  = response.check_status      //审核状态
+      pushStatusList.value = response.push_status      //推送状态
+      // selectData.value = info.data
+      // alarmTypeList.value = info.data.alarmTypeList
+      // alarmAuditStatusList.value = info.data.alarmAuditStatusList
+      // alarmDeviceList.value = info.data.alarmDeviceList
+      // pushStatusList.value = info.data.pushStatusList
+      // auditUserList.value = info.data.auditUserList
+      // receiverList.value = info.data.receiverList
+      // // data.value = info.result;
       // console.log(data.value)
     } catch (error) {
       console.error('获取信息失败', error);
     }
-    await handleAlarList()
-  })
+  }
 
     const  handleAlarList = async() => {
     let parameter = {
         "pageNumber": paginationObj.current,
         "pageSize": paginationObj.pageSize,
+        "promptType": "", //报警类型（1.打架报警，2.人员入侵，3.吸烟报警，4.夜间异常徘徊）
+        "deviceId": "", //报警设备
+        "promptTimeStart": formState.value.alarmTime ? `${moment(formState.value.alarmTime.$d).format('YYYY-MM-DD')} 00:00:00` : '', //报警开始时间alarmTime[0]:formState.value.alarmTime ? moment(formState.value.alarmTime.$d).format('YYYY-MM-DD') : '',
+        "promptTimeEnd": formState.value.alarmTime ? `${moment(formState.value.alarmTime.$d).format('YYYY-MM-DD')} 23:59:59` : '', //报警结束时间alarmTime[1]
+        "checkStatus": "", //审核状态（1.待审核（默认值），2.误报，3.疑似报警,4.确认）
+        "pushStatus": "", //推送状态（0.未推送（默认值），1.已推送）
+        "dealPerson": "", //报警处理人
+        "recipient": "", //报警接收人
+        "dealTimeStart": formState.value.auditTime ? `${moment(formState.value.auditTime.$d).format('YYYY-MM-DD')} 00:00:00` : '', //处理开始时间
+        "dealTimeEnd": formState.value.auditTime ? `${moment(formState.value.auditTime.$d).format('YYYY-MM-DD')} 23:59:59` : '', //处理结束时间
         // "alarmDeviceId":formState.value.alarmDeviceId, // 报警设备id
         // "alarmTypeCode": formState.value.alarmType, //报警类型id
         // "alarmTime":formState.value.alarmTime ? moment(formState.value.alarmTime.$d).format('YYYY-MM-DD') : '', //报警时间
@@ -538,19 +457,18 @@
     handleAlarList()
     }
   //检索
-  const onFinish = (values) => {
-    formState.value = values
+  const handleOnSubmit = () => {
     paginationObj.current = 1
     handleAlarList()
   };
   //重置
   const handleReset = () => {
-    formState.value.alarmType = null //报警类型
-    formState.value.alarmDeviceId = null //报警设备
-    formState.value.auditStatus = null //审核状态
+    formState.value.promptType = null //报警类型
+    formState.value.deviceId = null //报警设备
+    formState.value.checkStatus = null //审核状态
     formState.value.alarmTime = null //报警时间
-    formState.value.auditUserId = null //报警审核人
-    formState.value.receiverId = null //报警处理人
+    formState.value.dealPerson = null //报警处理人
+    formState.value.recipient = null //报警接收人
     formState.value.auditTime = null //审核时间
     formState.value.pushStatus =null//报警推送状态
     paginationObj.current = 1
@@ -607,19 +525,19 @@
      paginationObj.total = pagination.total
      handleAlarList()
     };
-    const handleDetail = (record,index) => {
-        console.log( ((paginationObj.current - 1) * paginationObj.pageSize), record.$index)
+    const handleDetail = (record,index,type,) => {
+        console.log(  record)
       let obj = {
-         record :record.row,
+         record :type == 1 ? record.row : record,
          paginationObj:paginationObj,
          formState:formState.value,
-         indexAll :((paginationObj.current - 1) * paginationObj.pageSize) + (++record.$index),
-         index:record.$index
+         indexAll :((paginationObj.current - 1) * paginationObj.pageSize) + (type == 1 ? ++record.$index : ++index ),
+         index:type == 1 ? record.$index : index
 
       }
     //   alarmDetailsFlage.value = true
     //   listIndex.value = index
-      console.log(record,index)
+      // console.log(record,record.$index ,index)
       const jsonString = JSON.stringify(obj);
       router.push({ path: '/alarmCenter/alarmQuery/AlarmDetails', query: { data:jsonString,} });
     }
@@ -757,8 +675,6 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        border: 1px solid #112BAC;
-                        color:#1C34AF;
                         width: 63px;
                         height: 26px;
     

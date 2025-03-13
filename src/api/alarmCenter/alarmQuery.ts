@@ -34,3 +34,12 @@ export function promptUpdate(parameter?:Object) {
       data: parameter
     })
 }
+
+//字典
+export function queryDictItemsByCodeStr(parameter?:Object) {
+  console.log(parameter)
+  return request({
+    url: `/sys/dict/queryDictItemsByCodeStr?dictCodeStr=${parameter}`,
+    method: 'post',
+  })
+}

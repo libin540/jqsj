@@ -372,9 +372,9 @@ const pushNotifications = async() => {
   }
 }
 //上一条
-const handlePrevious = () => {
+const handlePrevious = async() => {
     
-    if(detailIndex.value == 1 ){
+    if(detailIndexAll.value == 1 ){
         ElMessage({
             message: '已经是第一条了！',
             type: 'warning', // 'success', 'warning', 'info', 'error'
@@ -382,33 +382,54 @@ const handlePrevious = () => {
         })
         
     }else{
-        const previousUser = props.alarmIdList[detailIndex.value - 1];
-        console.log(previousUser)
-        alarmId.value = previousUser
-        
-        handleDetail()
-        detailIndex.value = detailIndex.value - 1
+        // if(detailIndex.value == 1){
+        //     // if(pagination.value.current!=1){
+        //         pagination.value.current = pagination.value.current - 1
+        //         detailIndex.value = 10
+        //         await handleAlarList()
+        //         detailIndexAll.value = detailIndexAll.value - 1
+        //         detailIndex.value = detailIndex.value - 1
+        //         console.log(detailIndex.value,detailIndexAll.value,7)
+        //         const match = dataList.value[detailIndex.value];
+        //         await handleDetail(match.id)
+               
+        //         console.log(detailIndex.value,detailIndexAll.value,3)
+        //     // }
+           
+        // }else{
+        //     console.log(detailIndex.value,detailIndexAll.value,6)
+        //     const match = dataList.value[detailIndex.value == 10 ? detailIndex.value-1 : detailIndex.value];
+        //     console.log(match.id,detailIndex.value,detailIndexAll.value,5)
+        //     detailIndex.value = detailIndex.value - 1
+        //     detailIndexAll.value = detailIndexAll.value - 1
+        //     await handleDetail(match.id)
+           
+        //     console.log(match.id,detailIndex.value,detailIndexAll.value,4)
+        // }
+        if(detailIndexAll.value % 10 === 0){
+            pagination.value.current = pagination.value.current - 1
+            await handleAlarList()
+            console.log(dataList.value,detailIndexAll.value)
+            // const match = dataList.value[detailIndex.value];
+            detailIndexAll.value = detailIndexAll.value - 1
+            const item = dataList.value.find(item => item.rowNum == detailIndexAll.value);
+            console.log(item)
+            await handleDetail(item.id)
+            
+        }else{
+            console.log(dataList.value,detailIndexAll.value)
+            detailIndexAll.value = detailIndexAll.value - 1
+            const item = dataList.value.find(item => item.rowNum == detailIndexAll.value);
+            console.log(item)
+            await handleDetail(item.id)
+           
+        }
 
     }
-    // if(pagination.value.current == 1 && detailIndex.value == 0 ){
-    //     message.warning('已经是第一条')
-    //     console.log(detailIndex.value,pagination.value)
-        
-    // }else{
-    //     console.log(dataList.value,detailIndex.value)
-    //     const previousUser = dataList.value[detailIndex.value - 1 ];
-    //     console.log(previousUser)
-    //     alarmId.value = previousUser.alarmId
-    //     // handleDetail()
-    //     detailIndex.value = detailIndex.value - 1
-    //     console.log(detailIndex.value,pagination.value)
-    //     // console.log(index)
-
-    // }
 
 }
 //下一条
-const handleNext = () => {
+const handleNext = async() => {
     if(detailIndexAll.value == pagination.value.total){
         ElMessage({
             message: '已经是最后一条了！',
@@ -417,30 +438,38 @@ const handleNext = () => {
         })
         console.log(detailIndexAll.value,pagination.value.total)
     }else{
-        // const previousUser = props.alarmIdList[detailIndex.value + 1];
-        // alarmId.value = previousUser.alarmId
-        // handleDetail()
-        // detailIndex.value = detailIndex.value + 1
-        // const previousUser = props.alarmIdList[detailIndex.value + 1];
-        // console.log(previousUser)
-        // alarmId.value = previousUser
-        // handleDetail()
-        // detailIndex.value = detailIndex.value + 1
-        if(detailIndex.value == 10){
+        // if(detailIndex.value == 10){
+        //     pagination.value.current = pagination.value.current + 1
+        //     detailIndex.value = 0
+        //     await handleAlarList()
+        //     const match = dataList.value[detailIndex.value];
+        //     await handleDetail(match.id)
+        //     detailIndexAll.value = detailIndexAll.value + 1
+        //     detailIndex.value = detailIndex.value + 1
+        //     console.log(detailIndex.value,detailIndexAll.value,1)
+        // }else{
+        //     const match = dataList.value[detailIndex.value];
+        //     await handleDetail(match.id)
+        //     detailIndexAll.value = detailIndexAll.value + 1
+        //     detailIndex.value = detailIndex.value + 1
+        //     console.log(match.id,detailIndex.value,detailIndexAll.value,2)
+        // }
+        if(detailIndexAll.value % 10 === 0){
             pagination.value.current = pagination.value.current + 1
-            detailIndex.value = 0
-            handleAlarList()
-            const match = dataList.value[detailIndex.value];
-            handleDetail(match.id)
+            await handleAlarList()
+            // const match = dataList.value[detailIndex.value];
             detailIndexAll.value = detailIndexAll.value + 1
-            detailIndex.value = detailIndex.value + 1
-            console.log(detailIndexAll.value,detailIndex.value,1)
+            const item = dataList.value.find(item => item.rowNum == detailIndexAll.value);
+            console.log(item)
+            await handleDetail(item.id)
+            
         }else{
-            const match = dataList.value[detailIndex.value];
-            handleDetail(match.id)
+            console.log(dataList.value,detailIndexAll)
             detailIndexAll.value = detailIndexAll.value + 1
-            detailIndex.value = detailIndex.value + 1
-            console.log(match.id,detailIndex.value,detailIndexAll.value,2)
+            const item = dataList.value.find(item => item.rowNum == detailIndexAll.value);
+            console.log(item)
+            await handleDetail(item.id)
+           
         }
 
     }
