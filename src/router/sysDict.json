@@ -1,0 +1,4637 @@
+{
+        "WechatReturnCodeEnum": [
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "SenparcWeixinSDK配置错误",
+                "name": "SenparcWeixinSDK配置错误",
+                "value": "-99",
+                "remark": "微信开发返回码",
+                "orderNo": -89,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "系统繁忙此时请开发者稍候再试",
+                "name": "系统繁忙此时请开发者稍候再试",
+                "value": "-1",
+                "remark": "微信开发返回码",
+                "orderNo": 9,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "请求成功",
+                "name": "请求成功",
+                "value": "0",
+                "remark": "微信开发返回码",
+                "orderNo": 10,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "工商数据返回_企业已注销",
+                "name": "工商数据返回_企业已注销",
+                "value": "101",
+                "remark": "微信开发返回码",
+                "orderNo": 111,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "工商数据返回_企业不存在或企业信息未更新",
+                "name": "工商数据返回_企业不存在或企业信息未更新",
+                "value": "102",
+                "remark": "微信开发返回码",
+                "orderNo": 112,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "工商数据返回_企业法定代表人姓名不一致",
+                "name": "工商数据返回_企业法定代表人姓名不一致",
+                "value": "103",
+                "remark": "微信开发返回码",
+                "orderNo": 113,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "工商数据返回_企业法定代表人身份证号码不一致",
+                "name": "工商数据返回_企业法定代表人身份证号码不一致",
+                "value": "104",
+                "remark": "微信开发返回码",
+                "orderNo": 114,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "法定代表人身份证号码_工商数据未更新_请5_15个工作日之后尝试",
+                "name": "法定代表人身份证号码_工商数据未更新_请5_15个工作日之后尝试",
+                "value": "105",
+                "remark": "微信开发返回码",
+                "orderNo": 115,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "工商数据返回_企业信息或法定代表人信息不一致",
+                "name": "工商数据返回_企业信息或法定代表人信息不一致",
+                "value": "1000",
+                "remark": "微信开发返回码",
+                "orderNo": 1010,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "对方不是粉丝",
+                "name": "对方不是粉丝",
+                "value": "10700",
+                "remark": "微信开发返回码",
+                "orderNo": 10710,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "发送消息失败_对方关闭了接收消息",
+                "name": "发送消息失败_对方关闭了接收消息",
+                "value": "10703",
+                "remark": "微信开发返回码",
+                "orderNo": 10713,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "发送消息失败_48小时内用户未互动",
+                "name": "发送消息失败_48小时内用户未互动",
+                "value": "10706",
+                "remark": "微信开发返回码",
+                "orderNo": 10716,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "POST参数非法",
+                "name": "POST参数非法",
+                "value": "20002",
+                "remark": "微信开发返回码",
+                "orderNo": 20012,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "获取access_token时AppSecret错误或者access_token无效",
+                "name": "获取access_token时AppSecret错误或者access_token无效",
+                "value": "40001",
+                "remark": "微信开发返回码",
+                "orderNo": 40011,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的凭证类型",
+                "name": "不合法的凭证类型",
+                "value": "40002",
+                "remark": "微信开发返回码",
+                "orderNo": 40012,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的OpenID",
+                "name": "不合法的OpenID",
+                "value": "40003",
+                "remark": "微信开发返回码",
+                "orderNo": 40013,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的媒体文件类型",
+                "name": "不合法的媒体文件类型",
+                "value": "40004",
+                "remark": "微信开发返回码",
+                "orderNo": 40014,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的文件类型",
+                "name": "不合法的文件类型",
+                "value": "40005",
+                "remark": "微信开发返回码",
+                "orderNo": 40015,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的文件大小",
+                "name": "不合法的文件大小",
+                "value": "40006",
+                "remark": "微信开发返回码",
+                "orderNo": 40016,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的媒体文件id",
+                "name": "不合法的媒体文件id",
+                "value": "40007",
+                "remark": "微信开发返回码",
+                "orderNo": 40017,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的消息类型_40008",
+                "name": "不合法的消息类型_40008",
+                "value": "40008",
+                "remark": "微信开发返回码",
+                "orderNo": 40018,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的图片文件大小",
+                "name": "不合法的图片文件大小",
+                "value": "40009",
+                "remark": "微信开发返回码",
+                "orderNo": 40019,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的语音文件大小",
+                "name": "不合法的语音文件大小",
+                "value": "40010",
+                "remark": "微信开发返回码",
+                "orderNo": 40020,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的视频文件大小",
+                "name": "不合法的视频文件大小",
+                "value": "40011",
+                "remark": "微信开发返回码",
+                "orderNo": 40021,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的缩略图文件大小",
+                "name": "不合法的缩略图文件大小",
+                "value": "40012",
+                "remark": "微信开发返回码",
+                "orderNo": 40022,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的APPID",
+                "name": "不合法的APPID",
+                "value": "40013",
+                "remark": "微信开发返回码",
+                "orderNo": 40023,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的access_token",
+                "name": "不合法的access_token",
+                "value": "40014",
+                "remark": "微信开发返回码",
+                "orderNo": 40024,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的菜单类型",
+                "name": "不合法的菜单类型",
+                "value": "40015",
+                "remark": "微信开发返回码",
+                "orderNo": 40025,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的按钮个数1",
+                "name": "不合法的按钮个数1",
+                "value": "40016",
+                "remark": "微信开发返回码",
+                "orderNo": 40026,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的按钮个数2",
+                "name": "不合法的按钮个数2",
+                "value": "40017",
+                "remark": "微信开发返回码",
+                "orderNo": 40027,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的按钮名字长度",
+                "name": "不合法的按钮名字长度",
+                "value": "40018",
+                "remark": "微信开发返回码",
+                "orderNo": 40028,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的按钮KEY长度",
+                "name": "不合法的按钮KEY长度",
+                "value": "40019",
+                "remark": "微信开发返回码",
+                "orderNo": 40029,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的按钮URL长度",
+                "name": "不合法的按钮URL长度",
+                "value": "40020",
+                "remark": "微信开发返回码",
+                "orderNo": 40030,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的菜单版本号",
+                "name": "不合法的菜单版本号",
+                "value": "40021",
+                "remark": "微信开发返回码",
+                "orderNo": 40031,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的子菜单级数",
+                "name": "不合法的子菜单级数",
+                "value": "40022",
+                "remark": "微信开发返回码",
+                "orderNo": 40032,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的子菜单按钮个数",
+                "name": "不合法的子菜单按钮个数",
+                "value": "40023",
+                "remark": "微信开发返回码",
+                "orderNo": 40033,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的子菜单按钮类型",
+                "name": "不合法的子菜单按钮类型",
+                "value": "40024",
+                "remark": "微信开发返回码",
+                "orderNo": 40034,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的子菜单按钮名字长度",
+                "name": "不合法的子菜单按钮名字长度",
+                "value": "40025",
+                "remark": "微信开发返回码",
+                "orderNo": 40035,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的子菜单按钮KEY长度",
+                "name": "不合法的子菜单按钮KEY长度",
+                "value": "40026",
+                "remark": "微信开发返回码",
+                "orderNo": 40036,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的子菜单按钮URL长度",
+                "name": "不合法的子菜单按钮URL长度",
+                "value": "40027",
+                "remark": "微信开发返回码",
+                "orderNo": 40037,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的自定义菜单使用用户",
+                "name": "不合法的自定义菜单使用用户",
+                "value": "40028",
+                "remark": "微信开发返回码",
+                "orderNo": 40038,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的oauth_code",
+                "name": "不合法的oauth_code",
+                "value": "40029",
+                "remark": "微信开发返回码",
+                "orderNo": 40039,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的refresh_token",
+                "name": "不合法的refresh_token",
+                "value": "40030",
+                "remark": "微信开发返回码",
+                "orderNo": 40040,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的openid列表",
+                "name": "不合法的openid列表",
+                "value": "40031",
+                "remark": "微信开发返回码",
+                "orderNo": 40041,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的openid列表长度",
+                "name": "不合法的openid列表长度",
+                "value": "40032",
+                "remark": "微信开发返回码",
+                "orderNo": 40042,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的请求字符不能包含uxxxx格式的字符",
+                "name": "不合法的请求字符不能包含uxxxx格式的字符",
+                "value": "40033",
+                "remark": "微信开发返回码",
+                "orderNo": 40043,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的参数",
+                "name": "不合法的参数",
+                "value": "40035",
+                "remark": "微信开发返回码",
+                "orderNo": 40045,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "template_id不正确",
+                "name": "template_id不正确",
+                "value": "40037",
+                "remark": "微信开发返回码",
+                "orderNo": 40047,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的请求格式",
+                "name": "不合法的请求格式",
+                "value": "40038",
+                "remark": "微信开发返回码",
+                "orderNo": 40048,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的URL长度",
+                "name": "不合法的URL长度",
+                "value": "40039",
+                "remark": "微信开发返回码",
+                "orderNo": 40049,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不合法的分组id",
+                "name": "不合法的分组id",
+                "value": "40050",
+                "remark": "微信开发返回码",
+                "orderNo": 40060,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "分组名字不合法",
+                "name": "分组名字不合法",
+                "value": "40051",
+                "remark": "微信开发返回码",
+                "orderNo": 40061,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "输入参数有误",
+                "name": "输入参数有误",
+                "value": "40097",
+                "remark": "微信开发返回码",
+                "orderNo": 40107,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "appsecret不正确",
+                "name": "appsecret不正确",
+                "value": "40125",
+                "remark": "微信开发返回码",
+                "orderNo": 40135,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "调用接口的IP地址不在白名单中",
+                "name": "调用接口的IP地址不在白名单中",
+                "value": "40164",
+                "remark": "微信开发返回码",
+                "orderNo": 40174,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "参数path填写错误",
+                "name": "参数path填写错误",
+                "value": "40165",
+                "remark": "微信开发返回码",
+                "orderNo": 40175,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "小程序Appid不存在",
+                "name": "小程序Appid不存在",
+                "value": "40166",
+                "remark": "微信开发返回码",
+                "orderNo": 40176,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "参数query填写错误",
+                "name": "参数query填写错误",
+                "value": "40212",
+                "remark": "微信开发返回码",
+                "orderNo": 40222,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "缺少access_token参数",
+                "name": "缺少access_token参数",
+                "value": "41001",
+                "remark": "微信开发返回码",
+                "orderNo": 41011,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "缺少appid参数",
+                "name": "缺少appid参数",
+                "value": "41002",
+                "remark": "微信开发返回码",
+                "orderNo": 41012,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "缺少refresh_token参数",
+                "name": "缺少refresh_token参数",
+                "value": "41003",
+                "remark": "微信开发返回码",
+                "orderNo": 41013,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "缺少secret参数",
+                "name": "缺少secret参数",
+                "value": "41004",
+                "remark": "微信开发返回码",
+                "orderNo": 41014,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "缺少多媒体文件数据",
+                "name": "缺少多媒体文件数据",
+                "value": "41005",
+                "remark": "微信开发返回码",
+                "orderNo": 41015,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "缺少media_id参数",
+                "name": "缺少media_id参数",
+                "value": "41006",
+                "remark": "微信开发返回码",
+                "orderNo": 41016,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "缺少子菜单数据",
+                "name": "缺少子菜单数据",
+                "value": "41007",
+                "remark": "微信开发返回码",
+                "orderNo": 41017,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "缺少oauth_code",
+                "name": "缺少oauth_code",
+                "value": "41008",
+                "remark": "微信开发返回码",
+                "orderNo": 41018,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "缺少openid",
+                "name": "缺少openid",
+                "value": "41009",
+                "remark": "微信开发返回码",
+                "orderNo": 41019,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "form_id不正确_或者过期",
+                "name": "form_id不正确_或者过期",
+                "value": "41028",
+                "remark": "微信开发返回码",
+                "orderNo": 41038,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "form_id已被使用",
+                "name": "form_id已被使用",
+                "value": "41029",
+                "remark": "微信开发返回码",
+                "orderNo": 41039,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "page不正确",
+                "name": "page不正确",
+                "value": "41030",
+                "remark": "微信开发返回码",
+                "orderNo": 41040,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "access_token超时",
+                "name": "access_token超时",
+                "value": "42001",
+                "remark": "微信开发返回码",
+                "orderNo": 42011,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "refresh_token超时",
+                "name": "refresh_token超时",
+                "value": "42002",
+                "remark": "微信开发返回码",
+                "orderNo": 42012,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "oauth_code超时",
+                "name": "oauth_code超时",
+                "value": "42003",
+                "remark": "微信开发返回码",
+                "orderNo": 42013,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "需要GET请求",
+                "name": "需要GET请求",
+                "value": "43001",
+                "remark": "微信开发返回码",
+                "orderNo": 43011,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "需要POST请求",
+                "name": "需要POST请求",
+                "value": "43002",
+                "remark": "微信开发返回码",
+                "orderNo": 43012,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "需要HTTPS请求",
+                "name": "需要HTTPS请求",
+                "value": "43003",
+                "remark": "微信开发返回码",
+                "orderNo": 43013,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "需要接收者关注",
+                "name": "需要接收者关注",
+                "value": "43004",
+                "remark": "微信开发返回码",
+                "orderNo": 43014,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "需要好友关系",
+                "name": "需要好友关系",
+                "value": "43005",
+                "remark": "微信开发返回码",
+                "orderNo": 43015,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "用户拒绝接受消息",
+                "name": "用户拒绝接受消息",
+                "value": "43101",
+                "remark": "微信开发返回码",
+                "orderNo": 43111,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "没有权限",
+                "name": "没有权限",
+                "value": "43104",
+                "remark": "微信开发返回码",
+                "orderNo": 43114,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "多媒体文件为空",
+                "name": "多媒体文件为空",
+                "value": "44001",
+                "remark": "微信开发返回码",
+                "orderNo": 44011,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "POST的数据包为空",
+                "name": "POST的数据包为空",
+                "value": "44002",
+                "remark": "微信开发返回码",
+                "orderNo": 44012,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "图文消息内容为空",
+                "name": "图文消息内容为空",
+                "value": "44003",
+                "remark": "微信开发返回码",
+                "orderNo": 44013,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "文本消息内容为空",
+                "name": "文本消息内容为空",
+                "value": "44004",
+                "remark": "微信开发返回码",
+                "orderNo": 44014,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "多媒体文件大小超过限制",
+                "name": "多媒体文件大小超过限制",
+                "value": "45001",
+                "remark": "微信开发返回码",
+                "orderNo": 45011,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "消息内容超过限制",
+                "name": "消息内容超过限制",
+                "value": "45002",
+                "remark": "微信开发返回码",
+                "orderNo": 45012,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "标题字段超过限制",
+                "name": "标题字段超过限制",
+                "value": "45003",
+                "remark": "微信开发返回码",
+                "orderNo": 45013,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "描述字段超过限制",
+                "name": "描述字段超过限制",
+                "value": "45004",
+                "remark": "微信开发返回码",
+                "orderNo": 45014,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "链接字段超过限制",
+                "name": "链接字段超过限制",
+                "value": "45005",
+                "remark": "微信开发返回码",
+                "orderNo": 45015,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "图片链接字段超过限制",
+                "name": "图片链接字段超过限制",
+                "value": "45006",
+                "remark": "微信开发返回码",
+                "orderNo": 45016,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "语音播放时间超过限制",
+                "name": "语音播放时间超过限制",
+                "value": "45007",
+                "remark": "微信开发返回码",
+                "orderNo": 45017,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "图文消息超过限制",
+                "name": "图文消息超过限制",
+                "value": "45008",
+                "remark": "微信开发返回码",
+                "orderNo": 45018,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "接口调用超过限制",
+                "name": "接口调用超过限制",
+                "value": "45009",
+                "remark": "微信开发返回码",
+                "orderNo": 45019,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "创建菜单个数超过限制",
+                "name": "创建菜单个数超过限制",
+                "value": "45010",
+                "remark": "微信开发返回码",
+                "orderNo": 45020,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "回复时间超过限制",
+                "name": "回复时间超过限制",
+                "value": "45015",
+                "remark": "微信开发返回码",
+                "orderNo": 45025,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "系统分组不允许修改",
+                "name": "系统分组不允许修改",
+                "value": "45016",
+                "remark": "微信开发返回码",
+                "orderNo": 45026,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "分组名字过长",
+                "name": "分组名字过长",
+                "value": "45017",
+                "remark": "微信开发返回码",
+                "orderNo": 45027,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "分组数量超过上限",
+                "name": "分组数量超过上限",
+                "value": "45018",
+                "remark": "微信开发返回码",
+                "orderNo": 45028,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "超出响应数量限制",
+                "name": "超出响应数量限制",
+                "value": "45047",
+                "remark": "微信开发返回码",
+                "orderNo": 45057,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "创建的标签数过多请注意不能超过100个",
+                "name": "创建的标签数过多请注意不能超过100个",
+                "value": "45056",
+                "remark": "微信开发返回码",
+                "orderNo": 45066,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "标签名非法请注意不能和其他标签重名",
+                "name": "标签名非法请注意不能和其他标签重名",
+                "value": "45157",
+                "remark": "微信开发返回码",
+                "orderNo": 45167,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "标签名长度超过30个字节",
+                "name": "标签名长度超过30个字节",
+                "value": "45158",
+                "remark": "微信开发返回码",
+                "orderNo": 45168,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不存在媒体数据",
+                "name": "不存在媒体数据",
+                "value": "46001",
+                "remark": "微信开发返回码",
+                "orderNo": 46011,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不存在的菜单版本",
+                "name": "不存在的菜单版本",
+                "value": "46002",
+                "remark": "微信开发返回码",
+                "orderNo": 46012,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不存在的菜单数据",
+                "name": "不存在的菜单数据",
+                "value": "46003",
+                "remark": "微信开发返回码",
+                "orderNo": 46013,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "解析JSON_XML内容错误",
+                "name": "解析JSON_XML内容错误",
+                "value": "47001",
+                "remark": "微信开发返回码",
+                "orderNo": 47011,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "模板参数不准确",
+                "name": "模板参数不准确",
+                "value": "47003",
+                "remark": "微信开发返回码",
+                "orderNo": 47013,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "api功能未授权",
+                "name": "api功能未授权",
+                "value": "48001",
+                "remark": "微信开发返回码",
+                "orderNo": 48011,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "用户未授权该api",
+                "name": "用户未授权该api",
+                "value": "50001",
+                "remark": "微信开发返回码",
+                "orderNo": 50011,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "名称格式不合法",
+                "name": "名称格式不合法",
+                "value": "53010",
+                "remark": "微信开发返回码",
+                "orderNo": 53020,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "名称检测命中频率限制",
+                "name": "名称检测命中频率限制",
+                "value": "53011",
+                "remark": "微信开发返回码",
+                "orderNo": 53021,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "禁止使用该名称",
+                "name": "禁止使用该名称",
+                "value": "53012",
+                "remark": "微信开发返回码",
+                "orderNo": 53022,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "公众号_名称与已有公众号名称重复_小程序_该名称与已有小程序名称重复",
+                "name": "公众号_名称与已有公众号名称重复_小程序_该名称与已有小程序名称重复",
+                "value": "53013",
+                "remark": "微信开发返回码",
+                "orderNo": 53023,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "公众号_公众号已有_名称A_时_需与该帐号相同主体才可申请_名称A_小程序_小程序已有_名称A_时_需与该帐号相同主体才可申请_名称A_",
+                "name": "公众号_公众号已有_名称A_时_需与该帐号相同主体才可申请_名称A_小程序_小程序已有_名称A_时_需与该帐号相同主体才可申请_名称A_",
+                "value": "53014",
+                "remark": "微信开发返回码",
+                "orderNo": 53024,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "公众号_该名称与已有小程序名称重复_需与该小程序帐号相同主体才可申请_小程序_该名称与已有公众号名称重复_需与该公众号帐号相同主体才可申请",
+                "name": "公众号_该名称与已有小程序名称重复_需与该小程序帐号相同主体才可申请_小程序_该名称与已有公众号名称重复_需与该公众号帐号相同主体才可申请",
+                "value": "53015",
+                "remark": "微信开发返回码",
+                "orderNo": 53025,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "公众号_该名称与已有多个小程序名称重复_暂不支持申请_小程序_该名称与已有多个公众号名称重复_暂不支持申请",
+                "name": "公众号_该名称与已有多个小程序名称重复_暂不支持申请_小程序_该名称与已有多个公众号名称重复_暂不支持申请",
+                "value": "53016",
+                "remark": "微信开发返回码",
+                "orderNo": 53026,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "公众号_小程序已有_名称A_时_需与该帐号相同主体才可申请_名称A_小程序_公众号已有_名称A_时_需与该帐号相同主体才可申请_名称A",
+                "name": "公众号_小程序已有_名称A_时_需与该帐号相同主体才可申请_名称A_小程序_公众号已有_名称A_时_需与该帐号相同主体才可申请_名称A",
+                "value": "53017",
+                "remark": "微信开发返回码",
+                "orderNo": 53027,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "名称命中微信号",
+                "name": "名称命中微信号",
+                "value": "53018",
+                "remark": "微信开发返回码",
+                "orderNo": 53028,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "名称在保护期内",
+                "name": "名称在保护期内",
+                "value": "53019",
+                "remark": "微信开发返回码",
+                "orderNo": 53029,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "法人姓名与微信号不一致",
+                "name": "法人姓名与微信号不一致",
+                "value": "61070",
+                "remark": "微信开发返回码",
+                "orderNo": 61080,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "系统错误system_error",
+                "name": "系统错误system_error",
+                "value": "61450",
+                "remark": "微信开发返回码",
+                "orderNo": 61460,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "参数错误invalid_parameter",
+                "name": "参数错误invalid_parameter",
+                "value": "61451",
+                "remark": "微信开发返回码",
+                "orderNo": 61461,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "无效客服账号invalid_kf_account",
+                "name": "无效客服账号invalid_kf_account",
+                "value": "61452",
+                "remark": "微信开发返回码",
+                "orderNo": 61462,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "客服帐号已存在kf_account_exsited",
+                "name": "客服帐号已存在kf_account_exsited",
+                "value": "61453",
+                "remark": "微信开发返回码",
+                "orderNo": 61463,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "客服帐号名长度超过限制",
+                "name": "客服帐号名长度超过限制",
+                "value": "61454",
+                "remark": "微信开发返回码",
+                "orderNo": 61464,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "客服帐号名包含非法字符",
+                "name": "客服帐号名包含非法字符",
+                "value": "61455",
+                "remark": "微信开发返回码",
+                "orderNo": 61465,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "客服帐号个数超过限制",
+                "name": "客服帐号个数超过限制",
+                "value": "61456",
+                "remark": "微信开发返回码",
+                "orderNo": 61466,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "无效头像文件类型invalid_file_type",
+                "name": "无效头像文件类型invalid_file_type",
+                "value": "61457",
+                "remark": "微信开发返回码",
+                "orderNo": 61467,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "日期格式错误",
+                "name": "日期格式错误",
+                "value": "61500",
+                "remark": "微信开发返回码",
+                "orderNo": 61510,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "日期范围错误",
+                "name": "日期范围错误",
+                "value": "61501",
+                "remark": "微信开发返回码",
+                "orderNo": 61511,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "发送消息失败_该用户已被加入黑名单_无法向此发送消息",
+                "name": "发送消息失败_该用户已被加入黑名单_无法向此发送消息",
+                "value": "62751",
+                "remark": "微信开发返回码",
+                "orderNo": 62761,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "门店不存在",
+                "name": "门店不存在",
+                "value": "65115",
+                "remark": "微信开发返回码",
+                "orderNo": 65125,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "该门店状态不允许更新",
+                "name": "该门店状态不允许更新",
+                "value": "65118",
+                "remark": "微信开发返回码",
+                "orderNo": 65128,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "标签格式错误",
+                "name": "标签格式错误",
+                "value": "85006",
+                "remark": "微信开发返回码",
+                "orderNo": 85016,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "页面路径错误",
+                "name": "页面路径错误",
+                "value": "85007",
+                "remark": "微信开发返回码",
+                "orderNo": 85017,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "类目填写错误",
+                "name": "类目填写错误",
+                "value": "85008",
+                "remark": "微信开发返回码",
+                "orderNo": 85018,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "已经有正在审核的版本",
+                "name": "已经有正在审核的版本",
+                "value": "85009",
+                "remark": "微信开发返回码",
+                "orderNo": 85019,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "item_list有项目为空",
+                "name": "item_list有项目为空",
+                "value": "85010",
+                "remark": "微信开发返回码",
+                "orderNo": 85020,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "标题填写错误",
+                "name": "标题填写错误",
+                "value": "85011",
+                "remark": "微信开发返回码",
+                "orderNo": 85021,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "无效的审核id",
+                "name": "无效的审核id",
+                "value": "85012",
+                "remark": "微信开发返回码",
+                "orderNo": 85022,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "版本输入错误",
+                "name": "版本输入错误",
+                "value": "85015",
+                "remark": "微信开发返回码",
+                "orderNo": 85025,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "没有审核版本",
+                "name": "没有审核版本",
+                "value": "85019",
+                "remark": "微信开发返回码",
+                "orderNo": 85029,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "审核状态未满足发布",
+                "name": "审核状态未满足发布",
+                "value": "85020",
+                "remark": "微信开发返回码",
+                "orderNo": 85030,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "状态不可变",
+                "name": "状态不可变",
+                "value": "85021",
+                "remark": "微信开发返回码",
+                "orderNo": 85031,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "action非法",
+                "name": "action非法",
+                "value": "85022",
+                "remark": "微信开发返回码",
+                "orderNo": 85032,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "审核列表填写的项目数不在1到5以内",
+                "name": "审核列表填写的项目数不在1到5以内",
+                "value": "85023",
+                "remark": "微信开发返回码",
+                "orderNo": 85033,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "需要补充相应资料_填写org_code和other_files参数",
+                "name": "需要补充相应资料_填写org_code和other_files参数",
+                "value": "85024",
+                "remark": "微信开发返回码",
+                "orderNo": 85034,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "管理员手机登记数量已超过上限",
+                "name": "管理员手机登记数量已超过上限",
+                "value": "85025",
+                "remark": "微信开发返回码",
+                "orderNo": 85035,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "该微信号已绑定5个管理员",
+                "name": "该微信号已绑定5个管理员",
+                "value": "85026",
+                "remark": "微信开发返回码",
+                "orderNo": 85036,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "管理员身份证已登记过5次",
+                "name": "管理员身份证已登记过5次",
+                "value": "85027",
+                "remark": "微信开发返回码",
+                "orderNo": 85037,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "该主体登记数量已超过上限",
+                "name": "该主体登记数量已超过上限",
+                "value": "85028",
+                "remark": "微信开发返回码",
+                "orderNo": 85038,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "商家名称已被占用",
+                "name": "商家名称已被占用",
+                "value": "85029",
+                "remark": "微信开发返回码",
+                "orderNo": 85039,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不能使用该名称",
+                "name": "不能使用该名称",
+                "value": "85031",
+                "remark": "微信开发返回码",
+                "orderNo": 85041,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "该名称在侵权投诉保护期",
+                "name": "该名称在侵权投诉保护期",
+                "value": "85032",
+                "remark": "微信开发返回码",
+                "orderNo": 85042,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "名称包含违规内容或微信等保留字",
+                "name": "名称包含违规内容或微信等保留字",
+                "value": "85033",
+                "remark": "微信开发返回码",
+                "orderNo": 85043,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "商家名称在改名15天保护期内",
+                "name": "商家名称在改名15天保护期内",
+                "value": "85034",
+                "remark": "微信开发返回码",
+                "orderNo": 85044,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "需与该帐号相同主体才可申请",
+                "name": "需与该帐号相同主体才可申请",
+                "value": "85035",
+                "remark": "微信开发返回码",
+                "orderNo": 85045,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "介绍中含有虚假混淆内容",
+                "name": "介绍中含有虚假混淆内容",
+                "value": "85036",
+                "remark": "微信开发返回码",
+                "orderNo": 85046,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "头像或者简介修改达到每个月上限",
+                "name": "头像或者简介修改达到每个月上限",
+                "value": "85049",
+                "remark": "微信开发返回码",
+                "orderNo": 85059,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "正在审核中_请勿重复提交",
+                "name": "正在审核中_请勿重复提交",
+                "value": "85050",
+                "remark": "微信开发返回码",
+                "orderNo": 85060,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "请先成功创建门店后再调用",
+                "name": "请先成功创建门店后再调用",
+                "value": "85053",
+                "remark": "微信开发返回码",
+                "orderNo": 85063,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "临时mediaid无效",
+                "name": "临时mediaid无效",
+                "value": "85056",
+                "remark": "微信开发返回码",
+                "orderNo": 85066,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "链接错误",
+                "name": "链接错误",
+                "value": "85066",
+                "remark": "微信开发返回码",
+                "orderNo": 85076,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "测试链接不是子链接",
+                "name": "测试链接不是子链接",
+                "value": "85068",
+                "remark": "微信开发返回码",
+                "orderNo": 85078,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "校验文件失败",
+                "name": "校验文件失败",
+                "value": "85069",
+                "remark": "微信开发返回码",
+                "orderNo": 85079,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "个人类型小程序无法设置二维码规则",
+                "name": "个人类型小程序无法设置二维码规则",
+                "value": "85070",
+                "remark": "微信开发返回码",
+                "orderNo": 85080,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "已添加该链接_请勿重复添加",
+                "name": "已添加该链接_请勿重复添加",
+                "value": "85071",
+                "remark": "微信开发返回码",
+                "orderNo": 85081,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "该链接已被占用",
+                "name": "该链接已被占用",
+                "value": "85072",
+                "remark": "微信开发返回码",
+                "orderNo": 85082,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "二维码规则已满",
+                "name": "二维码规则已满",
+                "value": "85073",
+                "remark": "微信开发返回码",
+                "orderNo": 85083,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "小程序未发布_小程序必须先发布代码才可以发布二维码跳转规则",
+                "name": "小程序未发布_小程序必须先发布代码才可以发布二维码跳转规则",
+                "value": "85074",
+                "remark": "微信开发返回码",
+                "orderNo": 85084,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "个人类型小程序无法设置二维码规则1",
+                "name": "个人类型小程序无法设置二维码规则1",
+                "value": "85075",
+                "remark": "微信开发返回码",
+                "orderNo": 85085,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "小程序没有线上版本_不能进行灰度",
+                "name": "小程序没有线上版本_不能进行灰度",
+                "value": "85079",
+                "remark": "微信开发返回码",
+                "orderNo": 85089,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "小程序提交的审核未审核通过",
+                "name": "小程序提交的审核未审核通过",
+                "value": "85080",
+                "remark": "微信开发返回码",
+                "orderNo": 85090,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "无效的发布比例",
+                "name": "无效的发布比例",
+                "value": "85081",
+                "remark": "微信开发返回码",
+                "orderNo": 85091,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "当前的发布比例需要比之前设置的高",
+                "name": "当前的发布比例需要比之前设置的高",
+                "value": "85082",
+                "remark": "微信开发返回码",
+                "orderNo": 85092,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "小程序提审数量已达本月上限",
+                "name": "小程序提审数量已达本月上限",
+                "value": "85085",
+                "remark": "微信开发返回码",
+                "orderNo": 85095,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "提交代码审核之前需提前上传代码",
+                "name": "提交代码审核之前需提前上传代码",
+                "value": "85086",
+                "remark": "微信开发返回码",
+                "orderNo": 85096,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "小程序已使用_api_navigateToMiniProgram_请声明跳转_appid_列表后再次提交",
+                "name": "小程序已使用_api_navigateToMiniProgram_请声明跳转_appid_列表后再次提交",
+                "value": "85087",
+                "remark": "微信开发返回码",
+                "orderNo": 85097,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不是由第三方代小程序进行调用",
+                "name": "不是由第三方代小程序进行调用",
+                "value": "86000",
+                "remark": "微信开发返回码",
+                "orderNo": 86010,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "不存在第三方的已经提交的代码",
+                "name": "不存在第三方的已经提交的代码",
+                "value": "86001",
+                "remark": "微信开发返回码",
+                "orderNo": 86011,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "小程序还未设置昵称_头像_简介_请先设置完后再重新提交",
+                "name": "小程序还未设置昵称_头像_简介_请先设置完后再重新提交",
+                "value": "86002",
+                "remark": "微信开发返回码",
+                "orderNo": 86012,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "无效微信号",
+                "name": "无效微信号",
+                "value": "86004",
+                "remark": "微信开发返回码",
+                "orderNo": 86014,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "签名错误",
+                "name": "签名错误",
+                "value": "87009",
+                "remark": "微信开发返回码",
+                "orderNo": 87019,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "现网已经在灰度发布_不能进行版本回退",
+                "name": "现网已经在灰度发布_不能进行版本回退",
+                "value": "87011",
+                "remark": "微信开发返回码",
+                "orderNo": 87021,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "该版本不能回退_可能的原因_1_无上一个线上版用于回退_2_此版本为已回退版本_不能回退_3_此版本为回退功能上线之前的版本_不能回退",
+                "name": "该版本不能回退_可能的原因_1_无上一个线上版用于回退_2_此版本为已回退版本_不能回退_3_此版本为回退功能上线之前的版本_不能回退",
+                "value": "87012",
+                "remark": "微信开发返回码",
+                "orderNo": 87022,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "内容含有违法违规内容",
+                "name": "内容含有违法违规内容",
+                "value": "87014",
+                "remark": "微信开发返回码",
+                "orderNo": 87024,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "没有留言权限",
+                "name": "没有留言权限",
+                "value": "88000",
+                "remark": "微信开发返回码",
+                "orderNo": 88010,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "该图文不存在",
+                "name": "该图文不存在",
+                "value": "88001",
+                "remark": "微信开发返回码",
+                "orderNo": 88011,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "文章存在敏感信息",
+                "name": "文章存在敏感信息",
+                "value": "88002",
+                "remark": "微信开发返回码",
+                "orderNo": 88012,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "精选评论数已达上限",
+                "name": "精选评论数已达上限",
+                "value": "88003",
+                "remark": "微信开发返回码",
+                "orderNo": 88013,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "已被用户删除_无法精选",
+                "name": "已被用户删除_无法精选",
+                "value": "88004",
+                "remark": "微信开发返回码",
+                "orderNo": 88014,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "已经回复过了",
+                "name": "已经回复过了",
+                "value": "88005",
+                "remark": "微信开发返回码",
+                "orderNo": 88015,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "回复超过长度限制或为0",
+                "name": "回复超过长度限制或为0",
+                "value": "88007",
+                "remark": "微信开发返回码",
+                "orderNo": 88017,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "该评论不存在",
+                "name": "该评论不存在",
+                "value": "88008",
+                "remark": "微信开发返回码",
+                "orderNo": 88018,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "获取评论数目不合法",
+                "name": "获取评论数目不合法",
+                "value": "88010",
+                "remark": "微信开发返回码",
+                "orderNo": 88020,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "该公众号_小程序已经绑定了开放平台帐号",
+                "name": "该公众号_小程序已经绑定了开放平台帐号",
+                "value": "89000",
+                "remark": "微信开发返回码",
+                "orderNo": 89010,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "业务域名无更改_无需重复设置",
+                "name": "业务域名无更改_无需重复设置",
+                "value": "89019",
+                "remark": "微信开发返回码",
+                "orderNo": 89029,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "尚未设置小程序业务域名_请先在第三方平台中设置小程序业务域名后在调用本接口",
+                "name": "尚未设置小程序业务域名_请先在第三方平台中设置小程序业务域名后在调用本接口",
+                "value": "89020",
+                "remark": "微信开发返回码",
+                "orderNo": 89030,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "请求保存的域名不是第三方平台中已设置的小程序业务域名或子域名",
+                "name": "请求保存的域名不是第三方平台中已设置的小程序业务域名或子域名",
+                "value": "89021",
+                "remark": "微信开发返回码",
+                "orderNo": 89031,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "业务域名数量超过限制_最多可以添加100个业务域名",
+                "name": "业务域名数量超过限制_最多可以添加100个业务域名",
+                "value": "89029",
+                "remark": "微信开发返回码",
+                "orderNo": 89039,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "个人小程序不支持调用_setwebviewdomain_接口",
+                "name": "个人小程序不支持调用_setwebviewdomain_接口",
+                "value": "89231",
+                "remark": "微信开发返回码",
+                "orderNo": 89241,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "内部错误",
+                "name": "内部错误",
+                "value": "89247",
+                "remark": "微信开发返回码",
+                "orderNo": 89257,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "企业代码类型无效_请选择正确类型填写",
+                "name": "企业代码类型无效_请选择正确类型填写",
+                "value": "89248",
+                "remark": "微信开发返回码",
+                "orderNo": 89258,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "该主体已有任务执行中_距上次任务24h后再试",
+                "name": "该主体已有任务执行中_距上次任务24h后再试",
+                "value": "89249",
+                "remark": "微信开发返回码",
+                "orderNo": 89259,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "未找到该任务",
+                "name": "未找到该任务",
+                "value": "89250",
+                "remark": "微信开发返回码",
+                "orderNo": 89260,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "待法人人脸核身校验",
+                "name": "待法人人脸核身校验",
+                "value": "89251",
+                "remark": "微信开发返回码",
+                "orderNo": 89261,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "法人_企业信息一致性校验中",
+                "name": "法人_企业信息一致性校验中",
+                "value": "89252",
+                "remark": "微信开发返回码",
+                "orderNo": 89262,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "缺少参数",
+                "name": "缺少参数",
+                "value": "89253",
+                "remark": "微信开发返回码",
+                "orderNo": 89263,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "第三方权限集不全_补全权限集全网发布后生效",
+                "name": "第三方权限集不全_补全权限集全网发布后生效",
+                "value": "89254",
+                "remark": "微信开发返回码",
+                "orderNo": 89264,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "系统不稳定_请稍后再试_如多次失败请通过社区反馈",
+                "name": "系统不稳定_请稍后再试_如多次失败请通过社区反馈",
+                "value": "89401",
+                "remark": "微信开发返回码",
+                "orderNo": 89411,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "该审核单不在待审核队列_请检查是否已提交审核或已审完",
+                "name": "该审核单不在待审核队列_请检查是否已提交审核或已审完",
+                "value": "89402",
+                "remark": "微信开发返回码",
+                "orderNo": 89412,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "本单属于平台不支持加急种类_请等待正常审核流程",
+                "name": "本单属于平台不支持加急种类_请等待正常审核流程",
+                "value": "89403",
+                "remark": "微信开发返回码",
+                "orderNo": 89413,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "本单已加速成功_请勿重复提交",
+                "name": "本单已加速成功_请勿重复提交",
+                "value": "89404",
+                "remark": "微信开发返回码",
+                "orderNo": 89414,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "本月加急额度不足_请提升提审质量以获取更多额度",
+                "name": "本月加急额度不足_请提升提审质量以获取更多额度",
+                "value": "89405",
+                "remark": "微信开发返回码",
+                "orderNo": 89415,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "该经营资质已添加_请勿重复添加",
+                "name": "该经营资质已添加_请勿重复添加",
+                "value": "92000",
+                "remark": "微信开发返回码",
+                "orderNo": 92010,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "附近地点添加数量达到上线_无法继续添加",
+                "name": "附近地点添加数量达到上线_无法继续添加",
+                "value": "92002",
+                "remark": "微信开发返回码",
+                "orderNo": 92012,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "地点已被其它小程序占用",
+                "name": "地点已被其它小程序占用",
+                "value": "92003",
+                "remark": "微信开发返回码",
+                "orderNo": 92013,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "附近功能被封禁",
+                "name": "附近功能被封禁",
+                "value": "92004",
+                "remark": "微信开发返回码",
+                "orderNo": 92014,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "地点正在审核中",
+                "name": "地点正在审核中",
+                "value": "92005",
+                "remark": "微信开发返回码",
+                "orderNo": 92015,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "地点正在展示小程序",
+                "name": "地点正在展示小程序",
+                "value": "92006",
+                "remark": "微信开发返回码",
+                "orderNo": 92016,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "地点审核失败",
+                "name": "地点审核失败",
+                "value": "92007",
+                "remark": "微信开发返回码",
+                "orderNo": 92017,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "程序未展示在该地点",
+                "name": "程序未展示在该地点",
+                "value": "92008",
+                "remark": "微信开发返回码",
+                "orderNo": 92018,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "小程序未上架或不可见",
+                "name": "小程序未上架或不可见",
+                "value": "92009",
+                "remark": "微信开发返回码",
+                "orderNo": 92019,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "地点不存在",
+                "name": "地点不存在",
+                "value": "93010",
+                "remark": "微信开发返回码",
+                "orderNo": 93020,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "个人类型小程序不可用",
+                "name": "个人类型小程序不可用",
+                "value": "93011",
+                "remark": "微信开发返回码",
+                "orderNo": 93021,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "已下发的模板消息法人并未确认且已超时_24h_未进行身份证校验",
+                "name": "已下发的模板消息法人并未确认且已超时_24h_未进行身份证校验",
+                "value": "100001",
+                "remark": "微信开发返回码",
+                "orderNo": 100011,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "已下发的模板消息法人并未确认且已超时_24h_未进行人脸识别校验",
+                "name": "已下发的模板消息法人并未确认且已超时_24h_未进行人脸识别校验",
+                "value": "100002",
+                "remark": "微信开发返回码",
+                "orderNo": 100012,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "已下发的模板消息法人并未确认且已超时_24h",
+                "name": "已下发的模板消息法人并未确认且已超时_24h",
+                "value": "100003",
+                "remark": "微信开发返回码",
+                "orderNo": 100013,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "此账号已被封禁_无法操作",
+                "name": "此账号已被封禁_无法操作",
+                "value": "200011",
+                "remark": "微信开发返回码",
+                "orderNo": 200021,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "私有模板数已达上限_上限_50_个",
+                "name": "私有模板数已达上限_上限_50_个",
+                "value": "200012",
+                "remark": "微信开发返回码",
+                "orderNo": 200022,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "此模版已被封禁_无法选用",
+                "name": "此模版已被封禁_无法选用",
+                "value": "200013",
+                "remark": "微信开发返回码",
+                "orderNo": 200023,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "模版tid参数错误",
+                "name": "模版tid参数错误",
+                "value": "200014",
+                "remark": "微信开发返回码",
+                "orderNo": 200024,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "关键词列表kidList参数错误",
+                "name": "关键词列表kidList参数错误",
+                "value": "200020",
+                "remark": "微信开发返回码",
+                "orderNo": 200030,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "WechatReturnCodeEnum",
+                "code": "场景描述sceneDesc参数错误",
+                "name": "场景描述sceneDesc参数错误",
+                "value": "200021",
+                "remark": "微信开发返回码",
+                "orderNo": 200031,
+                "tagType": "info"
+            }
+        ],
+        "code_gen_query_type": [
+            {
+                "typeCode": "code_gen_query_type",
+                "code": "==",
+                "name": null,
+                "value": "等于",
+                "remark": "等于",
+                "orderNo": 1,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_query_type",
+                "code": "like",
+                "name": null,
+                "value": "模糊",
+                "remark": "模糊",
+                "orderNo": 1,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_query_type",
+                "code": ">",
+                "name": null,
+                "value": "大于",
+                "remark": "大于",
+                "orderNo": 1,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_query_type",
+                "code": "<",
+                "name": null,
+                "value": "小于",
+                "remark": "小于",
+                "orderNo": 1,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_query_type",
+                "code": "!=",
+                "name": null,
+                "value": "不等于",
+                "remark": "不等于",
+                "orderNo": 1,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_query_type",
+                "code": ">=",
+                "name": null,
+                "value": "大于等于",
+                "remark": "大于等于",
+                "orderNo": 1,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_query_type",
+                "code": "<=",
+                "name": null,
+                "value": "小于等于",
+                "remark": "小于等于",
+                "orderNo": 1,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_query_type",
+                "code": "isNotNull",
+                "name": null,
+                "value": "不为空",
+                "remark": "不为空",
+                "orderNo": 1,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_query_type",
+                "code": "~",
+                "name": null,
+                "value": "时间范围",
+                "remark": "时间范围",
+                "orderNo": 1,
+                "tagType": null
+            }
+        ],
+        "code_gen_net_type": [
+            {
+                "typeCode": "code_gen_net_type",
+                "code": "long",
+                "name": null,
+                "value": "long",
+                "remark": "long",
+                "orderNo": 1,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_net_type",
+                "code": "string",
+                "name": null,
+                "value": "string",
+                "remark": "string",
+                "orderNo": 1,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_net_type",
+                "code": "DateTime",
+                "name": null,
+                "value": "DateTime",
+                "remark": "DateTime",
+                "orderNo": 1,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_net_type",
+                "code": "bool",
+                "name": null,
+                "value": "bool",
+                "remark": "bool",
+                "orderNo": 1,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_net_type",
+                "code": "int",
+                "name": null,
+                "value": "int",
+                "remark": "int",
+                "orderNo": 1,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_net_type",
+                "code": "double",
+                "name": null,
+                "value": "double",
+                "remark": "double",
+                "orderNo": 1,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_net_type",
+                "code": "float",
+                "name": null,
+                "value": "float",
+                "remark": "float",
+                "orderNo": 1,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_net_type",
+                "code": "decimal",
+                "name": null,
+                "value": "decimal",
+                "remark": "decimal",
+                "orderNo": 1,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_net_type",
+                "code": "Guid",
+                "name": null,
+                "value": "Guid",
+                "remark": "Guid",
+                "orderNo": 1,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_net_type",
+                "code": "DateTimeOffset",
+                "name": null,
+                "value": "DateTimeOffset",
+                "remark": "DateTimeOffset",
+                "orderNo": 1,
+                "tagType": null
+            }
+        ],
+        "code_gen_create_type": [
+            {
+                "typeCode": "code_gen_create_type",
+                "code": "100",
+                "name": null,
+                "value": "下载压缩包",
+                "remark": "下载压缩包",
+                "orderNo": 1,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_create_type",
+                "code": "111",
+                "name": null,
+                "value": "下载压缩包(前端)",
+                "remark": "下载压缩包(前端)",
+                "orderNo": 2,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_create_type",
+                "code": "121",
+                "name": null,
+                "value": "下载压缩包(后端)",
+                "remark": "下载压缩包(后端)",
+                "orderNo": 3,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_create_type",
+                "code": "200",
+                "name": null,
+                "value": "生成到本项目",
+                "remark": "生成到本项目",
+                "orderNo": 4,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_create_type",
+                "code": "211",
+                "name": null,
+                "value": "生成到本项目(前端)",
+                "remark": "生成到本项目(前端)",
+                "orderNo": 5,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_create_type",
+                "code": "221",
+                "name": null,
+                "value": "生成到本项目(后端)",
+                "remark": "生成到本项目(后端)",
+                "orderNo": 6,
+                "tagType": null
+            }
+        ],
+        "GoViewProState": [
+            {
+                "typeCode": "GoViewProState",
+                "code": "UnPublish",
+                "name": "未发布",
+                "value": "-1",
+                "remark": "GoView 项目状态",
+                "orderNo": 9,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "GoViewProState",
+                "code": "Published",
+                "name": "已发布",
+                "value": "1",
+                "remark": "GoView 项目状态",
+                "orderNo": 11,
+                "tagType": "info"
+            }
+        ],
+        "CacheTypeEnum": [
+            {
+                "typeCode": "CacheTypeEnum",
+                "code": "Memory",
+                "name": "内存缓存",
+                "value": "0",
+                "remark": "缓存类型枚举",
+                "orderNo": 10,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "CacheTypeEnum",
+                "code": "Redis",
+                "name": "Redis缓存",
+                "value": "1",
+                "remark": "缓存类型枚举",
+                "orderNo": 11,
+                "tagType": "info"
+            }
+        ],
+        "CardTypeEnum": [
+            {
+                "typeCode": "CardTypeEnum",
+                "code": "IdCard",
+                "name": "身份证",
+                "value": "0",
+                "remark": "证件类型枚举",
+                "orderNo": 10,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "CardTypeEnum",
+                "code": "PassportCard",
+                "name": "护照",
+                "value": "1",
+                "remark": "证件类型枚举",
+                "orderNo": 11,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "CardTypeEnum",
+                "code": "BirthCard",
+                "name": "出生证",
+                "value": "2",
+                "remark": "证件类型枚举",
+                "orderNo": 12,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "CardTypeEnum",
+                "code": "GatCard",
+                "name": "港澳台通行证",
+                "value": "3",
+                "remark": "证件类型枚举",
+                "orderNo": 13,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "CardTypeEnum",
+                "code": "ForeignCard",
+                "name": "外国人居留证",
+                "value": "4",
+                "remark": "证件类型枚举",
+                "orderNo": 14,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "CardTypeEnum",
+                "code": "License",
+                "name": "营业执照",
+                "value": "5",
+                "remark": "证件类型枚举",
+                "orderNo": 15,
+                "tagType": "info"
+            }
+        ],
+        "CryptogramEnum": [
+            {
+                "typeCode": "CryptogramEnum",
+                "code": "MD5",
+                "name": "MD5",
+                "value": "0",
+                "remark": "密码加密枚举",
+                "orderNo": 10,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "CryptogramEnum",
+                "code": "SM2",
+                "name": "SM2",
+                "value": "1",
+                "remark": "密码加密枚举",
+                "orderNo": 11,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "CryptogramEnum",
+                "code": "SM4",
+                "name": "SM4",
+                "value": "2",
+                "remark": "密码加密枚举",
+                "orderNo": 12,
+                "tagType": "info"
+            }
+        ],
+        "CultureLevelEnum": [
+            {
+                "typeCode": "CultureLevelEnum",
+                "code": "Level0",
+                "name": "其他",
+                "value": "0",
+                "remark": "文化程度枚举",
+                "orderNo": 10,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "CultureLevelEnum",
+                "code": "Level1",
+                "name": "文盲",
+                "value": "1",
+                "remark": "文化程度枚举",
+                "orderNo": 11,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "CultureLevelEnum",
+                "code": "Level2",
+                "name": "小学",
+                "value": "2",
+                "remark": "文化程度枚举",
+                "orderNo": 12,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "CultureLevelEnum",
+                "code": "Level3",
+                "name": "初中",
+                "value": "3",
+                "remark": "文化程度枚举",
+                "orderNo": 13,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "CultureLevelEnum",
+                "code": "Level4",
+                "name": "普通高中",
+                "value": "4",
+                "remark": "文化程度枚举",
+                "orderNo": 14,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "CultureLevelEnum",
+                "code": "Level5",
+                "name": "技工学校",
+                "value": "5",
+                "remark": "文化程度枚举",
+                "orderNo": 15,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "CultureLevelEnum",
+                "code": "Level6",
+                "name": "职业教育",
+                "value": "6",
+                "remark": "文化程度枚举",
+                "orderNo": 16,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "CultureLevelEnum",
+                "code": "Level7",
+                "name": "职业高中",
+                "value": "7",
+                "remark": "文化程度枚举",
+                "orderNo": 17,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "CultureLevelEnum",
+                "code": "Level8",
+                "name": "中等专科",
+                "value": "8",
+                "remark": "文化程度枚举",
+                "orderNo": 18,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "CultureLevelEnum",
+                "code": "Level9",
+                "name": "大学专科",
+                "value": "9",
+                "remark": "文化程度枚举",
+                "orderNo": 19,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "CultureLevelEnum",
+                "code": "Level10",
+                "name": "大学本科",
+                "value": "10",
+                "remark": "文化程度枚举",
+                "orderNo": 20,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "CultureLevelEnum",
+                "code": "Level11",
+                "name": "硕士研究生",
+                "value": "11",
+                "remark": "文化程度枚举",
+                "orderNo": 21,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "CultureLevelEnum",
+                "code": "Level12",
+                "name": "博士研究生",
+                "value": "12",
+                "remark": "文化程度枚举",
+                "orderNo": 22,
+                "tagType": "info"
+            }
+        ],
+        "DataOpTypeEnum": [
+            {
+                "typeCode": "DataOpTypeEnum",
+                "code": "Other",
+                "name": "其它",
+                "value": "0",
+                "remark": "数据操作类型枚举",
+                "orderNo": 10,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "DataOpTypeEnum",
+                "code": "Add",
+                "name": "增加",
+                "value": "1",
+                "remark": "数据操作类型枚举",
+                "orderNo": 11,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "DataOpTypeEnum",
+                "code": "Delete",
+                "name": "删除",
+                "value": "2",
+                "remark": "数据操作类型枚举",
+                "orderNo": 12,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "DataOpTypeEnum",
+                "code": "Edit",
+                "name": "编辑",
+                "value": "3",
+                "remark": "数据操作类型枚举",
+                "orderNo": 13,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "DataOpTypeEnum",
+                "code": "Update",
+                "name": "更新",
+                "value": "4",
+                "remark": "数据操作类型枚举",
+                "orderNo": 14,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "DataOpTypeEnum",
+                "code": "Query",
+                "name": "查询",
+                "value": "5",
+                "remark": "数据操作类型枚举",
+                "orderNo": 15,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "DataOpTypeEnum",
+                "code": "Detail",
+                "name": "详情",
+                "value": "6",
+                "remark": "数据操作类型枚举",
+                "orderNo": 16,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "DataOpTypeEnum",
+                "code": "Tree",
+                "name": "树",
+                "value": "7",
+                "remark": "数据操作类型枚举",
+                "orderNo": 17,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "DataOpTypeEnum",
+                "code": "Import",
+                "name": "导入",
+                "value": "8",
+                "remark": "数据操作类型枚举",
+                "orderNo": 18,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "DataOpTypeEnum",
+                "code": "Export",
+                "name": "导出",
+                "value": "9",
+                "remark": "数据操作类型枚举",
+                "orderNo": 19,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "DataOpTypeEnum",
+                "code": "Grant",
+                "name": "授权",
+                "value": "10",
+                "remark": "数据操作类型枚举",
+                "orderNo": 20,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "DataOpTypeEnum",
+                "code": "Force",
+                "name": "强退",
+                "value": "11",
+                "remark": "数据操作类型枚举",
+                "orderNo": 21,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "DataOpTypeEnum",
+                "code": "Clean",
+                "name": "清空",
+                "value": "12",
+                "remark": "数据操作类型枚举",
+                "orderNo": 22,
+                "tagType": "info"
+            }
+        ],
+        "ErrorCodeEnum": [
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D0008",
+                "name": "D0008",
+                "value": "0",
+                "remark": "系统错误码",
+                "orderNo": 10,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D0009",
+                "name": "D0009",
+                "value": "1",
+                "remark": "系统错误码",
+                "orderNo": 11,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D0010",
+                "name": "D0010",
+                "value": "2",
+                "remark": "系统错误码",
+                "orderNo": 12,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1000",
+                "name": "D1000",
+                "value": "3",
+                "remark": "系统错误码",
+                "orderNo": 13,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1001",
+                "name": "D1001",
+                "value": "4",
+                "remark": "系统错误码",
+                "orderNo": 14,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1002",
+                "name": "D1002",
+                "value": "5",
+                "remark": "系统错误码",
+                "orderNo": 15,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1003",
+                "name": "D1003",
+                "value": "6",
+                "remark": "系统错误码",
+                "orderNo": 16,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1004",
+                "name": "D1004",
+                "value": "7",
+                "remark": "系统错误码",
+                "orderNo": 17,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1005",
+                "name": "D1005",
+                "value": "8",
+                "remark": "系统错误码",
+                "orderNo": 18,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1006",
+                "name": "D1006",
+                "value": "9",
+                "remark": "系统错误码",
+                "orderNo": 19,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1007",
+                "name": "D1007",
+                "value": "10",
+                "remark": "系统错误码",
+                "orderNo": 20,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1008",
+                "name": "D1008",
+                "value": "11",
+                "remark": "系统错误码",
+                "orderNo": 21,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1009",
+                "name": "D1009",
+                "value": "12",
+                "remark": "系统错误码",
+                "orderNo": 22,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1010",
+                "name": "D1010",
+                "value": "13",
+                "remark": "系统错误码",
+                "orderNo": 23,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1011",
+                "name": "D1011",
+                "value": "14",
+                "remark": "系统错误码",
+                "orderNo": 24,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1012",
+                "name": "D1012",
+                "value": "15",
+                "remark": "系统错误码",
+                "orderNo": 25,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1013",
+                "name": "D1013",
+                "value": "16",
+                "remark": "系统错误码",
+                "orderNo": 26,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1014",
+                "name": "D1014",
+                "value": "17",
+                "remark": "系统错误码",
+                "orderNo": 27,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1015",
+                "name": "D1015",
+                "value": "18",
+                "remark": "系统错误码",
+                "orderNo": 28,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1016",
+                "name": "D1016",
+                "value": "19",
+                "remark": "系统错误码",
+                "orderNo": 29,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1017",
+                "name": "D1017",
+                "value": "20",
+                "remark": "系统错误码",
+                "orderNo": 30,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1018",
+                "name": "D1018",
+                "value": "21",
+                "remark": "系统错误码",
+                "orderNo": 31,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1019",
+                "name": "D1019",
+                "value": "22",
+                "remark": "系统错误码",
+                "orderNo": 32,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1020",
+                "name": "D1020",
+                "value": "23",
+                "remark": "系统错误码",
+                "orderNo": 33,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1021",
+                "name": "D1021",
+                "value": "24",
+                "remark": "系统错误码",
+                "orderNo": 34,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1022",
+                "name": "D1022",
+                "value": "25",
+                "remark": "系统错误码",
+                "orderNo": 35,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1023",
+                "name": "D1023",
+                "value": "26",
+                "remark": "系统错误码",
+                "orderNo": 36,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1024",
+                "name": "D1024",
+                "value": "27",
+                "remark": "系统错误码",
+                "orderNo": 37,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1025",
+                "name": "D1025",
+                "value": "28",
+                "remark": "系统错误码",
+                "orderNo": 38,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1026",
+                "name": "D1026",
+                "value": "29",
+                "remark": "系统错误码",
+                "orderNo": 39,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1027",
+                "name": "D1027",
+                "value": "30",
+                "remark": "系统错误码",
+                "orderNo": 40,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1028",
+                "name": "D1028",
+                "value": "31",
+                "remark": "系统错误码",
+                "orderNo": 41,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D2000",
+                "name": "D2000",
+                "value": "32",
+                "remark": "系统错误码",
+                "orderNo": 42,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D2001",
+                "name": "D2001",
+                "value": "33",
+                "remark": "系统错误码",
+                "orderNo": 43,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D2002",
+                "name": "D2002",
+                "value": "34",
+                "remark": "系统错误码",
+                "orderNo": 44,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D2003",
+                "name": "D2003",
+                "value": "35",
+                "remark": "系统错误码",
+                "orderNo": 45,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D2004",
+                "name": "D2004",
+                "value": "36",
+                "remark": "系统错误码",
+                "orderNo": 46,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D2005",
+                "name": "D2005",
+                "value": "37",
+                "remark": "系统错误码",
+                "orderNo": 47,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D2006",
+                "name": "D2006",
+                "value": "38",
+                "remark": "系统错误码",
+                "orderNo": 48,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D2007",
+                "name": "D2007",
+                "value": "39",
+                "remark": "系统错误码",
+                "orderNo": 49,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D2008",
+                "name": "D2008",
+                "value": "40",
+                "remark": "系统错误码",
+                "orderNo": 50,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D2009",
+                "name": "D2009",
+                "value": "41",
+                "remark": "系统错误码",
+                "orderNo": 51,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D3000",
+                "name": "D3000",
+                "value": "42",
+                "remark": "系统错误码",
+                "orderNo": 52,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D3001",
+                "name": "D3001",
+                "value": "43",
+                "remark": "系统错误码",
+                "orderNo": 53,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D3002",
+                "name": "D3002",
+                "value": "44",
+                "remark": "系统错误码",
+                "orderNo": 54,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D3003",
+                "name": "D3003",
+                "value": "45",
+                "remark": "系统错误码",
+                "orderNo": 55,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D3004",
+                "name": "D3004",
+                "value": "46",
+                "remark": "系统错误码",
+                "orderNo": 56,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D3005",
+                "name": "D3005",
+                "value": "47",
+                "remark": "系统错误码",
+                "orderNo": 57,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D4000",
+                "name": "D4000",
+                "value": "48",
+                "remark": "系统错误码",
+                "orderNo": 58,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D4001",
+                "name": "D4001",
+                "value": "49",
+                "remark": "系统错误码",
+                "orderNo": 59,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D4002",
+                "name": "D4002",
+                "value": "50",
+                "remark": "系统错误码",
+                "orderNo": 60,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D4003",
+                "name": "D4003",
+                "value": "51",
+                "remark": "系统错误码",
+                "orderNo": 61,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D4004",
+                "name": "D4004",
+                "value": "52",
+                "remark": "系统错误码",
+                "orderNo": 62,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D4005",
+                "name": "D4005",
+                "value": "53",
+                "remark": "系统错误码",
+                "orderNo": 63,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D4006",
+                "name": "D4006",
+                "value": "54",
+                "remark": "系统错误码",
+                "orderNo": 64,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D4007",
+                "name": "D4007",
+                "value": "55",
+                "remark": "系统错误码",
+                "orderNo": 65,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D4008",
+                "name": "D4008",
+                "value": "56",
+                "remark": "系统错误码",
+                "orderNo": 66,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D4009",
+                "name": "D4009",
+                "value": "57",
+                "remark": "系统错误码",
+                "orderNo": 67,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D4010",
+                "name": "D4010",
+                "value": "58",
+                "remark": "系统错误码",
+                "orderNo": 68,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D5000",
+                "name": "D5000",
+                "value": "59",
+                "remark": "系统错误码",
+                "orderNo": 69,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D5001",
+                "name": "D5001",
+                "value": "60",
+                "remark": "系统错误码",
+                "orderNo": 70,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D5002",
+                "name": "D5002",
+                "value": "61",
+                "remark": "系统错误码",
+                "orderNo": 71,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D5003",
+                "name": "D5003",
+                "value": "62",
+                "remark": "系统错误码",
+                "orderNo": 72,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D6000",
+                "name": "D6000",
+                "value": "63",
+                "remark": "系统错误码",
+                "orderNo": 73,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D6001",
+                "name": "D6001",
+                "value": "64",
+                "remark": "系统错误码",
+                "orderNo": 74,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D6002",
+                "name": "D6002",
+                "value": "65",
+                "remark": "系统错误码",
+                "orderNo": 75,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D6003",
+                "name": "D6003",
+                "value": "66",
+                "remark": "系统错误码",
+                "orderNo": 76,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D7000",
+                "name": "D7000",
+                "value": "67",
+                "remark": "系统错误码",
+                "orderNo": 77,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D7001",
+                "name": "D7001",
+                "value": "68",
+                "remark": "系统错误码",
+                "orderNo": 78,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D7002",
+                "name": "D7002",
+                "value": "69",
+                "remark": "系统错误码",
+                "orderNo": 79,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D7003",
+                "name": "D7003",
+                "value": "70",
+                "remark": "系统错误码",
+                "orderNo": 80,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D8000",
+                "name": "D8000",
+                "value": "71",
+                "remark": "系统错误码",
+                "orderNo": 81,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D8001",
+                "name": "D8001",
+                "value": "72",
+                "remark": "系统错误码",
+                "orderNo": 82,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D8002",
+                "name": "D8002",
+                "value": "73",
+                "remark": "系统错误码",
+                "orderNo": 83,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D8003",
+                "name": "D8003",
+                "value": "74",
+                "remark": "系统错误码",
+                "orderNo": 84,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D8004",
+                "name": "D8004",
+                "value": "75",
+                "remark": "系统错误码",
+                "orderNo": 85,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D9000",
+                "name": "D9000",
+                "value": "76",
+                "remark": "系统错误码",
+                "orderNo": 86,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D9001",
+                "name": "D9001",
+                "value": "77",
+                "remark": "系统错误码",
+                "orderNo": 87,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1100",
+                "name": "D1100",
+                "value": "78",
+                "remark": "系统错误码",
+                "orderNo": 88,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1101",
+                "name": "D1101",
+                "value": "79",
+                "remark": "系统错误码",
+                "orderNo": 89,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1200",
+                "name": "D1200",
+                "value": "80",
+                "remark": "系统错误码",
+                "orderNo": 90,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1300",
+                "name": "D1300",
+                "value": "81",
+                "remark": "系统错误码",
+                "orderNo": 91,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1301",
+                "name": "D1301",
+                "value": "82",
+                "remark": "系统错误码",
+                "orderNo": 92,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1302",
+                "name": "D1302",
+                "value": "83",
+                "remark": "系统错误码",
+                "orderNo": 93,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1400",
+                "name": "D1400",
+                "value": "84",
+                "remark": "系统错误码",
+                "orderNo": 94,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1501",
+                "name": "D1501",
+                "value": "85",
+                "remark": "系统错误码",
+                "orderNo": 95,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1502",
+                "name": "D1502",
+                "value": "86",
+                "remark": "系统错误码",
+                "orderNo": 96,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1503",
+                "name": "D1503",
+                "value": "87",
+                "remark": "系统错误码",
+                "orderNo": 97,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1504",
+                "name": "D1504",
+                "value": "88",
+                "remark": "系统错误码",
+                "orderNo": 98,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1505",
+                "name": "D1505",
+                "value": "89",
+                "remark": "系统错误码",
+                "orderNo": 99,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1600",
+                "name": "D1600",
+                "value": "90",
+                "remark": "系统错误码",
+                "orderNo": 100,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1601",
+                "name": "D1601",
+                "value": "91",
+                "remark": "系统错误码",
+                "orderNo": 101,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1602",
+                "name": "D1602",
+                "value": "92",
+                "remark": "系统错误码",
+                "orderNo": 102,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1701",
+                "name": "D1701",
+                "value": "93",
+                "remark": "系统错误码",
+                "orderNo": 103,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1702",
+                "name": "D1702",
+                "value": "94",
+                "remark": "系统错误码",
+                "orderNo": 104,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1703",
+                "name": "D1703",
+                "value": "95",
+                "remark": "系统错误码",
+                "orderNo": 105,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1704",
+                "name": "D1704",
+                "value": "96",
+                "remark": "系统错误码",
+                "orderNo": 106,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1705",
+                "name": "D1705",
+                "value": "97",
+                "remark": "系统错误码",
+                "orderNo": 107,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1800",
+                "name": "D1800",
+                "value": "98",
+                "remark": "系统错误码",
+                "orderNo": 108,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "D1900",
+                "name": "D1900",
+                "value": "99",
+                "remark": "系统错误码",
+                "orderNo": 109,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "xg1000",
+                "name": "xg1000",
+                "value": "100",
+                "remark": "系统错误码",
+                "orderNo": 110,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "xg1001",
+                "name": "xg1001",
+                "value": "101",
+                "remark": "系统错误码",
+                "orderNo": 111,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "xg1002",
+                "name": "xg1002",
+                "value": "102",
+                "remark": "系统错误码",
+                "orderNo": 112,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "db1000",
+                "name": "db1000",
+                "value": "103",
+                "remark": "系统错误码",
+                "orderNo": 113,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "db1001",
+                "name": "db1001",
+                "value": "104",
+                "remark": "系统错误码",
+                "orderNo": 114,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "db1002",
+                "name": "db1002",
+                "value": "105",
+                "remark": "系统错误码",
+                "orderNo": 115,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "R2000",
+                "name": "R2000",
+                "value": "106",
+                "remark": "系统错误码",
+                "orderNo": 116,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "R2001",
+                "name": "R2001",
+                "value": "107",
+                "remark": "系统错误码",
+                "orderNo": 117,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "R2002",
+                "name": "R2002",
+                "value": "108",
+                "remark": "系统错误码",
+                "orderNo": 118,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "Z1001",
+                "name": "Z1001",
+                "value": "109",
+                "remark": "系统错误码",
+                "orderNo": 119,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "Z1002",
+                "name": "Z1002",
+                "value": "110",
+                "remark": "系统错误码",
+                "orderNo": 120,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "Z1003",
+                "name": "Z1003",
+                "value": "111",
+                "remark": "系统错误码",
+                "orderNo": 121,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "Z1004",
+                "name": "Z1004",
+                "value": "112",
+                "remark": "系统错误码",
+                "orderNo": 122,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ErrorCodeEnum",
+                "code": "O1000",
+                "name": "O1000",
+                "value": "113",
+                "remark": "系统错误码",
+                "orderNo": 123,
+                "tagType": "info"
+            }
+        ],
+        "HttpMethodEnum": [
+            {
+                "typeCode": "HttpMethodEnum",
+                "code": "Get",
+                "name": "HTTP \"GET\" method.",
+                "value": "0",
+                "remark": "HTTP请求方法枚举",
+                "orderNo": 10,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "HttpMethodEnum",
+                "code": "Post",
+                "name": "HTTP \"POST\" method.",
+                "value": "1",
+                "remark": "HTTP请求方法枚举",
+                "orderNo": 11,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "HttpMethodEnum",
+                "code": "Put",
+                "name": " HTTP \"PUT\" method.",
+                "value": "2",
+                "remark": "HTTP请求方法枚举",
+                "orderNo": 12,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "HttpMethodEnum",
+                "code": "Delete",
+                "name": "HTTP \"DELETE\" method.",
+                "value": "3",
+                "remark": "HTTP请求方法枚举",
+                "orderNo": 13,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "HttpMethodEnum",
+                "code": "Patch",
+                "name": "HTTP \"PATCH\" method. ",
+                "value": "4",
+                "remark": "HTTP请求方法枚举",
+                "orderNo": 14,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "HttpMethodEnum",
+                "code": "Head",
+                "name": "HTTP \"HEAD\" method.",
+                "value": "5",
+                "remark": "HTTP请求方法枚举",
+                "orderNo": 15,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "HttpMethodEnum",
+                "code": "Options",
+                "name": "HTTP \"OPTIONS\" method.",
+                "value": "6",
+                "remark": "HTTP请求方法枚举",
+                "orderNo": 16,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "HttpMethodEnum",
+                "code": "Trace",
+                "name": " HTTP \"TRACE\" method.",
+                "value": "7",
+                "remark": "HTTP请求方法枚举",
+                "orderNo": 17,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "HttpMethodEnum",
+                "code": "Connect",
+                "name": "HTTP \"CONNECT\" method.",
+                "value": "8",
+                "remark": "HTTP请求方法枚举",
+                "orderNo": 18,
+                "tagType": "info"
+            }
+        ],
+        "JobCreateTypeEnum": [
+            {
+                "typeCode": "JobCreateTypeEnum",
+                "code": "BuiltIn",
+                "name": "内置",
+                "value": "0",
+                "remark": "作业创建类型枚举",
+                "orderNo": 10,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "JobCreateTypeEnum",
+                "code": "Script",
+                "name": "脚本",
+                "value": "1",
+                "remark": "作业创建类型枚举",
+                "orderNo": 11,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "JobCreateTypeEnum",
+                "code": "Http",
+                "name": "HTTP请求",
+                "value": "2",
+                "remark": "作业创建类型枚举",
+                "orderNo": 12,
+                "tagType": "info"
+            }
+        ],
+        "MessageTypeEnum": [
+            {
+                "typeCode": "MessageTypeEnum",
+                "code": "Info",
+                "name": "消息",
+                "value": "0",
+                "remark": "消息类型枚举",
+                "orderNo": 10,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "MessageTypeEnum",
+                "code": "Success",
+                "name": "成功",
+                "value": "1",
+                "remark": "消息类型枚举",
+                "orderNo": 11,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "MessageTypeEnum",
+                "code": "Warning",
+                "name": "警告",
+                "value": "2",
+                "remark": "消息类型枚举",
+                "orderNo": 12,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "MessageTypeEnum",
+                "code": "Error",
+                "name": "错误",
+                "value": "3",
+                "remark": "消息类型枚举",
+                "orderNo": 13,
+                "tagType": "info"
+            }
+        ],
+        "NoticeStatusEnum": [
+            {
+                "typeCode": "NoticeStatusEnum",
+                "code": "DRAFT",
+                "name": "草稿",
+                "value": "0",
+                "remark": "通知公告状态枚举",
+                "orderNo": 10,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "NoticeStatusEnum",
+                "code": "PUBLIC",
+                "name": "发布",
+                "value": "1",
+                "remark": "通知公告状态枚举",
+                "orderNo": 11,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "NoticeStatusEnum",
+                "code": "CANCEL",
+                "name": "撤回",
+                "value": "2",
+                "remark": "通知公告状态枚举",
+                "orderNo": 12,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "NoticeStatusEnum",
+                "code": "DELETED",
+                "name": "删除",
+                "value": "3",
+                "remark": "通知公告状态枚举",
+                "orderNo": 13,
+                "tagType": "info"
+            }
+        ],
+        "NoticeUserStatusEnum": [
+            {
+                "typeCode": "NoticeUserStatusEnum",
+                "code": "UNREAD",
+                "name": "未读",
+                "value": "0",
+                "remark": "通知公告用户状态枚举",
+                "orderNo": 10,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "NoticeUserStatusEnum",
+                "code": "READ",
+                "name": "已读",
+                "value": "1",
+                "remark": "通知公告用户状态枚举",
+                "orderNo": 11,
+                "tagType": "info"
+            }
+        ],
+        "RequestTypeEnum": [
+            {
+                "typeCode": "RequestTypeEnum",
+                "code": "Run",
+                "name": "Run",
+                "value": "0",
+                "remark": "HTTP请求类型",
+                "orderNo": 10,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "RequestTypeEnum",
+                "code": "Get",
+                "name": "Get",
+                "value": "1",
+                "remark": "HTTP请求类型",
+                "orderNo": 11,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "RequestTypeEnum",
+                "code": "Post",
+                "name": "Post",
+                "value": "2",
+                "remark": "HTTP请求类型",
+                "orderNo": 12,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "RequestTypeEnum",
+                "code": "Put",
+                "name": "Put",
+                "value": "3",
+                "remark": "HTTP请求类型",
+                "orderNo": 13,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "RequestTypeEnum",
+                "code": "Delete",
+                "name": "Delete",
+                "value": "4",
+                "remark": "HTTP请求类型",
+                "orderNo": 14,
+                "tagType": "info"
+            }
+        ],
+        "TenantTypeEnum": [
+            {
+                "typeCode": "TenantTypeEnum",
+                "code": "Id",
+                "name": "Id隔离",
+                "value": "0",
+                "remark": "租户类型枚举",
+                "orderNo": 10,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "TenantTypeEnum",
+                "code": "Db",
+                "name": "库隔离",
+                "value": "1",
+                "remark": "租户类型枚举",
+                "orderNo": 11,
+                "tagType": "info"
+            }
+        ],
+        "DingTalkConversationTypeEnum": [
+            {
+                "typeCode": "DingTalkConversationTypeEnum",
+                "code": "SingleChat",
+                "name": "单聊",
+                "value": "0",
+                "remark": "钉钉发送的会话类型枚举",
+                "orderNo": 10,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "DingTalkConversationTypeEnum",
+                "code": "GroupChat",
+                "name": "群聊",
+                "value": "1",
+                "remark": "钉钉发送的会话类型枚举",
+                "orderNo": 11,
+                "tagType": "info"
+            }
+        ],
+        "DataScopeEnum": [
+            {
+                "typeCode": "DataScopeEnum",
+                "code": "All",
+                "name": "全部数据",
+                "value": "1",
+                "remark": "角色数据范围枚举",
+                "orderNo": 11,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "DataScopeEnum",
+                "code": "DeptChild",
+                "name": "本部门及以下数据",
+                "value": "2",
+                "remark": "角色数据范围枚举",
+                "orderNo": 12,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "DataScopeEnum",
+                "code": "Dept",
+                "name": "本部门数据",
+                "value": "3",
+                "remark": "角色数据范围枚举",
+                "orderNo": 13,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "DataScopeEnum",
+                "code": "Self",
+                "name": "仅本人数据",
+                "value": "4",
+                "remark": "角色数据范围枚举",
+                "orderNo": 14,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "DataScopeEnum",
+                "code": "Define",
+                "name": "自定义数据",
+                "value": "5",
+                "remark": "角色数据范围枚举",
+                "orderNo": 15,
+                "tagType": "info"
+            }
+        ],
+        "ElasticSearchAuthTypeEnum": [
+            {
+                "typeCode": "ElasticSearchAuthTypeEnum",
+                "code": "Basic",
+                "name": "BasicAuthentication",
+                "value": "1",
+                "remark": "ES认证类型枚举",
+                "orderNo": 11,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ElasticSearchAuthTypeEnum",
+                "code": "ApiKey",
+                "name": "ApiKey",
+                "value": "2",
+                "remark": "ES认证类型枚举",
+                "orderNo": 12,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "ElasticSearchAuthTypeEnum",
+                "code": "Base64ApiKey",
+                "name": "Base64ApiKey",
+                "value": "3",
+                "remark": "ES认证类型枚举",
+                "orderNo": 13,
+                "tagType": "info"
+            }
+        ],
+        "GenderEnum": [
+            {
+                "typeCode": "GenderEnum",
+                "code": "Male",
+                "name": "男",
+                "value": "1",
+                "remark": "性别枚举",
+                "orderNo": 11,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "GenderEnum",
+                "code": "Female",
+                "name": "女",
+                "value": "2",
+                "remark": "性别枚举",
+                "orderNo": 12,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "GenderEnum",
+                "code": "Other",
+                "name": "其他",
+                "value": "3",
+                "remark": "性别枚举",
+                "orderNo": 13,
+                "tagType": "info"
+            }
+        ],
+        "JobStatusEnum": [
+            {
+                "typeCode": "JobStatusEnum",
+                "code": "On",
+                "name": "在职",
+                "value": "1",
+                "remark": "岗位状态枚举",
+                "orderNo": 11,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "JobStatusEnum",
+                "code": "Off",
+                "name": "离职",
+                "value": "2",
+                "remark": "岗位状态枚举",
+                "orderNo": 12,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "JobStatusEnum",
+                "code": "Leave",
+                "name": "请假",
+                "value": "3",
+                "remark": "岗位状态枚举",
+                "orderNo": 13,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "JobStatusEnum",
+                "code": "Other",
+                "name": "其他",
+                "value": "4",
+                "remark": "岗位状态枚举",
+                "orderNo": 14,
+                "tagType": "info"
+            }
+        ],
+        "LoginModeEnum": [
+            {
+                "typeCode": "LoginModeEnum",
+                "code": "PC",
+                "name": "PC模式",
+                "value": "1",
+                "remark": "登录模式枚举",
+                "orderNo": 11,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "LoginModeEnum",
+                "code": "APP",
+                "name": "APP",
+                "value": "2",
+                "remark": "登录模式枚举",
+                "orderNo": 12,
+                "tagType": "info"
+            }
+        ],
+        "LoginTypeEnum": [
+            {
+                "typeCode": "LoginTypeEnum",
+                "code": "Login",
+                "name": "PC登录",
+                "value": "1",
+                "remark": "登录类型枚举",
+                "orderNo": 11,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "LoginTypeEnum",
+                "code": "Logout",
+                "name": "PC退出",
+                "value": "2",
+                "remark": "登录类型枚举",
+                "orderNo": 12,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "LoginTypeEnum",
+                "code": "Register",
+                "name": "PC注册",
+                "value": "3",
+                "remark": "登录类型枚举",
+                "orderNo": 13,
+                "tagType": "info"
+            }
+        ],
+        "MaritalStatusEnum": [
+            {
+                "typeCode": "MaritalStatusEnum",
+                "code": "UnMarried",
+                "name": "未婚",
+                "value": "1",
+                "remark": "婚姻状况枚举",
+                "orderNo": 11,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "MaritalStatusEnum",
+                "code": "Married",
+                "name": "已婚",
+                "value": "2",
+                "remark": "婚姻状况枚举",
+                "orderNo": 12,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "MaritalStatusEnum",
+                "code": "Divorce",
+                "name": "离异",
+                "value": "3",
+                "remark": "婚姻状况枚举",
+                "orderNo": 13,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "MaritalStatusEnum",
+                "code": "Remarry",
+                "name": "再婚",
+                "value": "4",
+                "remark": "婚姻状况枚举",
+                "orderNo": 14,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "MaritalStatusEnum",
+                "code": "Widowed",
+                "name": "丧偶",
+                "value": "5",
+                "remark": "婚姻状况枚举",
+                "orderNo": 15,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "MaritalStatusEnum",
+                "code": "None",
+                "name": "未知",
+                "value": "6",
+                "remark": "婚姻状况枚举",
+                "orderNo": 16,
+                "tagType": "info"
+            }
+        ],
+        "MenuTypeEnum": [
+            {
+                "typeCode": "MenuTypeEnum",
+                "code": "Dir",
+                "name": "目录",
+                "value": "1",
+                "remark": "系统菜单类型枚举",
+                "orderNo": 11,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "MenuTypeEnum",
+                "code": "Menu",
+                "name": "菜单",
+                "value": "2",
+                "remark": "系统菜单类型枚举",
+                "orderNo": 12,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "MenuTypeEnum",
+                "code": "Btn",
+                "name": "按钮",
+                "value": "3",
+                "remark": "系统菜单类型枚举",
+                "orderNo": 13,
+                "tagType": "info"
+            }
+        ],
+        "NoticeTypeEnum": [
+            {
+                "typeCode": "NoticeTypeEnum",
+                "code": "NOTICE",
+                "name": "通知",
+                "value": "1",
+                "remark": "通知公告状类型枚举",
+                "orderNo": 11,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "NoticeTypeEnum",
+                "code": "ANNOUNCEMENT",
+                "name": "公告",
+                "value": "2",
+                "remark": "通知公告状类型枚举",
+                "orderNo": 12,
+                "tagType": "info"
+            }
+        ],
+        "PlatformTypeEnum": [
+            {
+                "typeCode": "PlatformTypeEnum",
+                "code": "微信公众号",
+                "name": "微信公众号",
+                "value": "1",
+                "remark": "平台类型枚举",
+                "orderNo": 11,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "PlatformTypeEnum",
+                "code": "微信小程序",
+                "name": "微信小程序",
+                "value": "2",
+                "remark": "平台类型枚举",
+                "orderNo": 12,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "PlatformTypeEnum",
+                "code": "QQ",
+                "name": "QQ",
+                "value": "3",
+                "remark": "平台类型枚举",
+                "orderNo": 13,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "PlatformTypeEnum",
+                "code": "Alipay",
+                "name": "支付宝",
+                "value": "4",
+                "remark": "平台类型枚举",
+                "orderNo": 14,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "PlatformTypeEnum",
+                "code": "Gitee",
+                "name": "Gitee",
+                "value": "5",
+                "remark": "平台类型枚举",
+                "orderNo": 15,
+                "tagType": "info"
+            }
+        ],
+        "PrintTypeEnum": [
+            {
+                "typeCode": "PrintTypeEnum",
+                "code": "Browser",
+                "name": "浏览器打印",
+                "value": "1",
+                "remark": "打印类型枚举",
+                "orderNo": 11,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "PrintTypeEnum",
+                "code": "Client",
+                "name": "客户端打印",
+                "value": "2",
+                "remark": "打印类型枚举",
+                "orderNo": 12,
+                "tagType": "info"
+            }
+        ],
+        "StatusEnum": [
+            {
+                "typeCode": "StatusEnum",
+                "code": "Enable",
+                "name": "启用",
+                "value": "1",
+                "remark": "通用状态枚举",
+                "orderNo": 11,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "StatusEnum",
+                "code": "Disable",
+                "name": "停用",
+                "value": "2",
+                "remark": "通用状态枚举",
+                "orderNo": 12,
+                "tagType": "info"
+            }
+        ],
+        "YesNoEnum": [
+            {
+                "typeCode": "YesNoEnum",
+                "code": "Y",
+                "name": "是",
+                "value": "1",
+                "remark": "是否枚举",
+                "orderNo": 11,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "YesNoEnum",
+                "code": "N",
+                "name": "否",
+                "value": "2",
+                "remark": "是否枚举",
+                "orderNo": 12,
+                "tagType": "info"
+            }
+        ],
+        "code_gen_effect_type": [
+            {
+                "typeCode": "code_gen_effect_type",
+                "code": "Input",
+                "name": null,
+                "value": "输入框",
+                "remark": "输入框",
+                "orderNo": 100,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_effect_type",
+                "code": "fk",
+                "name": null,
+                "value": "外键",
+                "remark": "外键",
+                "orderNo": 100,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_effect_type",
+                "code": "DatePicker",
+                "name": null,
+                "value": "时间选择",
+                "remark": "时间选择",
+                "orderNo": 100,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_effect_type",
+                "code": "Select",
+                "name": null,
+                "value": "选择器",
+                "remark": "选择器",
+                "orderNo": 100,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_effect_type",
+                "code": "InputNumber",
+                "name": null,
+                "value": "数字输入框",
+                "remark": "数字输入框",
+                "orderNo": 100,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_effect_type",
+                "code": "InputTextArea",
+                "name": null,
+                "value": "文本域",
+                "remark": "文本域",
+                "orderNo": 100,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_effect_type",
+                "code": "Upload",
+                "name": null,
+                "value": "上传",
+                "remark": "上传",
+                "orderNo": 100,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_effect_type",
+                "code": "ApiTreeSelect",
+                "name": null,
+                "value": "树选择",
+                "remark": "树选择",
+                "orderNo": 100,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_effect_type",
+                "code": "Switch",
+                "name": null,
+                "value": "开关",
+                "remark": "开关",
+                "orderNo": 100,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_effect_type",
+                "code": "ConstSelector",
+                "name": null,
+                "value": "常量选择器",
+                "remark": "常量选择器",
+                "orderNo": 100,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_effect_type",
+                "code": "EnumSelector",
+                "name": null,
+                "value": "枚举选择器",
+                "remark": "枚举选择器",
+                "orderNo": 100,
+                "tagType": null
+            }
+        ],
+        "code_gen_print_type": [
+            {
+                "typeCode": "code_gen_print_type",
+                "code": "off",
+                "name": null,
+                "value": "不需要",
+                "remark": "不需要打印支持",
+                "orderNo": 100,
+                "tagType": null
+            },
+            {
+                "typeCode": "code_gen_print_type",
+                "code": "custom",
+                "name": null,
+                "value": "绑定打印模版",
+                "remark": "绑定打印模版",
+                "orderNo": 101,
+                "tagType": null
+            }
+        ],
+        "org_type": [
+            {
+                "typeCode": "org_type",
+                "code": "101",
+                "name": null,
+                "value": "集团",
+                "remark": "集团",
+                "orderNo": 100,
+                "tagType": null
+            },
+            {
+                "typeCode": "org_type",
+                "code": "201",
+                "name": null,
+                "value": "公司",
+                "remark": "公司",
+                "orderNo": 101,
+                "tagType": null
+            },
+            {
+                "typeCode": "org_type",
+                "code": "301",
+                "name": null,
+                "value": "部门",
+                "remark": "部门",
+                "orderNo": 102,
+                "tagType": null
+            },
+            {
+                "typeCode": "org_type",
+                "code": "401",
+                "name": null,
+                "value": "区域",
+                "remark": "区域",
+                "orderNo": 103,
+                "tagType": null
+            },
+            {
+                "typeCode": "org_type",
+                "code": "501",
+                "name": null,
+                "value": "组",
+                "remark": "组",
+                "orderNo": 104,
+                "tagType": null
+            }
+        ],
+        "AccountTypeEnum": [
+            {
+                "typeCode": "AccountTypeEnum",
+                "code": "Member",
+                "name": "会员",
+                "value": "666",
+                "remark": "账号类型枚举",
+                "orderNo": 676,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "AccountTypeEnum",
+                "code": "NormalUser",
+                "name": "普通账号",
+                "value": "777",
+                "remark": "账号类型枚举",
+                "orderNo": 787,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "AccountTypeEnum",
+                "code": "SysAdmin",
+                "name": "系统管理员",
+                "value": "888",
+                "remark": "账号类型枚举",
+                "orderNo": 898,
+                "tagType": "info"
+            },
+            {
+                "typeCode": "AccountTypeEnum",
+                "code": "SuperAdmin",
+                "name": "超级管理员",
+                "value": "999",
+                "remark": "账号类型枚举",
+                "orderNo": 1009,
+                "tagType": "info"
+            }
+        ]
+    }

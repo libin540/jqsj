@@ -1,0 +1,626 @@
+[
+    {
+        "id": 1300000000101,
+        "pid": 0,
+        "type": 1,
+        "name": "dashboard",
+        "path": "/dashboard",
+        "component": "Layout",
+        "permission": null,
+        "redirect": null,
+        "orderNo": 0,
+        "status": 1,
+        "remark": null,
+        "createTime": "2025-02-26 14:39:42",
+        "updateTime": "2025-03-10 14:21:24",
+        "createUserName": null,
+        "updateUserName": null,
+        "meta": {
+            "title": "工作台",
+            "icon": "ele-HomeFilled",
+            "isIframe": false,
+            "isLink": null,
+            "isHide": false,
+            "isKeepAlive": true,
+            "isAffix": false
+        },
+        "children": [
+            {
+                "id": 1300000000111,
+                "pid": 1300000000101,
+                "type": 2,
+                "name": "home",
+                "path": "/dashboard/home",
+                "component":"/home/index",
+                "permission": null,
+                "redirect": null,
+                "orderNo": 100,
+                "status": 1,
+                "remark": null,
+                "createTime": "2025-02-26 14:39:42",
+                "updateTime": "2025-03-10 14:21:24",
+                "createUserName": null,
+                "updateUserName": null,
+                "meta": {
+                    "title": "首页",
+                    "icon": "ele-HomeFilled",
+                    "isIframe": false,
+                    "isLink": null,
+                    "isHide": false,
+                    "isKeepAlive": true,
+                    "isAffix": true
+                },
+                "children": [
+                    
+                ]
+            },
+            {
+                "id": 1300000000121,
+                "pid": 1300000000101,
+                "type": 2,
+                "name": "notice",
+                "path": "/dashboard/notice",
+                "component":"/home/notice/index",
+                "permission": null,
+                "redirect": null,
+                "orderNo": 101,
+                "status": 1,
+                "remark": null,
+                "createTime": "2025-02-26 14:39:42",
+                "updateTime": "2025-03-10 14:21:24",
+                "createUserName": null,
+                "updateUserName": null,
+                "meta": {
+                    "title": "站内信",
+                    "icon": "ele-Bell",
+                    "isIframe": false,
+                    "isLink": null,
+                    "isHide": true,
+                    "isKeepAlive": true,
+                    "isAffix": false
+                },
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "id": 651160469700677,
+        "pid": 0,
+        "type": 1,
+        "name": "alarm",
+        "path": "/alarmCenter",
+        "permission": null,
+        "redirect": null,
+        "orderNo": 100,
+        "status": 1,
+        "remark": null,
+        "createTime": "2025-03-05 09:58:46",
+        "updateTime": "2025-03-06 15:56:14",
+        "createUserName": "超级管理员",
+        "updateUserName": "超级管理员",
+        "meta": {
+            "title": "报警中心",
+            "icon": "ele-BellFilled",
+            "isIframe": false,
+            "isLink": null,
+            "isHide": false,
+            "isKeepAlive": true,
+            "isAffix": false
+        },
+        "children": [
+            {
+                "id": 651601624592453,
+                "pid": 651160469700677,
+                "type": 2,
+                "name": null,
+                "path": "/alarmCenter/statisticalAnalysis",
+                "component":"/alarmCenter/statisticalAnalysis",
+                "permission": null,
+                "redirect": null,
+                "orderNo": 100,
+                "status": 1,
+                "remark": null,
+                "createTime": "2025-03-06 15:53:50",
+                "updateTime": "2025-03-07 10:23:55",
+                "createUserName": "超级管理员",
+                "updateUserName": "超级管理员",
+                "meta": {
+                    "title": "统计分析",
+                    "icon": "ele-TrendCharts",
+                    "isIframe": false,
+                    "isLink": null,
+                    "isHide": false,
+                    "isKeepAlive": true,
+                    "isAffix": false
+                },
+                "children": [
+                    
+                ]
+            },
+            {
+                "id": 651872403492933,
+                "pid": 651160469700677,
+                "type": 2,
+                "name": null,
+                "path": "/alarmCenter/onePoliceOneFile",
+                "component":"/alarmCenter/onePoliceOneFile",
+                "permission": null,
+                "redirect": null,
+                "orderNo": 100,
+                "status": 1,
+                "remark": null,
+                "createTime": "2025-03-07 10:15:38",
+                "updateTime": "2025-03-07 10:25:12",
+                "createUserName": "超级管理员",
+                "updateUserName": "超级管理员",
+                "meta": {
+                    "title": "一警一档",
+                    "icon": "ele-Notebook",
+                    "isIframe": false,
+                    "isLink": null,
+                    "isHide": false,
+                    "isKeepAlive": true,
+                    "isAffix": false
+                },
+                "children": [
+                    
+                ]
+            },
+            {
+                "id": 653006186405957,
+                "pid": 651160469700677,
+                "type": 2,
+                "name": null,
+                "path": "/alarmCenter/alarmQuery",
+                "component":"/alarmCenter/alarmQuery",
+                "permission": null,
+                "redirect": null,
+                "orderNo": 100,
+                "status": 1,
+                "remark": null,
+                "createTime": "2025-03-10 15:09:01",
+                "updateTime": "2025-03-10 15:09:24",
+                "createUserName": "超级管理员",
+                "updateUserName": "超级管理员",
+                "meta": {
+                    "title": "报警查询",
+                    "icon": "ele-Opportunity",
+                    "isIframe": false,
+                    "isLink": null,
+                    "isHide": false,
+                    "isKeepAlive": true,
+                    "isAffix": false
+                },
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "id": 1310000000101,
+        "pid": 0,
+        "type": 1,
+        "name": "system",
+        "path": "/system",
+        "permission": null,
+        "redirect": null,
+        "orderNo": 10000,
+        "status": 1,
+        "remark": null,
+        "createTime": "2025-02-26 14:39:42",
+        "updateTime": "2025-03-10 14:21:24",
+        "createUserName": null,
+        "updateUserName": null,
+        "meta": {
+            "title": "系统管理",
+            "icon": "ele-Setting",
+            "isIframe": false,
+            "isLink": null,
+            "isHide": false,
+            "isKeepAlive": true,
+            "isAffix": false
+        },
+        "children": [
+            {
+                "id": 1310000000111,
+                "pid": 1310000000101,
+                "type": 2,
+                "name": "sysUser",
+                "path": "/system/user",
+                "component": "/system/user/index",
+                "permission": null,
+                "redirect": null,
+                "orderNo": 100,
+                "status": 1,
+                "remark": null,
+                "createTime": "2025-02-26 14:39:42",
+                "updateTime": "2025-03-10 14:21:24",
+                "createUserName": null,
+                "updateUserName": null,
+                "meta": {
+                    "title": "账号管理",
+                    "icon": "ele-User",
+                    "isIframe": false,
+                    "isLink": null,
+                    "isHide": false,
+                    "isKeepAlive": true,
+                    "isAffix": false
+                },
+                "children": [
+                    
+                ]
+            },
+            {
+                "id": 1310000000131,
+                "pid": 1310000000101,
+                "type": 2,
+                "name": "sysRole",
+                "path": "/system/role",
+                "component": "/system/role/index",
+                "permission": null,
+                "redirect": null,
+                "orderNo": 110,
+                "status": 1,
+                "remark": null,
+                "createTime": "2025-02-26 14:39:42",
+                "updateTime": "2025-03-10 14:21:24",
+                "createUserName": null,
+                "updateUserName": null,
+                "meta": {
+                    "title": "角色管理",
+                    "icon": "ele-Help",
+                    "isIframe": false,
+                    "isLink": null,
+                    "isHide": false,
+                    "isKeepAlive": true,
+                    "isAffix": false
+                },
+                "children": [
+                    
+                ]
+            },
+            {
+                "id": 1310000000141,
+                "pid": 1310000000101,
+                "type": 2,
+                "name": "sysOrg",
+                "path": "/system/org",
+                "permission": null,
+                "redirect": null,
+                "orderNo": 120,
+                "status": 1,
+                "remark": null,
+                "createTime": "2025-02-26 14:39:42",
+                "updateTime": "2025-03-10 14:21:24",
+                "createUserName": null,
+                "updateUserName": null,
+                "meta": {
+                    "title": "机构管理",
+                    "icon": "ele-OfficeBuilding",
+                    "isIframe": false,
+                    "isLink": null,
+                    "isHide": true,
+                    "isKeepAlive": true,
+                    "isAffix": false
+                },
+                "children": [
+                    
+                ]
+            },
+            {
+                "id": 1310000000161,
+                "pid": 1310000000101,
+                "type": 2,
+                "name": "sysUserCenter",
+                "path": "/system/userCenter",
+                "component": "/system/user/component/userCenter",
+                "permission": null,
+                "redirect": null,
+                "orderNo": 140,
+                "status": 1,
+                "remark": null,
+                "createTime": "2025-02-26 14:39:42",
+                "updateTime": "2025-03-10 14:21:24",
+                "createUserName": null,
+                "updateUserName": null,
+                "meta": {
+                    "title": "个人中心",
+                    "icon": "ele-Medal",
+                    "isIframe": false,
+                    "isLink": null,
+                    "isHide": false,
+                    "isKeepAlive": true,
+                    "isAffix": false
+                },
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "id": 1310000000301,
+        "pid": 0,
+        "type": 1,
+        "name": "platform",
+        "path": "/platform",
+        "component": "Layout",
+        "permission": null,
+        "redirect": null,
+        "orderNo": 11000,
+        "status": 1,
+        "remark": null,
+        "createTime": "2025-02-26 14:39:42",
+        "updateTime": "2025-03-10 14:21:24",
+        "createUserName": null,
+        "updateUserName": null,
+        "meta": {
+            "title": "平台管理",
+            "icon": "ele-Menu",
+            "isIframe": false,
+            "isLink": null,
+            "isHide": false,
+            "isKeepAlive": true,
+            "isAffix": false
+        },
+        "children": [
+            {
+                "id": 1310000000321,
+                "pid": 1310000000301,
+                "type": 2,
+                "name": "sysMenu",
+                "path": "/platform/menu",
+                "component": "/system/menu/index",
+                "permission": null,
+                "redirect": null,
+                "orderNo": 110,
+                "status": 1,
+                "remark": null,
+                "createTime": "2025-02-26 14:39:42",
+                "updateTime": "2025-03-10 14:21:24",
+                "createUserName": null,
+                "updateUserName": null,
+                "meta": {
+                    "title": "菜单管理",
+                    "icon": "ele-Menu",
+                    "isIframe": false,
+                    "isLink": null,
+                    "isHide": false,
+                    "isKeepAlive": true,
+                    "isAffix": false
+                },
+                "children": [
+                    
+                ]
+            },
+            {
+                "id": 1310000000331,
+                "pid": 1310000000301,
+                "type": 2,
+                "name": "sysConfig",
+                "path": "/platform/config",
+                "component": "/system/config/index",
+                "permission": null,
+                "redirect": null,
+                "orderNo": 120,
+                "status": 1,
+                "remark": null,
+                "createTime": "2025-02-26 14:39:42",
+                "updateTime": "2025-03-10 14:21:24",
+                "createUserName": null,
+                "updateUserName": null,
+                "meta": {
+                    "title": "参数配置",
+                    "icon": "ele-DocumentCopy",
+                    "isIframe": false,
+                    "isLink": null,
+                    "isHide": false,
+                    "isKeepAlive": true,
+                    "isAffix": false
+                },
+                "children": [
+                    
+                ]
+            },
+            {
+                "id": 1310000000431,
+                "pid": 1310000000301,
+                "type": 2,
+                "name": "sysInfoSetting",
+                "path": "/platform/infoSetting",
+                "component": "/system/infoSetting/index",
+                "permission": null,
+                "redirect": null,
+                "orderNo": 220,
+                "status": 1,
+                "remark": null,
+                "createTime": "2025-02-26 14:39:42",
+                "updateTime": "2025-03-10 14:21:24",
+                "createUserName": null,
+                "updateUserName": null,
+                "meta": {
+                    "title": "系统配置",
+                    "icon": "ele-Setting",
+                    "isIframe": false,
+                    "isLink": null,
+                    "isHide": false,
+                    "isKeepAlive": true,
+                    "isAffix": false
+                },
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "id": 1310000000501,
+        "pid": 0,
+        "type": 1,
+        "name": "log",
+        "path": "/log",
+        "permission": null,
+        "redirect": null,
+        "orderNo": 12000,
+        "status": 1,
+        "remark": null,
+        "createTime": "2025-02-26 14:39:42",
+        "updateTime": "2025-03-10 14:21:24",
+        "createUserName": null,
+        "updateUserName": null,
+        "meta": {
+            "title": "日志管理",
+            "icon": "ele-DocumentCopy",
+            "isIframe": false,
+            "isLink": null,
+            "isHide": false,
+            "isKeepAlive": true,
+            "isAffix": false
+        },
+        "children": [
+            {
+                "id": 1310000000511,
+                "pid": 1310000000501,
+                "type": 2,
+                "name": "sysVisLog",
+                "path": "/log/vislog",
+                "permission": null,
+                "redirect": null,
+                "orderNo": 100,
+                "status": 1,
+                "remark": null,
+                "createTime": "2025-02-26 14:39:42",
+                "updateTime": "2025-03-10 14:21:24",
+                "createUserName": null,
+                "updateUserName": null,
+                "meta": {
+                    "title": "访问日志",
+                    "icon": "ele-Document",
+                    "isIframe": false,
+                    "isLink": null,
+                    "isHide": false,
+                    "isKeepAlive": true,
+                    "isAffix": false
+                },
+                "children": [
+                    
+                ]
+            },
+            {
+                "id": 1310000000521,
+                "pid": 1310000000501,
+                "type": 2,
+                "name": "sysOpLog",
+                "path": "/log/oplog",
+                "permission": null,
+                "redirect": null,
+                "orderNo": 110,
+                "status": 1,
+                "remark": null,
+                "createTime": "2025-02-26 14:39:42",
+                "updateTime": "2025-03-10 14:21:24",
+                "createUserName": null,
+                "updateUserName": null,
+                "meta": {
+                    "title": "操作日志",
+                    "icon": "ele-Document",
+                    "isIframe": false,
+                    "isLink": null,
+                    "isHide": false,
+                    "isKeepAlive": true,
+                    "isAffix": false
+                },
+                "children": [
+                    
+                ]
+            },
+            {
+                "id": 1310000000531,
+                "pid": 1310000000501,
+                "type": 2,
+                "name": "sysExLog",
+                "path": "/log/exlog",
+                "permission": null,
+                "redirect": null,
+                "orderNo": 120,
+                "status": 1,
+                "remark": null,
+                "createTime": "2025-02-26 14:39:42",
+                "updateTime": "2025-03-10 14:21:24",
+                "createUserName": null,
+                "updateUserName": null,
+                "meta": {
+                    "title": "异常日志",
+                    "icon": "ele-Document",
+                    "isIframe": false,
+                    "isLink": null,
+                    "isHide": false,
+                    "isKeepAlive": true,
+                    "isAffix": false
+                },
+                "children": [
+                    
+                ]
+            },
+            {
+                "id": 1310000000541,
+                "pid": 1310000000501,
+                "type": 2,
+                "name": "sysDiffLog",
+                "path": "/log/difflog",
+                "permission": null,
+                "redirect": null,
+                "orderNo": 130,
+                "status": 1,
+                "remark": null,
+                "createTime": "2025-02-26 14:39:42",
+                "updateTime": "2025-03-10 14:21:24",
+                "createUserName": null,
+                "updateUserName": null,
+                "meta": {
+                    "title": "差异日志",
+                    "icon": "ele-Document",
+                    "isIframe": false,
+                    "isLink": null,
+                    "isHide": false,
+                    "isKeepAlive": true,
+                    "isAffix": false
+                },
+                "children": [
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "id": 1310000000801,
+        "pid": 0,
+        "type": 2,
+        "name": "about",
+        "path": "/about",
+        "permission": null,
+        "redirect": null,
+        "orderNo": 15000,
+        "status": 1,
+        "remark": null,
+        "createTime": "2025-02-28 16:08:28",
+        "updateTime": "2025-03-10 14:21:24",
+        "createUserName": null,
+        "updateUserName": null,
+        "meta": {
+            "title": "关于项目",
+            "icon": "ele-InfoFilled",
+            "isIframe": false,
+            "isLink": null,
+            "isHide": false,
+            "isKeepAlive": true,
+            "isAffix": false
+        },
+        "children": [
+            
+        ]
+    }
+]

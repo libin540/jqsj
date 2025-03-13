@@ -1,0 +1,109 @@
+[
+    {
+        "name": "平台配置",
+        "code": "CommonConst",
+        "data": {
+            "result": [
+                {
+                    "name": "SysDemoEnv",
+                    "code": "sys_demo",
+                    "data": null
+                },
+                {
+                    "name": "SysPassword",
+                    "code": "sys_password",
+                    "data": null
+                },
+                {
+                    "name": "SysPasswordMaxErrorTimes",
+                    "code": "sys_password_max_error_times",
+                    "data": null
+                },
+                {
+                    "name": "SysSecondVer",
+                    "code": "sys_second_ver",
+                    "data": null
+                },
+                {
+                    "name": "SysCaptcha",
+                    "code": "sys_captcha",
+                    "data": null
+                },
+                {
+                    "name": "SysWatermark",
+                    "code": "sys_watermark",
+                    "data": null
+                },
+                {
+                    "name": "SysOpLog",
+                    "code": "sys_oplog",
+                    "data": null
+                },
+                {
+                    "name": "SysTokenExpire",
+                    "code": "sys_token_expire",
+                    "data": null
+                },
+                {
+                    "name": "SysRefreshTokenExpire",
+                    "code": "sys_refresh_token_expire",
+                    "data": null
+                },
+                {
+                    "name": "SysErrorMail",
+                    "code": "sys_error_mail",
+                    "data": null
+                },
+                {
+                    "name": "SysSingleLogin",
+                    "code": "sys_single_login",
+                    "data": null
+                },
+                {
+                    "name": "SysAdminRole",
+                    "code": "sys_admin",
+                    "data": null
+                },
+                {
+                    "name": "SysDomainLogin",
+                    "code": "sys_domain_login",
+                    "data": null
+                },
+                {
+                    "name": "SysValidationLog",
+                    "code": "sys_validation_log",
+                    "data": null
+                },
+                {
+                    "name": "SysLogRetentionDays",
+                    "code": "sys_log_retention_days",
+                    "data": null
+                },
+                {
+                    "name": "SysLogCategoryName",
+                    "code": "System.Logging.LoggingMonitor",
+                    "data": null
+                },
+                {
+                    "name": "AddExLog",
+                    "code": "Add:ExLog",
+                    "data": null
+                },
+                {
+                    "name": "SendErrorMail",
+                    "code": "Send:ErrorMail",
+                    "data": null
+                }
+            ],
+            "id": 1,
+            "exception": null,
+            "status": 5,
+            "isCanceled": false,
+            "isCompleted": true,
+            "isCompletedSuccessfully": true,
+            "creationOptions": 0,
+            "asyncState": null,
+            "isFaulted": false
+        }
+    }
+]

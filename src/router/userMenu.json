@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1310000000101,
+        "pid": 0,
+        "type": 1,
+        "name": "system",
+        "path": "/system",
+        "component": "Layout",
+        "permission": null,
+        "redirect": null,
+        "orderNo": 10000,
+        "status": 1,
+        "remark": null,
+        "createTime": "2025-02-26 14:39:42",
+        "updateTime": "2025-03-12 17:06:07",
+        "createUserName": null,
+        "updateUserName": null,
+        "meta": {
+            "title": "系统管理",
+            "icon": "ele-Setting",
+            "isIframe": false,
+            "isLink": null,
+            "isHide": false,
+            "isKeepAlive": true,
+            "isAffix": false
+        },
+        "children": []
+    }
+]
