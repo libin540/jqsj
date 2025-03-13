@@ -280,7 +280,7 @@ export const SysAuthApiAxiosParamCreator = function (configuration?: Configurati
             if (body === null || body === undefined) {
                 throw new RequiredError('body','Required parameter body was null or undefined when calling apiSysAuthLoginPost.');
             }
-            const localVarPath = `/sys/login`;
+            const localVarPath = `/api/sysAuth/login`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
             let baseOptions;
@@ -314,6 +314,7 @@ export const SysAuthApiAxiosParamCreator = function (configuration?: Configurati
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
             const needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.data =  needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+
             return {
                 url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
                 options: localVarRequestOptions,
@@ -469,7 +470,6 @@ export const SysAuthApiAxiosParamCreator = function (configuration?: Configurati
          * @throws {RequiredError}
          */
         apiSysAuthUserInfoGet: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            debugger
             const localVarPath = `/api/sysAuth/userInfo`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
@@ -893,7 +893,7 @@ export class SysAuthApi extends BaseAPI {
      * @memberof SysAuthApi
      */
     public async apiSysAuthLoginPost(body: LoginInput, options?: AxiosRequestConfig) : Promise<AxiosResponse<AdminResultLoginOutput>> {
-        return SysAuthApiFp(this.configuration).apiSysAuthLoginPost(body, options).then((request) => request(this.axios, this.basePath1));
+        return SysAuthApiFp(this.configuration).apiSysAuthLoginPost(body, options).then((request) => request(this.axios, this.basePath));
     }
     /**
      * 

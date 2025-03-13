@@ -111,53 +111,46 @@ watch(
 
 // 加载系统信息
 const loadSysInfo = () => {
-	// 置空 logo 地址
-	themeConfig.value.logoUrl = '';
+	getAPI(SysConfigApi)
+		.apiSysConfigSysInfoGet()
+		.then((res) => {
+			if (res.data.type != 'success') return;
+
+			const data = res.data.result;
+			// 系统logo
+			//themeConfig.value.logoUrl = data.sysLogo;
+			// 主标题
+			//themeConfig.value.globalTitle = data.sysTitle;
+			// 副标题
+			//themeConfig.value.globalViceTitle = data.sysViceTitle;
+			// 系统说明
+			//themeConfig.value.globalViceTitleMsg = data.sysViceDesc;
+			// Icp备案信息
+			themeConfig.value.icp = data.sysIcp;
+			themeConfig.value.icpUrl = data.sysIcpUrl;
+			// 水印
+			// themeConfig.value.isWatermark = data.sysWatermark != null;
+			// themeConfig.value.watermarkText = data.sysWatermark;
+			themeConfig.value.isWatermark = false;
+			themeConfig.value.watermarkText = "";
+			// 版权说明
+			themeConfig.value.copyright = data.sysCopyright;
+
+			// 更新 favicon
+			updateFavicon(data.sysLogo);
+
+			// 保存配置
+			Local.remove('themeConfig');
+			Local.set('themeConfig', storesThemeConfig.themeConfig);
+		})
+		.catch(() => {
+			// 置空 logo 地址
+			themeConfig.value.logoUrl = '';
 			// 保存配置
 			Local.remove('themeConfig');
 			Local.set('themeConfig', storesThemeConfig.themeConfig);
 			return;
-	//去掉获取系统配置接口
-	//getAPI(SysConfigApi)
-		// .apiSysConfigSysInfoGet()
-		// .then((res) => {
-		// 	if (res.data.type != 'success') return;
-
-		// 	const data = res.data.result;
-		// 	// 系统logo
-		// 	//themeConfig.value.logoUrl = data.sysLogo;
-		// 	// 主标题
-		// 	//themeConfig.value.globalTitle = data.sysTitle;
-		// 	// 副标题
-		// 	//themeConfig.value.globalViceTitle = data.sysViceTitle;
-		// 	// 系统说明
-		// 	//themeConfig.value.globalViceTitleMsg = data.sysViceDesc;
-		// 	// Icp备案信息
-		// 	themeConfig.value.icp = data.sysIcp;
-		// 	themeConfig.value.icpUrl = data.sysIcpUrl;
-		// 	// 水印
-		// 	// themeConfig.value.isWatermark = data.sysWatermark != null;
-		// 	// themeConfig.value.watermarkText = data.sysWatermark;
-		// 	themeConfig.value.isWatermark = false;
-		// 	themeConfig.value.watermarkText = "";
-		// 	// 版权说明
-		// 	themeConfig.value.copyright = data.sysCopyright;
-
-		// 	// 更新 favicon
-		// 	updateFavicon(data.sysLogo);
-
-		// 	// 保存配置
-		// 	Local.remove('themeConfig');
-		// 	Local.set('themeConfig', storesThemeConfig.themeConfig);
-		// })
-		// .catch(() => {
-		// 	// 置空 logo 地址
-		// 	themeConfig.value.logoUrl = '';
-		// 	// 保存配置
-		// 	Local.remove('themeConfig');
-		// 	Local.set('themeConfig', storesThemeConfig.themeConfig);
-		// 	return;
-		// });
+		});
 };
 
 // 更新 favicon

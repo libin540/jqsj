@@ -8,7 +8,6 @@ import { useUserInfo } from '/@/stores/userInfo';
 import { useTagsViewRoutes } from '/@/stores/tagsViewRoutes';
 import { useRoutesList } from '/@/stores/routesList';
 import { NextLoading } from '/@/utils/loading';
-import { de } from 'element-plus/es/locale';
 
 // 前端控制路由
 
@@ -83,13 +82,10 @@ export function setFilterRoute(chil: any) {
 	const { userInfos } = storeToRefs(stores);
 	let filterRoute: any = [];
 	chil.forEach((route: any) => {
-		//屏蔽权限过滤
-		//filterRoute.push({ ...route });
 		if (route.meta.roles) {
 			route.meta.roles.forEach((metaRoles: any) => {
 				userInfos.value.roles.forEach((roles: any) => {
-					if (metaRoles === roles) 
-						filterRoute.push({ ...route });
+					if (metaRoles === roles) filterRoute.push({ ...route });
 				});
 			});
 		}

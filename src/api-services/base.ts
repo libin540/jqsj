@@ -47,14 +47,13 @@ export interface RequestArgs {
  */
 export class BaseAPI {
     protected configuration: Configuration | undefined;
+    
+    constructor(configuration?: Configuration, protected basePath: string = BASE_PATH, protected basePath1: string = BASE_PATH, protected axios: AxiosInstance = globalAxios) {
 
-    constructor(configuration?: Configuration, protected basePath: string = BASE_PATH,
-        protected basePath1: string = BASE_PATH,
-         protected axios: AxiosInstance = globalAxios) {
         if (configuration) {
             this.configuration = configuration;
             this.basePath = configuration.basePath || this.basePath;
-            this.basePath1 = configuration.basePath1|| this.basePath1;
+            this.basePath1 = configuration.basePath1 || this.basePath1
         }
     }
 };

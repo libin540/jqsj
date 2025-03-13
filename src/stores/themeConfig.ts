@@ -1,4 +1,3 @@
-import { fa } from 'element-plus/es/locale';
 import { defineStore } from 'pinia';
 
 export const useThemeConfig = defineStore('themeConfig', {
@@ -11,7 +10,7 @@ export const useThemeConfig = defineStore('themeConfig', {
 			 * 全局主题
 			 */
 			// 默认 primary 主题颜色
-			primary: '#5C5B5A', //胭脂红:#F03F24 //飞燕草蓝:#0F59A4 //薄荷绿:#207F4C
+			primary: '#408FFF', //胭脂红:#F03F24 //飞燕草蓝:#0F59A4 //薄荷绿:#207F4C
 			// 是否开启深色模式
 			isIsDark: false,
 

@@ -46,48 +46,52 @@ export const dynamicRoutes: Array<RouteRecordRaw> = [
 		meta: {
 			isKeepAlive: true,
 		},
-		children: [
-			{
-				path: '/system',
-				name: 'system',
-				component: () => import('/@/views/home/index.vue'),
-				meta: {
-					title: '系统管理',
-					isHide: false,
-					isKeepAlive: true,
-					isAffix: false,
-					isIframe: false,
-					icon: 'ele-Setting',
-				},
-			},
-			{
-				path: '/system/user',
-				name: 'sysUser',
-				component: () => import('/@/views/system/user/index.vue'),
-				meta: {
-					title: '账号管理',
-					isHide: false,
-					isKeepAlive: true,
-					isAffix: false,
-					isIframe: false,
-					icon: 'ele-Menu',
-				},
-			}
-		],
+		children: [],
 	},
-	// {
-	// 	path: '/develop/operationManagement',
-	// 	name: 'operationManagement',
-	// 	component: () => import('/@/views/system/database/component/visualTable.vue'),
-	// 	meta: {
-	// 		title: '运维管理',
-	// 		isHide: true,
-	// 		isKeepAlive: true,
-	// 		isAffix: false,
-	// 		// isIframe: true,
-	// 		icon: 'ele-View',
-	// 	},
-	// },
+	{
+		path: '/alarmCenter/alarmQuery/AlarmDetails',
+		name: 'AlarmDetails',
+		component: () => import('/@/views/alarmCenter/components/alarmQuery/AlarmDetails.vue'),
+		meta: {
+			title: '报警详情',
+		},
+	},
+	{
+		path: '/alarmCenter/onePoliceOneFile/onePoliceOneFileDetails',
+		name: 'onePoliceOneFileDetails',
+		component: () => import('/@/views/alarmCenter/components/onePoliceOneFile/detailList.vue'),
+		meta: {
+			title: '一警一档详情',
+		},
+	},
+	
+	{
+		path: '/platform/job/dashboard',
+		name: 'jobDashboard',
+		component: () => import('/@/views/system/job/dashboard.vue'),
+		meta: {
+			title: '任务看板',
+			isLink: window.__env__.VITE_API_URL + '/schedule',
+			isHide: true,
+			isKeepAlive: true,
+			isAffix: false,
+			isIframe: true,
+			icon: 'ele-Clock',
+		},
+	},
+	{
+		path: '/develop/database/visual',
+		name: 'databaseVisual',
+		component: () => import('/@/views/system/database/component/visualTable.vue'),
+		meta: {
+			title: '库表可视化',
+			isHide: true,
+			isKeepAlive: true,
+			isAffix: false,
+			// isIframe: true,
+			icon: 'ele-View',
+		},
+	},
 ];
 
 /**
@@ -130,6 +134,7 @@ export const staticRoutes: Array<RouteRecordRaw> = [
 			title: '登录',
 		},
 	},
+	
 	/**
 	 * 提示：写在这里的为全屏界面，不建议写在这里
 	 * 请写在 `dynamicRoutes` 路由数组中

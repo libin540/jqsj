@@ -59,7 +59,7 @@ export interface SqlSugarPagedListUserOutput {
      * @type {Array<UserOutput>}
      * @memberof SqlSugarPagedListUserOutput
      */
-    records?: Array<UserOutput> | null;
+    items?: Array<UserOutput> | null;
 
     /**
      * 是否有上一页

@@ -405,7 +405,7 @@ export interface AddUserInput {
      * @type {string}
      * @memberof AddUserInput
      */
-    username: string;
+    account: string;
 
     /**
      * 真实姓名
@@ -413,7 +413,7 @@ export interface AddUserInput {
      * @type {string}
      * @memberof AddUserInput
      */
-    realname: string;
+    realName: string;
 
     /**
      * 域用户
@@ -424,12 +424,12 @@ export interface AddUserInput {
     domainAccount?: string | null;
 
     /**
-     * 角色ids, 多个id信息用','分隔
+     * 角色集合
      *
-     * @type {string}
+     * @type {Array<number>}
      * @memberof AddUserInput
      */
-    roleIds?: string | null;
+    roleIdList?: Array<number> | null;
 
     /**
      * 扩展机构集合

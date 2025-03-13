@@ -15,7 +15,7 @@ import { Local, Session } from '../utils/storage';
 // 接口服务器配置
 export const serveConfig = new Configuration({
 	basePath: window.__env__.VITE_API_URL,
-	basePath1:window.__env__.VITE_API_URL_1,
+	basePath1:window.__env__.VITE_API_ALARM_URL, 
 });
 
 // token 键定义
@@ -138,11 +138,11 @@ axiosInstance.interceptors.response.use(
 		}
 
 		// 响应拦截及自定义处理
-		if (serve.code == 401) {
+		if (serve.code === 401) {
 			clearAccessTokens();
 		} else if (serve.code === undefined) {
 			return Promise.resolve(res);
-		} else if (serve.code != 200) {
+		} else if (serve.code !== 200) {
 			var message;
 			// 判断 serve.message 是否为对象
 			if (serve.message && typeof serve.message == 'object') {
@@ -160,7 +160,6 @@ axiosInstance.interceptors.response.use(
 		return res;
 	},
 	(error) => {
-		debugger
 		// 处理响应错误
 		if (error.response) {
 			if (error.response.status === 401) {

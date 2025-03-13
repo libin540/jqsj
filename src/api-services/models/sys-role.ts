@@ -100,7 +100,7 @@ export interface SysRole {
      * @type {string}
      * @memberof SysRole
      */
-    roleName: string;
+    name: string;
 
     /**
      * 编码
@@ -108,7 +108,7 @@ export interface SysRole {
      * @type {string}
      * @memberof SysRole
      */
-    roleCode?: string | null;
+    code?: string | null;
 
     /**
      * 排序
@@ -130,7 +130,7 @@ export interface SysRole {
      * @type {string}
      * @memberof SysRole
      */
-    description?: string | null;
+    remark?: string | null;
 
     /**
      * @type {StatusEnum}

@@ -43,7 +43,7 @@ export const SysRoleApiAxiosParamCreator = function (configuration?: Configurati
          * @throws {RequiredError}
          */
         apiSysRoleAddPost: async (body?: AddRoleInput, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/sys/role/add`;
+            const localVarPath = `/api/sysRole/add`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
             let baseOptions;
@@ -86,20 +86,19 @@ export const SysRoleApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * 
          * @summary 删除角色 🔖
-         * @param {string} [roleIds] 
+         * @param {DeleteRoleInput} [body] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiSysRoleDelete: async (roleIds?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/sys/role/delete?roleIds={roleIds}`
-            .replace(`{${"roleIds"}}`, encodeURIComponent(String(roleIds)));
+        apiSysRoleDeletePost: async (body?: DeleteRoleInput, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/sysRole/delete`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions :AxiosRequestConfig = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarRequestOptions :AxiosRequestConfig = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -124,6 +123,9 @@ export const SysRoleApiAxiosParamCreator = function (configuration?: Configurati
             localVarUrlObj.search = (new URLSearchParams(query)).toString();
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
+
             return {
                 url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
                 options: localVarRequestOptions,
@@ -232,7 +234,7 @@ export const SysRoleApiAxiosParamCreator = function (configuration?: Configurati
          * @throws {RequiredError}
          */
         apiSysRoleListGet: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/sys/role/getAllRoles`;
+            const localVarPath = `/api/sysRole/list`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
             let baseOptions;
@@ -390,7 +392,7 @@ export const SysRoleApiAxiosParamCreator = function (configuration?: Configurati
          * @throws {RequiredError}
          */
         apiSysRolePagePost: async (body?: PageRoleInput, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/sys/role/list`;
+            const localVarPath = `/api/sysRole/page`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
             let baseOptions;
@@ -486,7 +488,7 @@ export const SysRoleApiAxiosParamCreator = function (configuration?: Configurati
          * @throws {RequiredError}
          */
         apiSysRoleUpdatePost: async (body?: UpdateRoleInput, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/sys/role/edit`;
+            const localVarPath = `/api/sysRole/update`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
             let baseOptions;
@@ -552,12 +554,12 @@ export const SysRoleApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @summary 删除角色 🔖
-         * @param {string} [roleIds] 
+         * @param {DeleteRoleInput} [body] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiSysRoleDelete(roleIds?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<AxiosResponse<void>>> {
-            const localVarAxiosArgs = await SysRoleApiAxiosParamCreator(configuration).apiSysRoleDelete(roleIds, options);
+        async apiSysRoleDeletePost(body?: DeleteRoleInput, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<AxiosResponse<void>>> {
+            const localVarAxiosArgs = await SysRoleApiAxiosParamCreator(configuration).apiSysRoleDeletePost(body, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs :AxiosRequestConfig = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -698,12 +700,12 @@ export const SysRoleApiFactory = function (configuration?: Configuration, basePa
         /**
          * 
          * @summary 删除角色 🔖
-         * @param {string} [roleIds] 
+         * @param {DeleteRoleInput} [body] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiSysRoleDelete(roleIds?: string, options?: AxiosRequestConfig): Promise<AxiosResponse<void>> {
-            return SysRoleApiFp(configuration).apiSysRoleDelete(roleIds, options).then((request) => request(axios, basePath));
+        async apiSysRoleDeletePost(body?: DeleteRoleInput, options?: AxiosRequestConfig): Promise<AxiosResponse<void>> {
+            return SysRoleApiFp(configuration).apiSysRoleDeletePost(body, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -805,18 +807,18 @@ export class SysRoleApi extends BaseAPI {
      * @memberof SysRoleApi
      */
     public async apiSysRoleAddPost(body?: AddRoleInput, options?: AxiosRequestConfig) : Promise<AxiosResponse<void>> {
-        return SysRoleApiFp(this.configuration).apiSysRoleAddPost(body, options).then((request) => request(this.axios, this.basePath1));
+        return SysRoleApiFp(this.configuration).apiSysRoleAddPost(body, options).then((request) => request(this.axios, this.basePath));
     }
     /**
      * 
      * @summary 删除角色 🔖
-     * @param {string} [roleIds] 
+     * @param {DeleteRoleInput} [body] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SysRoleApi
      */
-    public async apiSysRoleDelete(roleIds?: string, options?: AxiosRequestConfig) : Promise<AxiosResponse<void>> {
-        return SysRoleApiFp(this.configuration).apiSysRoleDelete(roleIds, options).then((request) => request(this.axios, this.basePath1));
+    public async apiSysRoleDeletePost(body?: DeleteRoleInput, options?: AxiosRequestConfig) : Promise<AxiosResponse<void>> {
+        return SysRoleApiFp(this.configuration).apiSysRoleDeletePost(body, options).then((request) => request(this.axios, this.basePath));
     }
     /**
      * 
@@ -848,7 +850,7 @@ export class SysRoleApi extends BaseAPI {
      * @memberof SysRoleApi
      */
     public async apiSysRoleListGet(options?: AxiosRequestConfig) : Promise<AxiosResponse<AdminResultListRoleOutput>> {
-        return SysRoleApiFp(this.configuration).apiSysRoleListGet(options).then((request) => request(this.axios, this.basePath1));
+        return SysRoleApiFp(this.configuration).apiSysRoleListGet(options).then((request) => request(this.axios, this.basePath));
     }
     /**
      * 
@@ -883,7 +885,7 @@ export class SysRoleApi extends BaseAPI {
      * @memberof SysRoleApi
      */
     public async apiSysRolePagePost(body?: PageRoleInput, options?: AxiosRequestConfig) : Promise<AxiosResponse<AdminResultSqlSugarPagedListSysRole>> {
-        return SysRoleApiFp(this.configuration).apiSysRolePagePost(body, options).then((request) => request(this.axios, this.basePath1));
+        return SysRoleApiFp(this.configuration).apiSysRolePagePost(body, options).then((request) => request(this.axios, this.basePath));
     }
     /**
      * 
@@ -905,6 +907,6 @@ export class SysRoleApi extends BaseAPI {
      * @memberof SysRoleApi
      */
     public async apiSysRoleUpdatePost(body?: UpdateRoleInput, options?: AxiosRequestConfig) : Promise<AxiosResponse<void>> {
-        return SysRoleApiFp(this.configuration).apiSysRoleUpdatePost(body, options).then((request) => request(this.axios, this.basePath1));
+        return SysRoleApiFp(this.configuration).apiSysRoleUpdatePost(body, options).then((request) => request(this.axios, this.basePath));
     }
 }

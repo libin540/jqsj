@@ -59,7 +59,7 @@ export interface SqlSugarPagedListSysRole {
      * @type {Array<SysRole>}
      * @memberof SqlSugarPagedListSysRole
      */
-    records?: Array<SysRole> | null;
+    items?: Array<SysRole> | null;
 
     /**
      * 是否有上一页

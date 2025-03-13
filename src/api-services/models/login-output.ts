@@ -26,7 +26,7 @@ export interface LoginOutput {
      * @type {string}
      * @memberof LoginOutput
      */
-    token?: string | null;
+    accessToken?: string | null;
 
     /**
      * 刷新Token

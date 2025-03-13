@@ -65,13 +65,14 @@ export class Configuration {
      */
     basePath?: string;
 
-     /**
-     * override base path1
+
+    /**
+     * override base path
      *
      * @type {string}
      * @memberof Configuration
      */
-     basePath1?: string;
+    basePath1?: string;
 
     /**
      * base options for axios calls
@@ -87,7 +88,7 @@ export class Configuration {
         this.password = param.password;
         this.accessToken = param.accessToken;
         this.basePath = param.basePath;
-        this.baseOptions = param.baseOptions;
         this.basePath1 = param.basePath1;
+        this.baseOptions = param.baseOptions;
     }
 }

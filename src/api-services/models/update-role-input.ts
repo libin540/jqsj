@@ -100,7 +100,7 @@ export interface UpdateRoleInput {
      * @type {string}
      * @memberof UpdateRoleInput
      */
-    roleCode?: string | null;
+    code?: string | null;
 
     /**
      * 排序
@@ -122,7 +122,7 @@ export interface UpdateRoleInput {
      * @type {string}
      * @memberof UpdateRoleInput
      */
-    description?: string | null;
+    remark?: string | null;
 
     /**
      * @type {StatusEnum}
@@ -136,7 +136,7 @@ export interface UpdateRoleInput {
      * @type {string}
      * @memberof UpdateRoleInput
      */
-    roleName: string;
+    name: string;
 
     /**
      * 菜单Id集合

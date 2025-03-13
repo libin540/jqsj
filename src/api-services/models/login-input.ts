@@ -27,7 +27,7 @@ export interface LoginInput {
      * @memberof LoginInput
      * @example admin
      */
-    username: string;
+    account: string;
 
     /**
      * 密码

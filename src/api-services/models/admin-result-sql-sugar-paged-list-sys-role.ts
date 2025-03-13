@@ -49,7 +49,7 @@ export interface AdminResultSqlSugarPagedListSysRole {
      * @type {SqlSugarPagedListSysRole}
      * @memberof AdminResultSqlSugarPagedListSysRole
      */
-    data?: SqlSugarPagedListSysRole;
+    result?: SqlSugarPagedListSysRole;
 
     /**
      * 附加数据

@@ -100,7 +100,7 @@ export interface AddRoleInput {
      * @type {string}
      * @memberof AddRoleInput
      */
-    roleCode?: string | null;
+    code?: string | null;
 
     /**
      * 排序
@@ -122,7 +122,7 @@ export interface AddRoleInput {
      * @type {string}
      * @memberof AddRoleInput
      */
-    description?: string | null;
+    remark?: string | null;
 
     /**
      * @type {StatusEnum}
@@ -136,7 +136,7 @@ export interface AddRoleInput {
      * @type {string}
      * @memberof AddRoleInput
      */
-    roleName: string;
+    name: string;
 
     /**
      * 菜单Id集合

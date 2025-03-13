@@ -9,12 +9,14 @@ import { CodeInspectorPlugin } from 'code-inspector-plugin';
 import fs from 'fs';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { webUpdateNotice } from '@plugin-web-update-notification/vite';
+import { fileURLToPath, URL } from 'node:url'
 const pathResolve = (dir: string) => {
 	return resolve(__dirname, '.', dir);
 };
 
 const alias: Record<string, string> = {
 	'/@': pathResolve('./src/'),
+	'@': fileURLToPath(new URL('./src', import.meta.url)),
 	'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js',
 };
 
@@ -66,11 +68,11 @@ const viteConfig = defineConfig((mode: ConfigEnv) => {
 					target: env.VITE_API_URL,
 					changeOrigin: true,
 				},
-				'/gw': {
-					target: 'http://192.168.2.12:9000/gw',
+				'/api': {
+					target: 'http://192.168.2.14:8877/zkdn-os/',
 					changeOrigin: true,
-					rewrite: (path) => path.replace(/^\/gw/, ''),
-				},
+					rewrite: (path) => path.replace(/^\/api/, '')
+				}
 			},
 		},
 		build: {

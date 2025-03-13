@@ -68,7 +68,6 @@ import { SysUserMenuApi } from '/@/api-services/api';
 import { MenuOutput } from '/@/api-services/models';
 import path from 'path';
 import { de } from 'element-plus/es/locale';
-import userMenu from '/@/router/userMenu.json'
 
 const mods = ref<MenuOutput[]>([]); // 所有应用
 const myMods = ref<MenuOutput[]>([]); // 我的常用
@@ -89,9 +88,8 @@ onMounted(() => {
 // 请求已收藏菜单列表
 const getFavoriteMenuList = async () => {
 	try {
-		//先用静态数据代替
-		//const res = await getAPI(SysUserMenuApi).apiSysUserMenuUserMenuListUserIdGet(userInfos.value.id);
-		return userMenu;//res.data.result || [];
+		const res = await getAPI(SysUserMenuApi).apiSysUserMenuUserMenuListUserIdGet(userInfos.value.id);
+		return res.data.result || [];
 	} catch (error) {
 		return [];
 	}

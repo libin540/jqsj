@@ -23,9 +23,9 @@
 		<el-card class="full-table" shadow="hover" style="margin-top: 5px">
 			<el-table :data="state.roleData" style="width: 100%" v-loading="state.loading" border>
 				<el-table-column type="index" label="序号" width="55" align="center" fixed />
-				<el-table-column prop="roleName" label="角色名称" align="center" show-overflow-tooltip />
-				<el-table-column prop="roleCode" label="角色编码" align="center" show-overflow-tooltip />
-				<!-- <el-table-column label="数据范围" align="center" show-overflow-tooltip>
+				<el-table-column prop="name" label="角色名称" align="center" show-overflow-tooltip />
+				<el-table-column prop="code" label="角色编码" align="center" show-overflow-tooltip />
+				<el-table-column label="数据范围" align="center" show-overflow-tooltip>
 					<template #default="scope">
 						<el-tag effect="plain" v-if="scope.row.dataScope === 1">全部数据</el-tag>
 						<el-tag effect="plain" v-else-if="scope.row.dataScope === 2">本部门及以下数据</el-tag>
@@ -33,14 +33,14 @@
 						<el-tag effect="plain" v-else-if="scope.row.dataScope === 4">仅本人数据</el-tag>
 						<el-tag effect="plain" v-else-if="scope.row.dataScope === 5">自定义数据</el-tag>
 					</template>
-				</el-table-column> -->
-				<!-- <el-table-column prop="orderNo" label="排序" width="70" align="center" show-overflow-tooltip />
+				</el-table-column>
+				<el-table-column prop="orderNo" label="排序" width="70" align="center" show-overflow-tooltip />
 				<el-table-column label="状态" width="70" align="center" show-overflow-tooltip>
 					<template #default="scope">
 						<el-tag type="success" v-if="scope.row.status === 1">启用</el-tag>
 						<el-tag type="danger" v-else>禁用</el-tag>
 					</template>
-				</el-table-column> -->
+				</el-table-column>
 				<el-table-column label="修改记录" width="100" align="center" show-overflow-tooltip>
 					<template #default="scope">
 						<ModifyRecord :data="scope.row" />
@@ -48,7 +48,7 @@
 				</el-table-column>
 				<el-table-column label="操作" width="240" fixed="right" align="center" show-overflow-tooltip>
 					<template #default="scope">
-						<!-- <el-button icon="ele-OfficeBuilding" size="small" text type="primary" @click="openGrantData(scope.row)" v-auth="'sysRole:grantDataScope'"> 数据范围 </el-button> -->
+						<el-button icon="ele-OfficeBuilding" size="small" text type="primary" @click="openGrantData(scope.row)" v-auth="'sysRole:grantDataScope'"> 数据范围 </el-button>
 						<el-button icon="ele-Edit" size="small" text type="primary" @click="openEditRole(scope.row)" v-auth="'sysRole:update'"> 编辑 </el-button>
 						<el-button icon="ele-Delete" size="small" text type="danger" @click="delRole(scope.row)" v-auth="'sysRole:delete'"> 删除 </el-button>
 					</template>
@@ -82,7 +82,7 @@ import ModifyRecord from '/@/components/table/modifyRecord.vue';
 
 import { getAPI } from '/@/utils/axios-utils';
 import { SysRoleApi } from '/@/api-services/api';
-import { QueryParams, SysRole } from '/@/api-services/models';
+import { SysRole } from '/@/api-services/models';
 
 const editRoleRef = ref<InstanceType<typeof EditRole>>();
 const grantDataRef = ref<InstanceType<typeof GrantData>>();
@@ -97,13 +97,6 @@ const state = reactive({
 		page: 1,
 		pageSize: 20,
 		total: 0 as any,
-		filters: []	as Array<QueryParams>,
-  		orders: [
-    		{
-      			asc: true,
-      			column: "id"
-    		}
-  		],
 	},
 	editRoleTitle: '',
 });
@@ -115,30 +108,10 @@ onMounted(async () => {
 // 查询操作
 const handleQuery = async () => {
 	state.loading = true;
-	//let params = Object.assign(state.queryParams, state.tableParams);
-	//清空数组
-	state.tableParams.filters=[];
-	if (state.queryParams.name) {
-		state.tableParams.filters.push(
-			{
-      			column: "roleName",
-      			operator: "LIKE",
-      			values: [state.queryParams.name]
-    		}
-		)
-	}
-	if (state.queryParams.code) {
-		state.tableParams.filters.push(
-			{
-      			column: "roleCode",
-      			operator: "LIKE",
-      			values: [state.queryParams.code]
-    		}
-		)
-	}
-	var res = await getAPI(SysRoleApi).apiSysRolePagePost(state.tableParams);
-	state.roleData = res.data.data?.records ?? [];
-	state.tableParams.total = res.data.data?.total;
+	let params = Object.assign(state.queryParams, state.tableParams);
+	var res = await getAPI(SysRoleApi).apiSysRolePagePost(params);
+	state.roleData = res.data.result?.items ?? [];
+	state.tableParams.total = res.data.result?.total;
 	state.loading = false;
 };
 
@@ -168,13 +141,13 @@ const openGrantData = (row: any) => {
 
 // 删除
 const delRole = (row: any) => {
-	ElMessageBox.confirm(`确定删角色：【${row.roleName}】?`, '提示', {
+	ElMessageBox.confirm(`确定删角色：【${row.name}】?`, '提示', {
 		confirmButtonText: '确定',
 		cancelButtonText: '取消',
 		type: 'warning',
 	})
 		.then(async () => {
-			await getAPI(SysRoleApi).apiSysRoleDelete(row.id);
+			await getAPI(SysRoleApi).apiSysRoleDeletePost({ id: row.id });
 			handleQuery();
 			ElMessage.success('删除成功');
 		})

@@ -418,7 +418,6 @@ export const SysConfigApiAxiosParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         apiSysConfigSysInfoGet: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            debugger
             const localVarPath = `/api/sysConfig/sysInfo`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
@@ -632,7 +631,6 @@ export const SysConfigApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = await SysConfigApiAxiosParamCreator(configuration).apiSysConfigSysInfoGet(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs :AxiosRequestConfig = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                debugger
                 return axios.request(axiosRequestArgs);
             };
         },

@@ -47,23 +47,23 @@
 		<div class="layout-navbars-breadcrumb-user-icon" @click="onScreenfullClick">
 			<i class="iconfont" :title="state.isScreenfull ? $t('message.user.title6') : $t('message.user.title5')" :class="!state.isScreenfull ? 'icon-fullscreen' : 'icon-tuichuquanping'"></i>
 		</div>
-		<!-- <div class="layout-navbars-breadcrumb-user-icon mr10" @click="onOnlineUserClick">
+		<div class="layout-navbars-breadcrumb-user-icon mr10" @click="onOnlineUserClick">
 			<el-icon title="在线用户">
 				<ele-User />
 			</el-icon>
-		</div> -->
+		</div>
 		<el-dropdown :show-timeout="70" :hide-timeout="50" @command="onHandleCommandClick">
 			<span class="layout-navbars-breadcrumb-user-link">
 				<el-tooltip effect="dark" placement="left">
 					<template #content>
-						账号：{{ userInfos.userName }}<br />
+						账号：{{ userInfos.account }}<br />
 						姓名：{{ userInfos.realName }}<br />
 						电话：{{ userInfos.phone }}<br />
 						邮箱：{{ userInfos.email }}<br />
-						<!-- 部门：{{ userInfos.orgName }}<br />
-						职位：{{ userInfos.posName }}<br /> -->
+						部门：{{ userInfos.orgName }}<br />
+						职位：{{ userInfos.posName }}<br />
 					</template>
-					<!-- <img :src="userInfos.avatar" class="layout-navbars-breadcrumb-user-link-photo mr5" /> -->
+					<img :src="userInfos.avatar" class="layout-navbars-breadcrumb-user-link-photo mr5" />
 				</el-tooltip>
 
 				{{ userInfos.realName == '' ? userInfos.account : userInfos.realName }}
@@ -100,7 +100,7 @@ import { Local } from '/@/utils/storage';
 import { clearAccessTokens, getAPI } from '/@/utils/axios-utils';
 import { SysAuthApi, SysNoticeApi } from '/@/api-services/api';
 import Push from 'push.js';
-//import { signalR } from '/@/views/system/onlineUser/signalR';
+import { signalR } from '/@/views/system/onlineUser/signalR';
 
 // 引入组件
 const UserNews = defineAsyncComponent(() => import('/@/layout/navBars/topBar/userNews.vue'));
@@ -232,11 +232,11 @@ onMounted(async () => {
 		}
 	});
 	// 加载未读的站内信
-	// var res = await getAPI(SysNoticeApi).apiSysNoticeUnReadListGet();
-	// state.noticeList = res.data.result ?? [];
+	var res = await getAPI(SysNoticeApi).apiSysNoticeUnReadListGet();
+	state.noticeList = res.data.result ?? [];
 
 	// 接收站内信
-	//signalR.on('PublicNotice', receiveNotice);
+	signalR.on('PublicNotice', receiveNotice);
 
 	// // 处理消息已读
 	// mittBus.on('noticeRead', (id) => {
