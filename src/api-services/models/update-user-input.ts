@@ -405,7 +405,7 @@ export interface UpdateUserInput {
      * @type {string}
      * @memberof UpdateUserInput
      */
-    account: string;
+    username: string;
 
     /**
      * 真实姓名
@@ -413,7 +413,7 @@ export interface UpdateUserInput {
      * @type {string}
      * @memberof UpdateUserInput
      */
-    realName: string;
+    realname: string;
 
     /**
      * 域用户
@@ -431,6 +431,14 @@ export interface UpdateUserInput {
      */
     roleIdList?: Array<number> | null;
 
+     /**
+     * 角色集合
+     *
+     * @type {string}
+     * @memberof UpdateUserInput
+     */
+     roleIds?: string | null;
+
     /**
      * 扩展机构集合
      *
@@ -438,4 +446,11 @@ export interface UpdateUserInput {
      * @memberof UpdateUserInput
      */
     extOrgIdList?: Array<SysUserExtOrg> | null;
+     /**
+     * 域用户
+     *
+     * @type {string}
+     * @memberof UpdateUserInput
+     */
+     password?: string | null;
 }

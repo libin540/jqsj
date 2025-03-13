@@ -13,26 +13,44 @@
  */
 
  /**
- * 
+ * 用户登录参数
  *
  * @export
- * @interface LogInput
+ * @interface LoginInput
  */
-export interface LogInput {
+ export interface LoginInput {
 
     /**
-     * 开始时间
+     * 账号
      *
-     * @type {Date}
-     * @memberof LogInput
+     * @type {string}
+     * @memberof LoginInput
+     * @example admin
      */
-    startTime?: Date | null;
+    username: string;
 
     /**
-     * 结束时间
+     * 密码
      *
-     * @type {Date}
-     * @memberof LogInput
+     * @type {string}
+     * @memberof LoginInput
+     * @example 123456
      */
-    endTime?: Date | null;
+    password: string;
+
+    /**
+     * 验证码Id
+     *
+     * @type {number}
+     * @memberof LoginInput
+     */
+    codeId?: number;
+
+    /**
+     * 验证码
+     *
+     * @type {string}
+     * @memberof LoginInput
+     */
+    code?: string | null;
 }

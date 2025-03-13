@@ -18,7 +18,7 @@
  * @export
  * @interface LoginOutput
  */
-export interface LoginOutput {
+ export interface LoginOutput {
 
     /**
      * 令牌Token
@@ -26,7 +26,7 @@ export interface LoginOutput {
      * @type {string}
      * @memberof LoginOutput
      */
-    accessToken?: string | null;
+    token?: string | null;
 
     /**
      * 刷新Token

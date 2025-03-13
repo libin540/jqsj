@@ -49,7 +49,7 @@ export interface AdminResultLoginOutput {
      * @type {LoginOutput}
      * @memberof AdminResultLoginOutput
      */
-    result?: LoginOutput;
+    data?: LoginOutput;
 
     /**
      * 附加数据

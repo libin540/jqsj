@@ -8,17 +8,17 @@
 				</div>
 			</template>
 			<el-tabs v-loading="state.loading" v-model="state.selectedTabName">
-				<el-tab-pane label="基础信息" style="height: 550px">
+				<el-tab-pane label="基础信息" style="height: 350px">
 					<el-form :model="state.ruleForm" ref="ruleFormRef" label-width="auto">
 						<el-row :gutter="35">
 							<el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="mb20">
-								<el-form-item label="账号名称" prop="account" :rules="[{ required: true, message: '账号名称不能为空', trigger: 'blur' }]">
-									<el-input v-model="state.ruleForm.account" placeholder="账号名称" clearable />
+								<el-form-item label="账号名称" prop="username" :rules="[{ required: true, message: '账号名称不能为空', trigger: 'blur' }]">
+									<el-input v-model="state.ruleForm.username" placeholder="账号名称" clearable />
 								</el-form-item>
 							</el-col>
-							<el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="mb20">
-								<el-form-item label="昵称">
-									<el-input v-model="state.ruleForm.nickName" placeholder="昵称" clearable />
+							<el-col v-if="state.ruleForm.id == undefined" :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="mb20">
+								<el-form-item label="密码">
+									<el-input v-model="state.ruleForm.password" placeholder="密码" clearable />
 								</el-form-item>
 							</el-col>
 							<el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="mb20">
@@ -27,8 +27,8 @@
 								</el-form-item>
 							</el-col>
 							<el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="mb20">
-								<el-form-item label="真实姓名" prop="realName" :rules="[{ required: true, message: '真实姓名不能为空', trigger: 'blur' }]">
-									<el-input v-model="state.ruleForm.realName" placeholder="真实姓名" clearable />
+								<el-form-item label="真实姓名" prop="realname" :rules="[{ required: true, message: '真实姓名不能为空', trigger: 'blur' }]">
+									<el-input v-model="state.ruleForm.realname" placeholder="真实姓名" clearable />
 								</el-form-item>
 							</el-col>
 							<el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="mb20">
@@ -38,7 +38,7 @@
 									</el-select>
 								</el-form-item>
 							</el-col>
-							<el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="mb20">
+							<!-- <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="mb20">
 								<el-form-item label="账号类型" prop="accountType" :rules="[{ required: true, message: '账号类型不能为空', trigger: 'blur' }]">
 									<el-select v-model="state.ruleForm.accountType" placeholder="账号类型" collapse-tags collapse-tags-tooltip class="w100">
 										<el-option label="系统管理员" :value="888" :disabled="userInfos.accountType != 888 && userInfos.accountType != 999" />
@@ -46,18 +46,27 @@
 										<el-option label="会员" :value="666" />
 									</el-select>
 								</el-form-item>
-							</el-col>
+							</el-col> -->
 							<el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="mb20">
 								<el-form-item label="邮箱">
 									<el-input v-model="state.ruleForm.email" placeholder="邮箱" clearable />
 								</el-form-item>
 							</el-col>
-							<el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="mb5">
+							<el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="mb20">
+								<el-form-item label="性别">
+									<el-radio-group v-model="state.ruleForm.sex">
+										<el-radio :value="1">男</el-radio>
+										<el-radio :value="2">女</el-radio>
+										<el-radio :value="3">其他</el-radio>
+									</el-radio-group>
+								</el-form-item>
+							</el-col>
+							<!-- <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="mb5">
 								<el-form-item label="排序">
 									<el-input-number v-model="state.ruleForm.orderNo" placeholder="排序" class="w100" />
 								</el-form-item>
-							</el-col>
-							<el-divider border-style="dashed" content-position="center">
+							</el-col> -->
+							<!-- <el-divider border-style="dashed" content-position="center">
 								<div style="color: #b1b3b8">机构组织</div>
 							</el-divider>
 							<el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="mb20">
@@ -140,11 +149,11 @@
 									</el-row>
 								</template>
 								<el-empty :image-size="50" description="空数据" v-else></el-empty>
-							</el-col>
+							</el-col> -->
 						</el-row>
 					</el-form>
 				</el-tab-pane>
-				<el-tab-pane label="档案信息" style="height: 550px">
+				<!-- <el-tab-pane label="档案信息" style="height: 550px">
 					<el-form :model="state.ruleForm" label-width="auto">
 						<el-row :gutter="35">
 							<el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="mb20">
@@ -168,15 +177,7 @@
 									<el-date-picker v-model="state.ruleForm.birthday" type="date" placeholder="出生日期" format="YYYY-MM-DD" value-format="YYYY-MM-DD" class="w100" />
 								</el-form-item>
 							</el-col>
-							<el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="mb20">
-								<el-form-item label="性别">
-									<el-radio-group v-model="state.ruleForm.sex">
-										<el-radio :value="1">男</el-radio>
-										<el-radio :value="2">女</el-radio>
-										<el-radio :value="3">其他</el-radio>
-									</el-radio-group>
-								</el-form-item>
-							</el-col>
+							
 							<el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="mb5">
 								<el-form-item label="年龄">
 									<el-input-number v-model="state.ruleForm.age" placeholder="年龄" class="w100" />
@@ -247,7 +248,7 @@
 							</el-col>
 						</el-row>
 					</el-form>
-				</el-tab-pane>
+				</el-tab-pane> -->
 			</el-tabs>
 			<template #footer>
 				<span class="dialog-footer">
@@ -324,9 +325,12 @@ const cancel = () => {
 const submit = () => {
 	ruleFormRef.value.validate(async (valid: boolean) => {
 		if (!valid) return;
+		//将角色集合转为string
+		state.ruleForm.roleIds = state.ruleForm.roleIdList?.join(',');
 		if (state.ruleForm.id != undefined && state.ruleForm.id > 0) {
 			await getAPI(SysUserApi).apiSysUserUpdatePost(state.ruleForm);
 		} else {
+			
 			await getAPI(SysUserApi).apiSysUserAddPost(state.ruleForm);
 		}
 		closeDialog();

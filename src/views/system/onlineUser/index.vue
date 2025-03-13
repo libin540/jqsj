@@ -58,7 +58,7 @@ import { getAPI, clearAccessTokens } from '/@/utils/axios-utils';
 import { SysOnlineUserApi, SysAuthApi } from '/@/api-services/api';
 import { SysOnlineUser } from '/@/api-services/models';
 
-import { signalR } from './signalR';
+//import { signalR } from './signalR';
 
 const state = reactive({
 	loading: false,
@@ -81,24 +81,24 @@ const state = reactive({
 
 onMounted(async () => {
 	// 在线用户列表
-	signalR.off('OnlineUserList');
-	signalR.on('OnlineUserList', (data: any) => {
-		state.onlineUserList = data.userList;
-		state.lastUserState = {
-			online: data.online,
-			realName: data.realName,
-		};
-		notificationThrottle();
-	});
-	// 强制下线
-	signalR.off('ForceOffline');
-	signalR.on('ForceOffline', async (data: any) => {
-		console.log('强制下线', data);
-		await signalR.stop();
+	// signalR.off('OnlineUserList');
+	// signalR.on('OnlineUserList', (data: any) => {
+	// 	state.onlineUserList = data.userList;
+	// 	state.lastUserState = {
+	// 		online: data.online,
+	// 		realName: data.realName,
+	// 	};
+	// 	notificationThrottle();
+	// });
+	// // 强制下线
+	// signalR.off('ForceOffline');
+	// signalR.on('ForceOffline', async (data: any) => {
+	// 	console.log('强制下线', data);
+	// 	await signalR.stop();
 
-		await getAPI(SysAuthApi).apiSysAuthLogoutPost();
-		clearAccessTokens();
-	});
+	// 	await getAPI(SysAuthApi).apiSysAuthLogoutPost();
+	// 	clearAccessTokens();
+	// });
 });
 
 // 通知提示节流
@@ -149,9 +149,9 @@ const forceOffline = async (row: any) => {
 		type: 'warning',
 	})
 		.then(async () => {
-			await signalR.send('ForceOffline', { connectionId: row.connectionId }).catch(function (err: any) {
-				console.log(err);
-			});
+			// await signalR.send('ForceOffline', { connectionId: row.connectionId }).catch(function (err: any) {
+			// 	console.log(err);
+			// });
 		})
 		.catch(() => {});
 };

@@ -365,3 +365,4 @@ export * from './wx-open-id-login-input';
 export * from './wx-open-id-output';
 export * from './wx-phone-output';
 export * from './yes-no-enum';
+export * from './query-params';

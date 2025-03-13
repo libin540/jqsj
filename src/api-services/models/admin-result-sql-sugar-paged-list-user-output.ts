@@ -49,7 +49,7 @@ export interface AdminResultSqlSugarPagedListUserOutput {
      * @type {SqlSugarPagedListUserOutput}
      * @memberof AdminResultSqlSugarPagedListUserOutput
      */
-    result?: SqlSugarPagedListUserOutput;
+    data?: SqlSugarPagedListUserOutput;
 
     /**
      * 附加数据

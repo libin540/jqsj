@@ -19,6 +19,7 @@ export interface ConfigurationParameters {
     accessToken?: string | Promise<string> | ((name?: string, scopes?: string[]) => string) | ((name?: string, scopes?: string[]) => Promise<string>);
     basePath?: string;
     basePath1?: string;
+    basePathAlarm?:string;
     baseOptions?: any;
 }
 
@@ -73,6 +74,13 @@ export class Configuration {
      * @memberof Configuration
      */
     basePath1?: string;
+     /**
+     * override base path
+     *
+     * @type {string}
+     * @memberof Configuration
+     */
+     basePathAlarm?: string;
 
     /**
      * base options for axios calls
@@ -89,6 +97,7 @@ export class Configuration {
         this.accessToken = param.accessToken;
         this.basePath = param.basePath;
         this.basePath1 = param.basePath1;
+        this.basePathAlarm = param.basePathAlarm;
         this.baseOptions = param.baseOptions;
     }
 }

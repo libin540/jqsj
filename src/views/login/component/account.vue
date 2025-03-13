@@ -2,7 +2,7 @@
 	<el-tooltip :visible="state.capsLockVisible" effect="light" content="大写锁定已打开" placement="top">
 		<el-form ref="ruleFormRef" :model="state.ruleForm" size="large" :rules="state.rules" class="login-content-form">
 			<el-form-item class="login-animation1" prop="account">
-				<el-input ref="accountRef" text placeholder="请输入账号" v-model="state.ruleForm.account" clearable autocomplete="off" @keyup.enter.native="handleSignIn">
+				<el-input ref="accountRef" text placeholder="请输入账号" v-model="state.ruleForm.username" clearable autocomplete="off" @keyup.enter.native="handleSignIn">
 					<template #prefix>
 						<el-icon>
 							<ele-User />
@@ -110,13 +110,13 @@ const dragRef: any = ref(null);
 const state = reactive({
 	isShowPassword: false,
 	ruleForm: {
-		account: 'superadmin',
-		password: '123456',
+		username: 'admin',
+		password: 'Zkdn@123',
 		code: '',
 		codeId: 0,
 	},
 	rules: {
-		account: [{ required: true, message: '请输入用户名', trigger: 'blur' }],
+		username: [{ required: true, message: '请输入用户名', trigger: 'blur' }],
 		password: [{ required: true, message: '请输入密码', trigger: 'blur' }],
 		// code: [{ required: true, message: '请输入验证码', trigger: 'blur' }],
 	},
@@ -141,9 +141,9 @@ onMounted(async () => {
 	}
 
 	// 获取登录配置
-	var res1 = await getAPI(SysAuthApi).apiSysAuthLoginConfigGet();
-	state.secondVerEnabled = res1.data.result.secondVerEnabled ?? true;
-	state.captchaEnabled = res1.data.result.captchaEnabled ?? true;
+	// var res1 = await getAPI(SysAuthApi).apiSysAuthLoginConfigGet();
+	// state.secondVerEnabled = res1.data.result.secondVerEnabled ?? true;
+	// state.captchaEnabled = res1.data.result.captchaEnabled ?? true;
 
 	// 获取验证码
 	getCaptcha();
@@ -182,24 +182,25 @@ const onSignIn = async () => {
 		if (!valid) return false;
 
 		try {
+			
 			state.loading.signIn = true;
 
 			// SM2加密密码
 			// const keys = SM2.generateKeyPair();
 			const publicKey = window.__env__.VITE_SM_PUBLIC_KEY;
 			const password = sm2.doEncrypt(state.ruleForm.password, publicKey, 1);
-
-			const [err, res] = await feature(getAPI(SysAuthApi).apiSysAuthLoginPost({ ...state.ruleForm, password: password }));
+			
+			const [err, res] = await feature(getAPI(SysAuthApi).apiSysAuthLoginPost({ ...state.ruleForm}));
 			if (err) {
 				getCaptcha(); // 重新获取验证码
 				return;
 			}
-			if (res.data.result?.accessToken == undefined) {
+			if (res.data.data?.token == undefined) {
 				getCaptcha(); // 重新获取验证码
 				ElMessage.error('登录失败，请检查账号！');
 				return;
 			}
-			await saveTokenAndInitRoutes(res.data.result?.accessToken);
+			await saveTokenAndInitRoutes(res.data.data);
 		} finally {
 			state.loading.signIn = false;
 		}
@@ -207,11 +208,22 @@ const onSignIn = async () => {
 };
 
 // 保持Token并初始化路由
-const saveTokenAndInitRoutes = async (accessToken: string | any) => {
+const saveTokenAndInitRoutes = async (data: string | any) => {
+	debugger
 	// 缓存token
-	Local.set(accessTokenKey, accessToken);
+	Local.set(accessTokenKey, data?.token);
 	// Local.set(refreshAccessTokenKey, refreshAccessToken);
-	Session.set('token', accessToken);
+	Session.set('token', data?.token);
+	const userInfo = {
+							id: data.userId,
+							account: data.username,
+							realName: data.realname,
+							phone: data.phone,
+							email: data.email,
+							time: new Date().getTime(),
+						};
+	//缓存用户信息
+	Session.set('userInfo', userInfo);
 
 	// 添加完动态路由再进行router跳转，否则可能报错 No match found for location with path "/"
 	const isNoPower = await initBackEndControlRoutes();
@@ -260,7 +272,7 @@ const passRotateVerify = () => {
 
 // 登录处理
 const handleSignIn = () => {
-	if (!state.ruleForm.account) {
+	if (!state.ruleForm.username) {
 		accountRef.value?.focus();
 	} else if (!state.ruleForm.password) {
 		passwordRef.value?.focus();

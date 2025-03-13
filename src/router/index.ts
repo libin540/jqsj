@@ -89,7 +89,6 @@ export function formatTwoStageRoutes(arr: any) {
 	});
 	const stores = useKeepALiveNames(pinia);
 	stores.setCacheKeepAlive(cacheList);
-	
 	return newArr;
 }
 
@@ -97,7 +96,7 @@ export function formatTwoStageRoutes(arr: any) {
 router.beforeEach(async (to, from, next) => {
 	NProgress.configure({ showSpinner: false });
 	if (to.meta.title) NProgress.start();
-	const token = '123456'//Session.get('token');
+	const token = Session.get('token');
 	if (to.path === '/login' && !token) {
 		next();
 		NProgress.done();

@@ -48,7 +48,7 @@ export const SysUserApiAxiosParamCreator = function (configuration?: Configurati
          * @throws {RequiredError}
          */
         apiSysUserAddPost: async (body?: AddUserInput, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/sysUser/add`;
+            const localVarPath = `/sys/user/add`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
             let baseOptions;
@@ -230,19 +230,20 @@ export const SysUserApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * 
          * @summary 删除用户 🔖
-         * @param {DeleteUserInput} [body] 
+         * @param {string} [userId] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiSysUserDeletePost: async (body?: DeleteUserInput, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/sysUser/delete`;
+        apiSysUserDelete: async (userId?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/sys/user/delete?userId={userId}`
+            .replace(`{${"userId"}}`, encodeURIComponent(String(userId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions :AxiosRequestConfig = { method: 'POST', ...baseOptions, ...options};
+            const localVarRequestOptions :AxiosRequestConfig = { method: 'DELETE', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -267,9 +268,6 @@ export const SysUserApiAxiosParamCreator = function (configuration?: Configurati
             localVarUrlObj.search = (new URLSearchParams(query)).toString();
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            const needsSerialization = (typeof body !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(body !== undefined ? body : {}) : (body || "");
-
             return {
                 url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
                 options: localVarRequestOptions,
@@ -384,7 +382,7 @@ export const SysUserApiAxiosParamCreator = function (configuration?: Configurati
             if (userId === null || userId === undefined) {
                 throw new RequiredError('userId','Required parameter userId was null or undefined when calling apiSysUserOwnRoleListUserIdGet.');
             }
-            const localVarPath = `/api/sysUser/ownRoleList/{userId}`
+            const localVarPath = `/sys/role/getRolesByUserId?userId={userId}`
                 .replace(`{${"userId"}}`, encodeURIComponent(String(userId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
@@ -428,8 +426,8 @@ export const SysUserApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiSysUserPagePost: async (body?: PageUserInput, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/sysUser/page`;
+        apiSysUserPagePost: async ( body?: PageUserInput, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/sys/user/list`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
             let baseOptions;
@@ -621,7 +619,7 @@ export const SysUserApiAxiosParamCreator = function (configuration?: Configurati
          * @throws {RequiredError}
          */
         apiSysUserUpdatePost: async (body?: UpdateUserInput, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/sysUser/update`;
+            const localVarPath = `/sys/user/edit`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
             let baseOptions;
@@ -728,12 +726,12 @@ export const SysUserApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @summary 删除用户 🔖
-         * @param {DeleteUserInput} [body] 
+         * @param {string} [userId] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiSysUserDeletePost(body?: DeleteUserInput, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<AxiosResponse<void>>> {
-            const localVarAxiosArgs = await SysUserApiAxiosParamCreator(configuration).apiSysUserDeletePost(body, options);
+        async apiSysUserDelete(userId?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<AxiosResponse<void>>> {
+            const localVarAxiosArgs = await SysUserApiAxiosParamCreator(configuration).apiSysUserDelete(userId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs :AxiosRequestConfig = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -902,12 +900,12 @@ export const SysUserApiFactory = function (configuration?: Configuration, basePa
         /**
          * 
          * @summary 删除用户 🔖
-         * @param {DeleteUserInput} [body] 
+         * @param {string} [userId] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiSysUserDeletePost(body?: DeleteUserInput, options?: AxiosRequestConfig): Promise<AxiosResponse<void>> {
-            return SysUserApiFp(configuration).apiSysUserDeletePost(body, options).then((request) => request(axios, basePath));
+        async apiSysUserDeletePost(userId?: string, options?: AxiosRequestConfig): Promise<AxiosResponse<void>> {
+            return SysUserApiFp(configuration).apiSysUserDelete(userId, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -1008,7 +1006,7 @@ export class SysUserApi extends BaseAPI {
      * @memberof SysUserApi
      */
     public async apiSysUserAddPost(body?: AddUserInput, options?: AxiosRequestConfig) : Promise<AxiosResponse<AdminResultInt64>> {
-        return SysUserApiFp(this.configuration).apiSysUserAddPost(body, options).then((request) => request(this.axios, this.basePath));
+        return SysUserApiFp(this.configuration).apiSysUserAddPost(body, options).then((request) => request(this.axios, this.basePath1));
     }
     /**
      * 
@@ -1045,13 +1043,13 @@ export class SysUserApi extends BaseAPI {
     /**
      * 
      * @summary 删除用户 🔖
-     * @param {DeleteUserInput} [body] 
+     * @param {string} [userId] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SysUserApi
      */
-    public async apiSysUserDeletePost(body?: DeleteUserInput, options?: AxiosRequestConfig) : Promise<AxiosResponse<void>> {
-        return SysUserApiFp(this.configuration).apiSysUserDeletePost(body, options).then((request) => request(this.axios, this.basePath));
+    public async apiSysUserDelete(userId?: string, options?: AxiosRequestConfig) : Promise<AxiosResponse<void>> {
+        return SysUserApiFp(this.configuration).apiSysUserDelete(userId, options).then((request) => request(this.axios, this.basePath1));
     }
     /**
      * 
@@ -1084,7 +1082,7 @@ export class SysUserApi extends BaseAPI {
      * @memberof SysUserApi
      */
     public async apiSysUserOwnRoleListUserIdGet(userId: number, options?: AxiosRequestConfig) : Promise<AxiosResponse<AdminResultListInt64>> {
-        return SysUserApiFp(this.configuration).apiSysUserOwnRoleListUserIdGet(userId, options).then((request) => request(this.axios, this.basePath));
+        return SysUserApiFp(this.configuration).apiSysUserOwnRoleListUserIdGet(userId, options).then((request) => request(this.axios, this.basePath1));
     }
     /**
      * 
@@ -1095,7 +1093,7 @@ export class SysUserApi extends BaseAPI {
      * @memberof SysUserApi
      */
     public async apiSysUserPagePost(body?: PageUserInput, options?: AxiosRequestConfig) : Promise<AxiosResponse<AdminResultSqlSugarPagedListUserOutput>> {
-        return SysUserApiFp(this.configuration).apiSysUserPagePost(body, options).then((request) => request(this.axios, this.basePath));
+        return SysUserApiFp(this.configuration).apiSysUserPagePost(body, options).then((request) => request(this.axios, this.basePath1));
     }
     /**
      * 

@@ -72,7 +72,11 @@ const viteConfig = defineConfig((mode: ConfigEnv) => {
 					target: 'http://192.168.2.14:8877/zkdn-os/',
 					changeOrigin: true,
 					rewrite: (path) => path.replace(/^\/api/, '')
-				}
+				},'/gw': {
+					target: 'http://192.168.2.12:9000/gw',
+					changeOrigin: true,
+					rewrite: (path) => path.replace(/^\/gw/, ''),
+				},
 			},
 		},
 		build: {
