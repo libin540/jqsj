@@ -36,6 +36,14 @@ export interface UpdateUserInput {
     id?: number;
 
     /**
+     * 雪花Id
+     *
+     * @type {string}
+     * @memberof UpdateUserInput
+     */
+    userId?: string;
+
+    /**
      * 创建时间
      *
      * @type {Date}

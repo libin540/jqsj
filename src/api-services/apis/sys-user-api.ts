@@ -1137,6 +1137,6 @@ export class SysUserApi extends BaseAPI {
      * @memberof SysUserApi
      */
     public async apiSysUserUpdatePost(body?: UpdateUserInput, options?: AxiosRequestConfig) : Promise<AxiosResponse<void>> {
-        return SysUserApiFp(this.configuration).apiSysUserUpdatePost(body, options).then((request) => request(this.axios, this.basePath));
+        return SysUserApiFp(this.configuration).apiSysUserUpdatePost(body, options).then((request) => request(this.axios, this.basePath1));
     }
 }

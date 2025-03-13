@@ -25,5 +25,31 @@
             "isAffix": false
         },
         "children": []
+    },
+    {
+        "id": 651160469700677,
+        "pid": 0,
+        "type": 1,
+        "name": "alarm",
+        "path": "/alarmCenter",
+        "permission": null,
+        "redirect": null,
+        "orderNo": 100,
+        "status": 1,
+        "remark": null,
+        "createTime": "2025-03-05 09:58:46",
+        "updateTime": "2025-03-06 15:56:14",
+        "createUserName": "超级管理员",
+        "updateUserName": "超级管理员",
+        "meta": {
+            "title": "报警中心",
+            "icon": "ele-BellFilled",
+            "isIframe": false,
+            "isLink": null,
+            "isHide": false,
+            "isKeepAlive": true,
+            "isAffix": false
+        },
+        "children": []
     }
 ]

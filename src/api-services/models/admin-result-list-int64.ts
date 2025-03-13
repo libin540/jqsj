@@ -12,6 +12,8 @@
  * Do not edit the class manually.
  */
 
+import { RoleOutput } from "./role-output";
+
  /**
  * 全局返回结果
  *
@@ -47,10 +49,10 @@ export interface AdminResultListInt64 {
     /**
      * 数据
      *
-     * @type {Array<number>}
+     * @type {Array<RoleOutput>}
      * @memberof AdminResultListInt64
      */
-    result?: Array<number> | null;
+    data?: Array<RoleOutput> | null;
 
     /**
      * 附加数据

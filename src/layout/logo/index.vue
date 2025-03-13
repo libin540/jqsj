@@ -12,9 +12,9 @@
 import { computed } from 'vue';
 import { storeToRefs } from 'pinia';
 import { useThemeConfig } from '/@/stores/themeConfig';
-
+import { useRouter } from 'vue-router';
 // import logoMini from '/@/assets/logo-mini.svg';
-
+const router = useRouter();
 // 定义变量内容
 const storesThemeConfig = useThemeConfig();
 const { themeConfig } = storeToRefs(storesThemeConfig);
@@ -30,8 +30,9 @@ const showLogo = computed(() => {
 });
 // logo 点击实现菜单展开/收起
 const onThemeConfigChange = () => {
-	if (themeConfig.value.layout === 'transverse') return false;
-	themeConfig.value.isCollapse = !themeConfig.value.isCollapse;
+	// if (themeConfig.value.layout === 'transverse') return false;
+	// themeConfig.value.isCollapse = !themeConfig.value.isCollapse;
+	router.push('/dashboard/home');
 };
 </script>
 

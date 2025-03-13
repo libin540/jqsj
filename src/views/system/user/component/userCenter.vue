@@ -20,7 +20,7 @@
 						<div class="username">{{ userInfos.realName }}</div>
 					</div>
 					<div class="account-center-org">
-						<p>
+						<!-- <p>
 							<el-icon><ele-School /></el-icon> <span>{{ userInfos.orgName ?? '超级管理员' }}</span>
 						</p>
 						<p>
@@ -28,7 +28,7 @@
 						</p>
 						<p>
 							<el-icon><ele-LocationInformation /></el-icon> <span>{{ userInfos.address ?? '家庭住址' }}</span>
-						</p>
+						</p> -->
 					</div>
 					<div class="image-signature">
 						<el-image :src="userInfos.signature" fit="contain" alt="电子签名" loading="lazy" style="width: 100%; height: 100%"> </el-image>
@@ -61,11 +61,11 @@
 											<el-input v-model="state.ruleFormBase.realName" placeholder="真实姓名" clearable />
 										</el-form-item>
 									</el-col>
-									<el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="mb20">
+									<!-- <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="mb20">
 										<el-form-item label="昵称">
 											<el-input v-model="state.ruleFormBase.nickName" placeholder="昵称" clearable />
 										</el-form-item>
-									</el-col>
+									</el-col> -->
 									<el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="mb20">
 										<el-form-item label="手机号码" prop="phone" :rules="[{ required: true, message: '手机号码不能为空', trigger: 'blur' }]">
 											<el-input v-model="state.ruleFormBase.phone" placeholder="手机号码" clearable />
@@ -76,11 +76,11 @@
 											<el-input v-model="state.ruleFormBase.email" placeholder="邮箱" clearable />
 										</el-form-item>
 									</el-col>
-									<el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="mb20">
+									<!-- <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="mb20">
 										<el-form-item label="出生日期" prop="birthday" :rules="[{ required: true, message: '出生日期不能为空', trigger: 'blur' }]">
 											<el-date-picker v-model="state.ruleFormBase.birthday" type="date" placeholder="出生日期" format="YYYY-MM-DD" value-format="YYYY-MM-DD" class="w100" />
 										</el-form-item>
-									</el-col>
+									</el-col> -->
 									<el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="mb20">
 										<el-form-item label="性别">
 											<el-radio-group v-model="state.ruleFormBase.sex">
@@ -107,9 +107,9 @@
 								</el-row>
 							</el-form>
 						</el-tab-pane>
-						<el-tab-pane label="组织机构">
+						<!-- <el-tab-pane label="组织机构">
 							<OrgTree ref="orgTreeRef" />
-						</el-tab-pane>
+						</el-tab-pane> -->
 						<el-tab-pane label="修改密码">
 							<el-form ref="ruleFormPasswordRef" :model="state.ruleFormPassword" label-width="auto">
 								<el-form-item label="当前密码" prop="passwordOld" :rules="[{ required: true, message: '当前密码不能为空', trigger: 'blur' }]">
@@ -173,6 +173,7 @@ import { sm2 } from 'sm-crypto-v2';
 import { clearAccessTokens, getAPI } from '/@/utils/axios-utils';
 import { SysFileApi, SysUserApi } from '/@/api-services/api';
 import { ChangePwdInput, SysUser, SysFile } from '/@/api-services/models';
+import { Session} from '/@/utils/storage';
 
 const stores = useUserInfo();
 const { userInfos } = storeToRefs(stores);
@@ -202,8 +203,10 @@ const state = reactive({
 
 onMounted(async () => {
 	state.loading = true;
-	var res = await getAPI(SysUserApi).apiSysUserBaseInfoGet();
-	state.ruleFormBase = res.data.result ?? { account: '' };
+	
+	//var res = await getAPI(SysUserApi).apiSysUserBaseInfoGet();
+	let userInfo = Session.get('userInfo');
+	state.ruleFormBase = userInfo//res.data.result ?? { account: '' };
 	state.loading = false;
 });
 

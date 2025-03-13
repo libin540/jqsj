@@ -34,7 +34,7 @@ export interface RoleOutput {
      * @type {string}
      * @memberof RoleOutput
      */
-    name?: string | null;
+    roleName?: string | null;
 
     /**
      * 编码
@@ -42,5 +42,5 @@ export interface RoleOutput {
      * @type {string}
      * @memberof RoleOutput
      */
-    code?: string | null;
+    roleCode?: string | null;
 }

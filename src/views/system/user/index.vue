@@ -93,7 +93,7 @@
 						</el-table-column>
 					</el-table>
 					<el-pagination
-						v-model:currentPage="state.tableParams.page"
+						v-model:currentPage="state.tableParams.pageNum"
 						v-model:page-size="state.tableParams.pageSize"
 						:total="state.tableParams.total"
 						:page-sizes="[10, 20, 50, 100]"
@@ -166,7 +166,6 @@ const loadOrgData = async () => {
 
 // 查询操作
 const handleQuery = async () => {
-	
 	state.loading = true;
 	//清空数组
 	state.tableParams.filters=[];

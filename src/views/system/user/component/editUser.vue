@@ -34,7 +34,7 @@
 							<el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="mb20">
 								<el-form-item label="角色集合" prop="roleIdList" :rules="[{ required: true, message: '角色集合不能为空', trigger: 'blur' }]">
 									<el-select v-model="state.ruleForm.roleIdList" multiple value-key="id" clearable placeholder="角色集合" collapse-tags collapse-tags-tooltip class="w100" filterable>
-										<el-option v-for="item in state.roleData" :key="item.id" :label="item.name" :value="item.id" />
+										<el-option v-for="item in state.roleData" :key="item.id" :label="item.roleName" :value="item.id" />
 									</el-select>
 								</el-form-item>
 							</el-col>
@@ -268,6 +268,8 @@ import { useUserInfo } from '/@/stores/userInfo';
 import { getAPI } from '/@/utils/axios-utils';
 import { SysPosApi, SysRoleApi, SysUserApi } from '/@/api-services/api';
 import { RoleOutput, SysOrg, SysPos, UpdateUserInput } from '/@/api-services/models';
+import { it } from 'node:test';
+import { number } from 'echarts';
 
 const props = defineProps({
 	title: String,
@@ -288,10 +290,10 @@ const state = reactive({
 
 onMounted(async () => {
 	state.loading = true;
-	var res = await getAPI(SysPosApi).apiSysPosListGet();
-	state.posData = res.data.result ?? [];
+	// var res = await getAPI(SysPosApi).apiSysPosListGet();
+	// state.posData = res.data.result ?? [];
 	var res1 = await getAPI(SysRoleApi).apiSysRoleListGet();
-	state.roleData = res1.data.result ?? [];
+	state.roleData = res1.data.data ?? [];
 	state.loading = false;
 });
 
@@ -303,9 +305,9 @@ const openDialog = async (row: any) => {
 	state.ruleForm = JSON.parse(JSON.stringify(row));
 	if (row.id != undefined) {
 		var resRole = await getAPI(SysUserApi).apiSysUserOwnRoleListUserIdGet(row.id);
-		state.ruleForm.roleIdList = resRole.data.result;
-		var resExtOrg = await getAPI(SysUserApi).apiSysUserOwnExtOrgListUserIdGet(row.id);
-		state.ruleForm.extOrgIdList = resExtOrg.data.result;
+		state.ruleForm.roleIdList = resRole.data.data?.map(item=>item?.id) as Array<number>;
+		// var resExtOrg = await getAPI(SysUserApi).apiSysUserOwnExtOrgListUserIdGet(row.id);
+		// state.ruleForm.extOrgIdList = resExtOrg.data.result;
 	} else state.ruleForm.accountType = 777; // 默认普通账号类型
 	state.isShowDialog = true;
 };
@@ -328,6 +330,7 @@ const submit = () => {
 		//将角色集合转为string
 		state.ruleForm.roleIds = state.ruleForm.roleIdList?.join(',');
 		if (state.ruleForm.id != undefined && state.ruleForm.id > 0) {
+			state.ruleForm.userId = state.ruleForm.id.toString();
 			await getAPI(SysUserApi).apiSysUserUpdatePost(state.ruleForm);
 		} else {
 			

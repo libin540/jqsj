@@ -10,31 +10,31 @@
 			<el-form :model="state.ruleForm" ref="ruleFormRef" label-width="auto">
 				<el-row :gutter="35">
 					<el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" class="mb20">
-						<el-form-item label="角色名称" prop="name" :rules="[{ required: true, message: '角色名称不能为空', trigger: 'blur' }]">
-							<el-input v-model="state.ruleForm.name" placeholder="角色名称" clearable />
+						<el-form-item label="角色名称" prop="roleName" :rules="[{ required: true, message: '角色名称不能为空', trigger: 'blur' }]">
+							<el-input v-model="state.ruleForm.roleName" placeholder="角色名称" clearable />
 						</el-form-item>
 					</el-col>
 					<el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" class="mb20">
-						<el-form-item label="角色编码" prop="code" :rules="[{ required: true, message: '角色编码不能为空', trigger: 'blur' }]">
-							<el-input v-model="state.ruleForm.code" placeholder="角色编码" clearable :disabled="state.ruleForm.code == 'sys_admin' && state.ruleForm.id != undefined" />
+						<el-form-item label="角色编码" prop="roleCode" :rules="[{ required: true, message: '角色编码不能为空', trigger: 'blur' }]">
+							<el-input v-model="state.ruleForm.roleCode" placeholder="角色编码" clearable :disabled="state.ruleForm.roleCode == 'sys_admin' && state.ruleForm.id != undefined" />
 						</el-form-item>
 					</el-col>
-					<el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="mb20">
+					<!-- <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="mb20">
 						<el-form-item label="排序">
 							<el-input-number v-model="state.ruleForm.orderNo" placeholder="排序" class="w100" />
 						</el-form-item>
-					</el-col>
-					<el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="mb20">
+					</el-col> -->
+					<!-- <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="mb20">
 						<el-form-item label="状态">
 							<el-radio-group v-model="state.ruleForm.status">
 								<el-radio :value="1">启用</el-radio>
 								<el-radio :value="2">禁用</el-radio>
 							</el-radio-group>
 						</el-form-item>
-					</el-col>
+					</el-col> -->
 					<el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" class="mb20">
 						<el-form-item label="备注">
-							<el-input v-model="state.ruleForm.remark" placeholder="请输入备注内容" clearable type="textarea" />
+							<el-input v-model="state.ruleForm.description" placeholder="请输入备注内容" clearable type="textarea" />
 						</el-form-item>
 					</el-col>
 					<el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" class="mb20">
@@ -71,6 +71,9 @@ import type { ElTree } from 'element-plus';
 import { getAPI } from '/@/utils/axios-utils';
 import { SysMenuApi, SysRoleApi } from '/@/api-services/api';
 import { SysMenu, UpdateRoleInput } from '/@/api-services/models';
+import menus from '/@/router/menus.json'
+import roleMenus from '/@/router/roleMenu.json'
+import { number } from 'echarts';
 
 const props = defineProps({
 	title: String,
@@ -87,8 +90,9 @@ const state = reactive({
 
 onMounted(async () => {
 	state.loading = true;
-	var res = await getAPI(SysMenuApi).apiSysMenuListGet();
-	state.menuData = res.data.result ?? [];
+	//这里需要获取多个模块的权限
+	//var res = await getAPI(SysMenuApi).apiSysMenuListGet();
+	state.menuData = menus//res.data.result ?? [];
 	state.loading = false;
 });
 
@@ -98,9 +102,14 @@ const openDialog = async (row: any) => {
 	treeRef.value?.setCheckedKeys([]); // 清空选中值
 	state.ruleForm = JSON.parse(JSON.stringify(row));
 	if (row.id != undefined) {
-		var res = await getAPI(SysRoleApi).apiSysRoleOwnMenuListGet(row.id);
+		//这里也需要获取已经选中的权限
+		//需要从每个模块获取
+		//var res = await getAPI(SysRoleApi).apiSysRoleOwnMenuListGet(row.id);
+		// setTimeout(() => {
+		// 	treeRef.value?.setCheckedKeys(res.data.result ?? []);
+		// }, 100);
 		setTimeout(() => {
-			treeRef.value?.setCheckedKeys(res.data.result ?? []);
+			treeRef.value?.setCheckedKeys(roleMenus);
 		}, 100);
 	}
 	state.isShowDialog = true;

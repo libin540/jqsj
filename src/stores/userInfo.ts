@@ -5,7 +5,19 @@ import { useThemeConfig } from '/@/stores/themeConfig';
 
 import { getAPI } from '/@/utils/axios-utils';
 import { SysAuthApi, SysConstApi, SysDictTypeApi } from '/@/api-services/api';
+import constListJson from '/@/router/const.json'
+import dictListJson from '/@/router/sysDict.json'
 
+
+// token 键定义
+export const accessTokenKey = 'access-token';
+export const refreshAccessTokenKey = `x-${accessTokenKey}`;
+// 清除 token
+export const clearTokens = () => {
+	Local.remove(accessTokenKey);
+	Local.remove(refreshAccessTokenKey);
+	Session.clear();
+};
 /**
  * 用户信息
  * @methods setUserInfos 设置用户信息
@@ -31,8 +43,10 @@ export const useUserInfo = defineStore('userInfo', {
 			if (Session.get('userInfo')) {
 				this.userInfos = Session.get('userInfo');
 			} else {
-				const userInfos = <UserInfos>await this.getApiUserInfo();
-				this.userInfos = userInfos;
+				//clearTokens(); // 清空Token缓存
+				//const userInfos = <UserInfos>await this.getApiUserInfo();
+				//this.userInfos = userInfos;
+				//跳转到登录页
 			}
 		},
 
@@ -41,68 +55,68 @@ export const useUserInfo = defineStore('userInfo', {
 			if (Session.get('constList')) {
 				this.constList = Session.get('constList');
 			} else {
-				const constList = <any[]>await this.getSysConstList();
-				Session.set('constList', constList);
-				this.constList = constList;
+				//const constList = <any[]>await this.getSysConstList();
+				Session.set('constList', constListJson);
+				this.constList = constListJson;
 			}
 		},
 
 		// 存储字典信息到浏览器缓存
 		async setDictList() {
-			var res = await getAPI(SysDictTypeApi).apiSysDictTypeAllDictListGet();
-			this.dictList = res.data.result;
-			// if (Session.get('dictList')) {
-			// 	this.dictList = Session.get('dictList');
-			// } else {
-			//	const dictList = <any[]>await this.getAllDictList();
-			//	Session.set('dictList', dictList);
-			//	this.dictList = dictList;
-			// }
+			//var res = await getAPI(SysDictTypeApi).apiSysDictTypeAllDictListGet();
+			//this.dictList = res.data.result;
+			 if (Session.get('dictList')) {
+			 	this.dictList = Session.get('dictList');
+			 } else {
+				//const dictList = <any[]>await this.getAllDictList();
+				Session.set('dictList', dictListJson);
+				this.dictList = dictListJson;
+			 }
 		},
 
-		// 获取当前用户信息
-		getApiUserInfo() {
-			return new Promise((resolve) => {
-				getAPI(SysAuthApi)
-					.apiSysAuthUserInfoGet()
-					.then(async (res: any) => {
-						if (res.data.result == null) return;
-						var d = res.data.result;
-						const userInfos = {
-							id: d.id,
-							account: d.account,
-							realName: d.realName,
-							phone: d.phone,
-							idCardNum: d.idCardNum,
-							email: d.email,
-							accountType: d.accountType,
-							avatar: d.avatar ?? '/favicon.ico',
-							address: d.address,
-							signature: d.signature,
-							orgId: d.orgId,
-							orgName: d.orgName,
-							posName: d.posName,
-							roles: d.roleIds,
-							authBtnList: d.buttons,
-							time: new Date().getTime(),
-						};
-						// vue-next-admin 提交Id：225bce7 提交消息：admin-23.03.26:发布v2.4.32版本
-						// 增加了下面代码，引起当前会话的用户信息不会刷新，如：重新提交的头像不更新，需要新开一个页面才能正确显示
-						// Session.set('userInfo', userInfos);
+		// // 获取当前用户信息
+		// getApiUserInfo() {
+		// 	return new Promise((resolve) => {
+		// 		getAPI(SysAuthApi)
+		// 			.apiSysAuthUserInfoGet()
+		// 			.then(async (res: any) => {
+		// 				if (res.data.result == null) return;
+		// 				var d = res.data.result;
+		// 				const userInfos = {
+		// 					id: d.id,
+		// 					account: d.account,
+		// 					realName: d.realName,
+		// 					phone: d.phone,
+		// 					idCardNum: d.idCardNum,
+		// 					email: d.email,
+		// 					accountType: d.accountType,
+		// 					avatar: d.avatar ?? '/favicon.ico',
+		// 					address: d.address,
+		// 					signature: d.signature,
+		// 					orgId: d.orgId,
+		// 					orgName: d.orgName,
+		// 					posName: d.posName,
+		// 					roles: d.roleIds,
+		// 					authBtnList: d.buttons,
+		// 					time: new Date().getTime(),
+		// 				};
+		// 				// vue-next-admin 提交Id：225bce7 提交消息：admin-23.03.26:发布v2.4.32版本
+		// 				// 增加了下面代码，引起当前会话的用户信息不会刷新，如：重新提交的头像不更新，需要新开一个页面才能正确显示
+		// 				// Session.set('userInfo', userInfos);
 
-						// 用户水印
-						const storesThemeConfig = useThemeConfig();
-						storesThemeConfig.themeConfig.watermarkText = d.watermarkText ?? '';
-						if (storesThemeConfig.themeConfig.isWatermark) Watermark.set(storesThemeConfig.themeConfig.watermarkText);
-						else Watermark.del();
+		// 				// 用户水印
+		// 				const storesThemeConfig = useThemeConfig();
+		// 				storesThemeConfig.themeConfig.watermarkText = d.watermarkText ?? '';
+		// 				if (storesThemeConfig.themeConfig.isWatermark) Watermark.set(storesThemeConfig.themeConfig.watermarkText);
+		// 				else Watermark.del();
 
-						Local.remove('themeConfig');
-						Local.set('themeConfig', storesThemeConfig.themeConfig);
+		// 				Local.remove('themeConfig');
+		// 				Local.set('themeConfig', storesThemeConfig.themeConfig);
 
-						resolve(userInfos);
-					});
-			});
-		},
+		// 				resolve(userInfos);
+		// 			});
+		// 	});
+		// },
 
 		// 获取常量集合
 		getSysConstList() {

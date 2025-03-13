@@ -51,7 +51,7 @@ export interface AdminResultListRoleOutput {
      * @type {Array<RoleOutput>}
      * @memberof AdminResultListRoleOutput
      */
-    result?: Array<RoleOutput> | null;
+    data?: Array<RoleOutput> | null;
 
     /**
      * 附加数据
