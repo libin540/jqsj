@@ -100,7 +100,7 @@
 			</el-col>
 		</el-row>
 
-		<el-row :gutter="8">
+		<!-- <el-row :gutter="8">
 			<el-col :md="24" :sm="24">
 				<el-card shadow="hover" header="程序集信息" style="margin-top: 5px; --el-card-padding: 10px">
 					<div v-for="d in state.assemblyInfo" :key="d.name" style="display: inline-block; margin: 4px; text-align: left">
@@ -113,10 +113,10 @@
 					</div>
 				</el-card>
 			</el-col>
-		</el-row>
+		</el-row> -->
 
 		<el-row :gutter="8">
-			<el-col :md="24" :sm="24">
+			<el-col :md="12" :sm="12">
 				<el-card shadow="hover" header="磁盘信息" style="margin-top: 5px">
 					<el-row>
 						<el-col
@@ -172,7 +172,7 @@ onMounted(async () => {
 // 服务器配置信息
 const loadMachineBaseInfo = async () => {
 	var res = await getAPI(SysServerApi).apiSysServerServerBaseGet();
-	state.machineBaseInfo = res.data.result;
+	state.machineBaseInfo = []//res.data.result;
 };
 
 // 服务器内存信息

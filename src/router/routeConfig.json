@@ -622,5 +622,119 @@
         "children": [
             
         ]
+    },
+    {
+        "id": 651160469700678,
+        "pid": 0,
+        "type": 1,
+        "name": "operation",
+        "path": "/operationCenter",
+        "permission": null,
+        "redirect": null,
+        "orderNo": 100,
+        "status": 1,
+        "remark": null,
+        "createTime": "2025-03-05 09:58:46",
+        "updateTime": "2025-03-06 15:56:14",
+        "createUserName": "超级管理员",
+        "updateUserName": "超级管理员",
+        "meta": {
+            "title": "运维监控",
+            "icon": "ele-BellFilled",
+            "isIframe": false,
+            "isLink": null,
+            "isHide": false,
+            "isKeepAlive": true,
+            "isAffix": false
+        },
+        "children": [
+            {
+                "id": 1300000000121,
+                "pid": 651160469700678,
+                "type": 2,
+                "name": "service",
+                "path": "/operationCenter/service",
+                "component":"/service/index",
+                "permission": null,
+                "redirect": null,
+                "orderNo": 101,
+                "status": 1,
+                "remark": null,
+                "createTime": "2025-02-26 14:39:42",
+                "updateTime": "2025-03-10 14:21:24",
+                "createUserName": null,
+                "updateUserName": null,
+                "meta": {
+                    "title": "服务",
+                    "icon": "ele-TrendCharts",
+                    "isIframe": false,
+                    "isLink": null,
+                    "isHide": false,
+                    "isKeepAlive": true,
+                    "isAffix": false
+                },
+                "children": [
+                    
+                ]
+            },
+            {
+                "id": 2300000000122,
+                "pid": 651160469700678,
+                "type": 2,
+                "name": "server",
+                "path": "/operationCenter/server",
+                "component":"/system/server/index",
+                "permission": null,
+                "redirect": null,
+                "orderNo": 102,
+                "status": 1,
+                "remark": null,
+                "createTime": "2025-02-26 14:39:42",
+                "updateTime": "2025-03-10 14:21:24",
+                "createUserName": null,
+                "updateUserName": null,
+                "meta": {
+                    "title": "服务器",
+                    "icon": "ele-Bell",
+                    "isIframe": false,
+                    "isLink": null,
+                    "isHide": false,
+                    "isKeepAlive": true,
+                    "isAffix": false
+                },
+                "children": [
+                    
+                ]
+            },
+            {
+                "id": 1300000000123,
+                "pid": 651160469700678,
+                "type": 2,
+                "name": "video",
+                "path": "/operationCenter/video",
+                "component":"/system/video/index",
+                "permission": null,
+                "redirect": null,
+                "orderNo": 102,
+                "status": 1,
+                "remark": null,
+                "createTime": "2025-02-26 14:39:42",
+                "updateTime": "2025-03-10 14:21:24",
+                "createUserName": null,
+                "updateUserName": null,
+                "meta": {
+                    "title": "录像",
+                    "icon": "ele-Bell",
+                    "isIframe": false,
+                    "isLink": null,
+                    "isHide": false,
+                    "isKeepAlive": true,
+                    "isAffix": false
+                },
+                "children": [
+                    
+                ]
+            }
+        ] 
     }
 ]

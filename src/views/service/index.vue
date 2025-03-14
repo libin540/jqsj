@@ -31,7 +31,7 @@
 		<el-row :gutter="15" class="home-card-three">
 			<el-col :xs="24" :sm="10" :md="10" :lg="8" :xl="8">
 				<div class="home-card-item">
-					<div class="home-card-item-title">快捷导航工具</div>
+					<div class="home-card-item-title">跳转服务详情</div>
 					<div class="home-monitor">
 						<div class="flex-warp">
 							<div class="flex-warp-item" v-for="(v, k) in state.homeThree" :key="k">
@@ -80,37 +80,37 @@ const state = reactive({
 	} as any,
 	homeOne: [
 		{
-			num1: '125,12',
-			num2: '-12.32',
-			num3: '订单统计信息',
-			num4: 'fa fa-meetup',
+			num1: '3',
+			num2: '100',
+			num3: '在线服务数量',
+			num4: 'iconfont icon-putong',
 			color1: '#FF6462',
 			color2: '--next-color-primary-lighter',
 			color3: '--el-color-primary',
 		},
 		{
-			num1: '653,33',
-			num2: '+42.32',
-			num3: '月度计划信息',
-			num4: 'iconfont icon-ditu',
+			num1: '0',
+			num2: '0',
+			num3: '离线服务数量',
+			num4: 'iconfont icon-putong',
 			color1: '#6690F9',
 			color2: '--next-color-success-lighter',
 			color3: '--el-color-success',
 		},
 		{
 			num1: '125,65',
-			num2: '+17.32',
-			num3: '年度计划信息',
-			num4: 'iconfont icon-zaosheng',
+			num2: '99.99',
+			num3: '服务当天处理数据进度',
+			num4: 'iconfont icon-putong',
 			color1: '#6690F9',
 			color2: '--next-color-warning-lighter',
 			color3: '--el-color-warning',
 		},
 		{
 			num1: '520,43',
-			num2: '-10.01',
-			num3: '访问统计信息',
-			num4: 'fa fa-github-alt',
+			num2: '98',
+			num3: '服务本月处理数据进度',
+			num4: 'iconfont icon-putong',
 			color1: '#FF6462',
 			color2: '--next-color-danger-lighter',
 			color3: '--el-color-danger',
@@ -119,58 +119,22 @@ const state = reactive({
 	homeThree: [
 		{
 			icon: 'iconfont icon-yangan',
-			label: '浅粉红',
-			value: '2.1%OBS/M',
+			label: '服务1',
+			value: '在线',
 			iconColor: '#F72B3F',
 		},
 		{
 			icon: 'iconfont icon-wendu',
-			label: '深红(猩红)',
-			value: '30℃',
+			label:  '服务2',
+			value: '离线',
 			iconColor: '#91BFF8',
 		},
 		{
 			icon: 'iconfont icon-shidu',
-			label: '淡紫红',
-			value: '57%RH',
+			label:  '服务3',
+			value: '在线',
 			iconColor: '#88D565',
-		},
-		{
-			icon: 'iconfont icon-shidu',
-			label: '弱紫罗兰红',
-			value: '107w',
-			iconColor: '#88D565',
-		},
-		{
-			icon: 'iconfont icon-zaosheng',
-			label: '中紫罗兰红',
-			value: '57DB',
-			iconColor: '#FBD4A0',
-		},
-		{
-			icon: 'iconfont icon-zaosheng',
-			label: '紫罗兰',
-			value: '57PV',
-			iconColor: '#FBD4A0',
-		},
-		{
-			icon: 'iconfont icon-zaosheng',
-			label: '暗紫罗兰',
-			value: '517Cpd',
-			iconColor: '#FBD4A0',
-		},
-		{
-			icon: 'iconfont icon-zaosheng',
-			label: '幽灵白',
-			value: '12kg',
-			iconColor: '#FBD4A0',
-		},
-		{
-			icon: 'iconfont icon-zaosheng',
-			label: '海军蓝',
-			value: '64fm',
-			iconColor: '#FBD4A0',
-		},
+		}
 	],
 	myCharts: [] as EmptyArrayType,
 	charts: {
@@ -187,26 +151,26 @@ const initLineChart = () => {
 	const option = {
 		backgroundColor: state.charts.bgColor,
 		title: {
-			text: '政策补贴额度',
+			text: '服务',
 			x: 'left',
 			textStyle: { fontSize: '15', color: state.charts.color },
 		},
 		grid: { top: 70, right: 20, bottom: 30, left: 30 },
 		tooltip: { trigger: 'axis' },
-		legend: { data: ['预购队列', '最新成交价'], right: 0 },
+		legend: { data: ['中心管理服务', '设备接入服务'], right: 0 },
 		xAxis: {
 			data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
 		},
 		yAxis: [
 			{
 				type: 'value',
-				name: '价格',
+				name: '数量',
 				splitLine: { show: true, lineStyle: { type: 'dashed', color: '#f5f5f5' } },
 			},
 		],
 		series: [
 			{
-				name: '预购队列',
+				name: '中心管理服务',
 				type: 'line',
 				symbolSize: 6,
 				symbol: 'circle',
@@ -222,7 +186,7 @@ const initLineChart = () => {
 				},
 			},
 			{
-				name: '最新成交价',
+				name: '设备接入服务',
 				type: 'line',
 				symbolSize: 6,
 				symbol: 'circle',
@@ -266,7 +230,7 @@ const initLineChart = () => {
 const initPieChart = () => {
 	if (!state.global.dispose.some((b: any) => b === state.global.homeChartTwo)) state.global.homeChartTwo.dispose();
 	state.global.homeChartTwo = markRaw(echarts.init(homePieRef.value, state.charts.theme));
-	var getname = ['房屋及结构物', '专用设备', '通用设备', '文物和陈列品', '图书、档案'];
+	var getname = ['中心管理服务', '设备接入服务', '媒体转发服务'];
 	var getvalue = [34.2, 38.87, 17.88, 9.05, 2.05];
 	var data = [];
 	for (var i = 0; i < getname.length; i++) {
@@ -276,7 +240,7 @@ const initPieChart = () => {
 	const option = {
 		backgroundColor: state.charts.bgColor,
 		title: {
-			text: '房屋建筑工程',
+			text: '服务类型',
 			x: 'left',
 			textStyle: { fontSize: '15', color: state.charts.color },
 		},
@@ -354,24 +318,24 @@ const initBarChart = () => {
 	const option = {
 		backgroundColor: state.charts.bgColor,
 		title: {
-			text: '地热开发利用',
+			text: '服务占用资源',
 			x: 'left',
 			textStyle: { fontSize: '15', color: state.charts.color },
 		},
 		tooltip: { trigger: 'axis' },
-		legend: { data: ['供温', '回温', '压力值(Mpa)'], right: 0 },
+		legend: { data: ['CPU占用率%', '内存占用率%', '启用时间'], right: 0 },
 		grid: { top: 70, right: 80, bottom: 30, left: 80 },
 		xAxis: [
 			{
 				type: 'category',
-				data: ['1km', '2km', '3km', '4km', '5km', '6km'],
+				data: ['00:00', '04:00', '08:00', '12:00', '16:00', '20:00'],
 				boundaryGap: true,
 				axisTick: { show: false },
 			},
 		],
 		yAxis: [
 			{
-				name: '供回温度(℃）',
+				name: 'CPU占用率%',
 				nameLocation: 'middle',
 				nameTextStyle: { padding: [3, 4, 50, 6] },
 				splitLine: { show: true, lineStyle: { type: 'dashed', color: '#f5f5f5' } },
@@ -380,7 +344,7 @@ const initBarChart = () => {
 				axisLabel: { color: state.charts.color, formatter: '{value} ' },
 			},
 			{
-				name: '压力值(Mpa)',
+				name: '内存占用率%',
 				nameLocation: 'middle',
 				nameTextStyle: { padding: [50, 4, 5, 6] },
 				splitLine: { show: false },
@@ -391,7 +355,7 @@ const initBarChart = () => {
 		],
 		series: [
 			{
-				name: '供温',
+				name: 'CPU占用率%',
 				type: 'line',
 				smooth: true,
 				showSymbol: true,
@@ -419,7 +383,7 @@ const initBarChart = () => {
 				],
 			},
 			{
-				name: '回温',
+				name: '内存占用率%',
 				type: 'line',
 				smooth: true,
 				showSymbol: true,
@@ -452,7 +416,7 @@ const initBarChart = () => {
 				],
 			},
 			{
-				name: '压力值(Mpa)',
+				name: '启用时间',
 				type: 'bar',
 				barWidth: 30,
 				yAxisIndex: 1,

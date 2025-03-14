@@ -39,7 +39,7 @@
                                     <li><span>报警ID：</span><p>{{alarmAuditRecord && alarmAuditRecord.deviceId}}</p></li>
                                     <li><span>报警内容：</span><p>{{alarmAuditRecord && alarmAuditRecord.promptContext}}</p></li>
                                     <li><span>时间：</span><p>{{alarmAuditRecord && alarmAuditRecord.promptTime}}</p></li>
-                                    <li><span>事件类型：</span><p>{{alarmAuditRecord && alarmAuditRecord.eventType}}</p></li>
+                                    <li><span>事件类型：</span><p>{{alarmAuditRecord && alarmAuditRecord.eventType_text}}</p></li>
                                     <li><span>置信度：</span><p>{{alarmAuditRecord && alarmAuditRecord.reliability}}</p></li>
                                     <li><span>报警设备：</span><p>{{alarmAuditRecord && alarmAuditRecord.deviceName}}</p></li>
                                     <li><span>报警级别：</span><p>{{alarmAuditRecord && alarmAuditRecord.promptLevel}}</p></li>

@@ -1,13 +1,6 @@
 <template>
 	<div :class="['widgets-home', customizing ? 'customizing' : '']" ref="main">
 		<div class="widgets-content">
-			<div class="widgets-top">
-				<div class="widgets-top-title">控制台</div>
-				<div class="widgets-top-actions">
-					<el-button v-if="customizing" type="primary" icon="ele-Check" round @click="save">完成</el-button>
-					<el-button v-else type="primary" icon="ele-Edit" round @click="custom">自定义</el-button>
-				</div>
-			</div>
 			<div class="widgets" ref="widgetsRef">
 				<div class="widgets-wrapper">
 					<div v-if="nowCompsList.length <= 0" class="no-widgets">
@@ -153,7 +146,7 @@ interface Grid {
 const defaultGrid = {
 	layout: [18, 6],
 	copmsList: [
-		['myapp','welcome', 'commit'],
+		['echarts','welcome', 'commit'],
 		['about', 'ver','timeing','progressing']
 	],
 };
@@ -189,7 +182,7 @@ const availableCompsList = computed(() => {
 });
 
 const myCompsList = computed(() => {
-	const myGrid = Local.get('DASHBOARDGRID') || ['welcome', 'myapp', 'ver', 'timeing', 'progressing', 'echarts', 'about', 'commit'];
+	const myGrid = Local.get('DASHBOARDGRID') || ['welcome', 'ver', 'timeing', 'progressing', 'echarts', 'about', 'commit'];
 	return availableCompsList.value.filter((comp) => !comp.disabled && myGrid.includes(comp.key));
 });
 
